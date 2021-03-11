@@ -1,0 +1,130 @@
+.Day-Events > h2{
+ font-family: 'Public Sans', sans-serif;
+ font-size: 50px;
+}
+.Day-Events > h3{
+    font-family: 'Public Sans', sans-serif;
+    color: yellow;
+   }
+.Day-Events_heading{
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+.Day-Events:nth-child(even) button{
+    background: black;
+    color: white;
+}
+.Day-Events:nth-child(even) p{
+    color: white;
+}
+.Day-Events:nth-child(even) a{
+    text-decoration: none;
+    padding: 10px;
+    background: white;
+    color: black;
+    margin-top: 5px;
+}
+.host-name{
+    font-weight: bold;
+}
+.Day-Events:nth-child(odd) button{
+    background: white;
+    color: black;
+}
+.Day-Events:nth-child(odd) p{
+    color: black;
+}
+.Day-Events:nth-child(odd) a{
+    text-decoration: none;
+    padding: 10px;
+    height: 15px;
+    background: black;
+    color: white;
+    margin-top: 5px;
+}
+.Event__expand-event-button{
+    width: 100%;
+
+}
+.Event-edit-container{
+    float: right;
+  
+}
+.time-letters{
+   font-size: 20px;
+   margin-bottom: 5px;
+}
+.Event-Content{
+  
+    display: flex;
+
+    
+}
+.alert-message{
+    text-align: center;
+    
+}
+.alert{
+    color: red;
+
+}
+
+.Event-top-and-bottom{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+.Event-content-details{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.events-attendees {
+width: 100px;
+}
+.events-attendees > li{
+    text-align: start;
+    font-weight: bold;
+    padding-right: 1px;
+
+}
+
+::marker {
+    margin-left: 20px;
+}
+
+.Event-column-1{
+ margin: 10px;
+
+}
+.Event-column-2{
+    font-family: 'Monoton', cursive;
+ font-size: 50px;
+ font-size: bold;
+ color: #ff4000;
+}
+.Event-bottom-row{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 450px) {
+    .Header{
+    height: 42px;
+    }
+    .Header h1 {
+    font-size: 22pt;
+    }
+    
+    .Header__not-logged-in {
+    flex-direction: row;
+    }
+    
+    .Header__not-logged-in .Hyph {
+    display: initial;
+    }
+    }

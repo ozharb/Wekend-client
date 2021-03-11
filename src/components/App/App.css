@@ -1,0 +1,15 @@
+.App{
+   
+    height: 100%;
+}
+html, body{
+
+    height: 100%;
+}
+
+
+
+footer{
+    margin: 0;
+    height: 0;
+}

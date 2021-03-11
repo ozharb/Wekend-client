@@ -1,0 +1,12 @@
+/* .Day-Events:nth-child(even){
+    background: black;
+
+}
+.Day-Events:nth-child(odd){
+
+  background-color: green;
+} */
+.DayPage>h2{
+    font-size: 50px;
+    font-family: 'Public Sans', sans-serif;
+}

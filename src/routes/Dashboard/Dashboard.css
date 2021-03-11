@@ -1,0 +1,19 @@
+.Dashboard{
+font-family: 'Bungee Shade', cursive;
+display: flex;
+flex-direction: column;
+align-content: space-between;
+font-size: 40px;
+
+}
+.Dashboard> a{
+color: black;
+margin-bottom: 40px;
+text-decoration: none;
+}
+.Dashboard> a:hover{
+font-size: 70px;
+}
+.Dashboard> a:focus{
+font-size: 70px;
+}

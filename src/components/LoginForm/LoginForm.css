@@ -1,0 +1,35 @@
+.green{
+    color:green;
+    font-weight: 300;
+}
+
+.red {
+    color:red;
+}
+
+.LoginForm{
+    height: 1400px;
+}
+
+.LoginForm > button{
+    background-color:Transparent;
+    border-radius: 20px;
+    
+    border-style: solid;
+    border-color: white;
+    color: white;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 70px;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    width: 90px;
+    cursor: pointer;
+}
+
+.LoginForm > button:hover{
+    border-color: #3CACD5;
+    color: #3CACD5;
+}
