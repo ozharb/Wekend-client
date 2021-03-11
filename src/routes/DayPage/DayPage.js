@@ -43,7 +43,7 @@ export default class DayPage extends Component {
                 {error
                     ? <p className='red'>There was an error, try again</p>
                     : this.renderEvents()}
-                <button className = 'Add-Event'>Add Event</button>
+            
             </section>
         )
     }

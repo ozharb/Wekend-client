@@ -12,6 +12,7 @@ import EditEvent from  '../../routes/EditEvent/EditEvent'
 import DayPage from '../../routes/DayPage/DayPage'
 import FilterPage from '../../routes/FilterPage/FilterPage'
 import FriendsPage from '../../routes/FriendsPage/FriendsPage'
+import NewFriend from '../../routes/NewFriend/NewFriend'
 import { Route, Switch } from 'react-router-dom'
 import './App.css';
 
@@ -66,6 +67,11 @@ class App extends Component {
               <PrivateRoute
                 path={'/days/:day'}
                 component={DayPage}
+              />
+               <PrivateRoute
+                exact
+                path={'/friend-search'}
+                component={NewFriend}
               />
                 <PrivateRoute
                 path={'/filter'}

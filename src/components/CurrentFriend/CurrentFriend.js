@@ -29,6 +29,14 @@ handleDelete=e=>{
 handleUnDelete=e=>{
     this.setState({deleting:false})
 }
+ notify = () => toast((t) => (
+    <span className = 'alert-message'>
+friend deleted
+      <button onClick={() => toast.dismiss(t.id)}>
+        Cool
+      </button>
+    </span>
+  ));
 deleteFriendFinal = e => {
     e.preventDefault()
      
@@ -41,6 +49,7 @@ const userId = friend.sender === user ? friend.sender_id : friend.receiver_id
 
   WekendApiService.deleteFriendship(friendId)
   .then(this.context.deleteFriend(friendId,userId))
+  .then(this.notify)
   .catch(error => { console.error({ error }) })
   }
     render() {
@@ -48,7 +57,7 @@ const userId = friend.sender === user ? friend.sender_id : friend.receiver_id
         let username = 'user'
         const user = window.localStorage.getItem(username)
         const { friend } = this.props
-
+        let friendClassName = (friend.friend.length > 12) ? 'small-font' : 'large-font'
         // const expandButtonText = this.state.expand
         // ?  <i className="fas fa-chevron-down"><FontAwesomeIcon className='chevron' icon='chevron-down' /></i> 
         // :   <i className="fas fa-chevron-right"><FontAwesomeIcon className='chevron' icon='chevron-right' /></i>
@@ -59,10 +68,10 @@ const userId = friend.sender === user ? friend.sender_id : friend.receiver_id
                 {/* <Link to={`/thing/${thing.id}`} className='ThingListItem'> */}
 
                 <div className='Friends-List'>
-                    <Toaster position="top" />
+                    <Toaster position="top-center" />
                     <div className='current-friend'>
                             <div className='friend-not-deleting'>
-                        <h2 className='Friends-List_heading' >{this.state.deleting? `Delete ${friend.friend}?`: friend.friend}</h2>
+                        <h2 className={friendClassName} >{this.state.deleting? `Delete ${friend.friend}?`: friend.friend}</h2>
                         <div className='delete-friend-container'>
                             {this.state.deleting
                         ?<div className='yes-no-buttons'>

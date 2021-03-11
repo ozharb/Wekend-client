@@ -6,64 +6,52 @@ import WekendApiService from '../../services/Wekend-api-service'
 
 // import { Link } from 'react-router-dom'
 // import { ThingStarRating } from '../ThingStarRating/ThingStarRating'
-import './RequestSent.css'
+import './FoundUser.css'
 import FriendsContext from '../../contexts/FriendsContext';
 
 
 
-export default class RequestSent extends Component {
+export default class FoundUser extends Component {
     static contextType = FriendsContext
     state = {
-        expand: false,
         error: null,
-        deleting: false
+        requesting: false
     };
-    handleExpand = e => {
-        this.setState({
-            expand: !this.state.expand
-        })
-    }
-handleDelete=e=>{
-    this.setState({deleting: true})
-}
-handleUnDelete=e=>{
-    this.setState({deleting:false})
-}
-notify = () => toast((t) => (
-    <span className = 'alert-message'>
- deleted
-      <button onClick={() => toast.dismiss(t.id)}>
-        Cool
-      </button>
-    </span>
 
-  )  );
-deleteFriendFinal = e => {
+    handleRequest=e=>{
+    this.setState({requesting: true})
+}
+handleUnRequest=e=>{
+    this.setState({requesting:false})
+}
+
+sendFriendRequest = e => {
     e.preventDefault()
      
-    let username = 'user'
-    const user =  window.localStorage.getItem(username)
-    const {friend} = this.props
-    const friendId = friend.friend_id
+    const {user} = this.props
+ 
 
-const userId = friend.sender === user ? friend.sender_id : friend.receiver_id
 
-  WekendApiService.deleteFriendship(friendId)
-  .then(this.context.deleteFriend(friendId,userId))
-  .then(this.notify)
+  WekendApiService.postFriendRequest(user.id)
+  .then(friendRes =>{
+      this.context.addFriend(friendRes)
+    .then(this.props.submitRequest)
+  })
+  
   .catch(error => { console.error({ error }) })
   }
     render() {
 
-        let username = 'user'
-        const user = window.localStorage.getItem(username)
-        const { friend } = this.props
-
+        const {user} = this.props
+        let friendClassName = (user.username.length > 12) ? 'small-font' : 'large-font'
         // const expandButtonText = this.state.expand
         // ?  <i className="fas fa-chevron-down"><FontAwesomeIcon className='chevron' icon='chevron-down' /></i> 
         // :   <i className="fas fa-chevron-right"><FontAwesomeIcon className='chevron' icon='chevron-right' /></i>
 
-        let friendClassName = (friend.friend.length > 12) ? 'small-font' : 'large-font'
+        let foundUserHeading = <>
+        {user.username}<br/>
+         <span className='founder-user-heading'>located in {user.city}</span>
+         </>
         return (
             <>
                 {/* <Link to={`/thing/${thing.id}`} className='ThingListItem'> */}
@@ -72,19 +60,20 @@ const userId = friend.sender === user ? friend.sender_id : friend.receiver_id
                     <Toaster position="top-center" />
                     <div className='current-friend'>
                             <div className='friend-not-deleting'>
-                        <h2 className={friendClassName} >{this.state.deleting? `Delete ${friend.friend}?`: friend.friend}</h2>
+        <h2 className={friendClassName} >{this.state.requesting
+        ? `Send friend request to${user.username}?`
+        : foundUserHeading }</h2>
                         <div className='delete-friend-container'>
-                            {this.state.deleting
+                            {this.state.requesting
                         ?<div className='yes-no-buttons'>
-                        <button className='delete-friend' onClick={this.handleUnDelete}>No</button> 
-                        <button className='delete-friend-yes' onClick={this.deleteFriendFinal}><span className='delete-friend-yes'>Yes</span></button>
+                        <button className='delete-friend' onClick={this.handleUnRequest}>No</button> 
+                        <button className='delete-friend-yes' onClick={this.sendFriendRequest}><span className='delete-friend-yes'>Yes</span></button>
                         </div>
                         : 
-                        <button className='delete-friend' onClick={this.handleDelete}>Delete</button>
+                        <button className='delete-friend' onClick={this.handleRequest}>Send Request</button>
                         }
                         </div>
                         </div>
-        
                     </div>
                 </div>
                 {/* </Link> */}

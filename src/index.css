@@ -14,3 +14,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+button{
+  cursor: pointer; 
+}
+.small-font{
+  font-size: 20px;
+
+}
+.large-font{
+  font-size: 40px;
+  margin: 0px;
+}

@@ -32,6 +32,7 @@
      
    }
 
+
    .Friends-List:nth-child(odd) {
        background: white;
        color: black;

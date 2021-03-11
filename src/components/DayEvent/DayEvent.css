@@ -4,10 +4,14 @@
 }
 .Day-Events > h3{
     font-family: 'Public Sans', sans-serif;
-    color: yellow;
+
    }
-.Day-Events_heading{
+.Day-Events_heading-large{
     font-size: 40px;
+    margin-bottom: 5px;
+}
+.Day-Events_heading-small{
+    font-size: 20px;
     margin-bottom: 5px;
 }
 .Day-Events:nth-child(even) button{

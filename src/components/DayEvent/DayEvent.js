@@ -30,6 +30,7 @@ export default class DayEvent extends Component {
         const user =  window.localStorage.getItem(username)
         const { event } = this.props
          let alertStyle = event.alert ? {color: 'red'} : null
+        let headingStyle = (event.title.length > 12 && this.state.expand)? 'Day-Events_heading-small' : 'Day-Events_heading-large'
         let time = convertTime(event.time)
         let timeNumbers = time.split('').slice(0, time.length - 2).join('')
         let timeLetters = time.split('').slice(time.length - 2).join('')
@@ -99,7 +100,7 @@ export default class DayEvent extends Component {
                 <div className='Day-Events'>
           
      
-      <Toaster position="top"/>
+      <Toaster position="top-center"/>
 
                     <button
                         type='button'
@@ -108,7 +109,7 @@ export default class DayEvent extends Component {
                         className='Event__expand-event-button'>
                         <div className="Event-Content">
                             <div className='event-title-attendees'>
-                                <h2 className='Day-Events_heading' style={alertStyle}>{event.title}</h2>
+                                <h2 className={headingStyle} style={alertStyle}>{event.title}</h2>
                                 {this.state.expand && 
                                 <ul className = 'events-attendees'>
                                     Who's going:

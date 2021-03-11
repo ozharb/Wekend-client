@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import FriendsContext from '../../contexts/FriendsContext'
 import WekendApiService from '../../services/Wekend-api-service'
 import CurrentFriend from '../../components/CurrentFriend/CurrentFriend'
@@ -26,7 +26,7 @@ export default class FriendsPage extends Component {
         let allFriends = friends.filter(friend=> 
             friend.confirmed === true)
 
-        return allFriends.map((friend, i) =>
+        return (!allFriends)?<p>No amigos at the moment</p> : allFriends.map((friend, i) =>
           <CurrentFriend
             key={friend.receiver_id + friend.sender_id}
             friend={friend}
@@ -41,7 +41,7 @@ export default class FriendsPage extends Component {
             (!friend.confirmed)&&(friend.friend_id===friend.receiver_id))
 
          
-        return friendRequests.map(friend =>
+        return (!friendRequests)? <p>You have no pending friend requests</p>:friendRequests.map(friend =>
           <RequestSent
             key={friend.receiver_id+friend.sender_id}
             friend={friend}
@@ -54,10 +54,10 @@ export default class FriendsPage extends Component {
  
         let requestsReceived = friends.filter(friend=> 
           (!friend.confirmed)&&(friend.friend_id===friend.sender_id))
-
+          
          
          
-        return requestsReceived.map(friend =>
+        return (!requestsReceived.length) ? <p>You have no pending friend requests</p>: requestsReceived.map(friend =>
           <RequestReceived
             key={friend.receiver_id + friend.sender_id}
             friend={friend}
@@ -70,18 +70,26 @@ export default class FriendsPage extends Component {
  
         return (
             <section className='FriendPage'>
+                  
+              <article className='FriendPage article'>
                 <h2>Your Friends</h2>
                 {error
                     ? <p className='red'>There was an error, try again</p>
                     : this.renderCurrentFriends()}
+                    </article>
+                <Link to='/friend-search' >get some new friends</Link>
+                    <article className='FriendPage article'>
                     <h2>Pending Requests Sent</h2>
                 {error
                     ? <p className='red'>There was an error, try again</p>
                     : this.renderRequestsSent()}
+                    </article>
+                    <article className='FriendPage article'>
                         <h2>Pending Requests Received</h2>
                 {error
                     ? <p className='red'>There was an error, try again</p>
                     : this.renderRequestsReceived()}
+                    </article>
             </section>
         )
     }

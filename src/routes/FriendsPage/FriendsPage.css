@@ -6,7 +6,17 @@
 
   background-color: green;
 } */
-.DayPage>h2{
+.FriendPage>h2{
     font-size: 50px;
     font-family: 'Public Sans', sans-serif;
+ 
+}
+.FriendPage{
+  padding-bottom: 40px;
+}
+.FriendPage>a{
+  font-size: 50px;
+  font-family: 'Public Sans', sans-serif;
+  text-decoration: none;
+  color: orangered;
 }

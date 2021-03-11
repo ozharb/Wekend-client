@@ -35,6 +35,24 @@ handleUnDelete=e=>{
 handleUnAccept=e=>{
     this.setState({accepting:false})
 }
+friendAcceptnotify = () => toast((t) => (
+    <span className = 'alert-message'>
+friend made
+      <button onClick={() => toast.dismiss(t.id)}>
+        Cool
+      </button>
+    </span>
+
+  )  );
+  friendDeletednotify = () => toast((t) => (
+    <span className = 'alert-message'>
+ request deleted
+      <button onClick={() => toast.dismiss(t.id)}>
+        Cool
+      </button>
+    </span>
+
+  )  );
 acceptFriendFinal = e => {
     e.preventDefault()
      
@@ -47,6 +65,7 @@ const userId = friend.sender === user ? friend.sender_id : friend.receiver_id
 
   WekendApiService.acceptFriendRequest(friendId)
   .then(this.context.confirmFriend(friendId,userId))
+  .then(this.friendAcceptnotify)
   .catch(error => { console.error({ error }) })
   }
 deleteFriendFinal = e => {
@@ -61,6 +80,7 @@ const userId = friend.sender === user ? friend.sender_id : friend.receiver_id
 
   WekendApiService.deleteFriendship(friendId)
   .then(this.context.deleteFriend(friendId,userId))
+  .then(this.friendDeletednotify)
   .catch(error => { console.error({ error }) })
   }
     render() {
@@ -82,32 +102,35 @@ const userId = friend.sender === user ? friend.sender_id : friend.receiver_id
     return friend
 }
      } 
-
+     let friendClassName = (friend.friend.length > 12) ? 'small-font' : 'large-font'
         return (
             <>
                 {/* <Link to={`/thing/${thing.id}`} className='ThingListItem'> */}
 
                 <div className='Friends-List'>
-                    <Toaster position="top" />
+                    <Toaster position="top-center" />
                     <div className='current-friend'>
-                            <div className='friend-not-deleting'>
+                            <div className='friend-not-deleting-accepting'>
+                                <div className='accept-friend-container'>
                             {this.state.accepting
                         ?<div className='yes-no-buttons'>
-                        <button className='accept-friend' onClick={this.handleUnAccept}>No</button> 
-                        <button className='accept-friend-yes' onClick={this.acceptFriendFinal}><span className='accept-friend-yes'>Yes</span></button>
+                        <button className='accept-friend' onClick={this.handleUnAccept}>no</button> 
+                        <button className='accept-friend yes' onClick={this.acceptFriendFinal}><span className='accept-friend-yes'>yes</span></button>
                         </div>
                         : 
-                        <button className='delete-friend' onClick={this.handleAccept}>Accept</button>
+                        <button className='accept-friend' onClick={this.handleAccept}>accept</button>
+                     
                         }
-        <h2 className='Friends-List_heading' >{friendName(friend.friend)}</h2>
+                           </div>
+        <h2 className={friendClassName} >{friendName(friend.friend)}</h2>
                         <div className='delete-friend-container'>
                             {this.state.deleting
                         ?<div className='yes-no-buttons'>
-                        <button className='delete-friend' onClick={this.handleUnDelete}>No</button> 
-                        <button className='delete-friend-yes' onClick={this.deleteFriendFinal}><span className='delete-friend-yes'>Yes</span></button>
+                        <button className='delete-friend' onClick={this.handleUnDelete}>no</button> 
+                        <button className='delete-friend-yes' onClick={this.deleteFriendFinal}><span className='delete-friend-yes'>yes</span></button>
                         </div>
                         : 
-                        <button className='delete-friend' onClick={this.handleDelete}>Delete</button>
+                        <button className='delete-friend' onClick={this.handleDelete}>delete</button>
                         }
                         </div>
                         </div>
