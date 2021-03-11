@@ -1,0 +1,82 @@
+.Friends-List > h2{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 50px;
+   }
+   .Friends-List > h3{
+       font-family: 'Public Sans', sans-serif;
+       color: yellow;
+      }
+      .friend-not-deleting{
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+       }
+   .Friends-List_heading{
+       font-size: 40px;
+        margin: 0px;
+   }
+   .Friends-List:nth-child(even) {
+       background: black;
+       color: white;
+   }
+   .Friends-List:nth-child(even) p{
+       color: white;
+   }
+   .Friends-List:nth-child(even) button{
+    height: 100%;
+       text-decoration: none;
+       padding: 15px;
+       background: white;
+       color: black;
+       width: 80px;
+     
+   }
+
+   .Friends-List:nth-child(odd) {
+       background: white;
+       color: black;
+   }
+   .Friends-List:nth-child(odd) p{
+       color: black;
+   }
+   .Friends-List:nth-child(odd) button{
+       height: 100%;
+       text-decoration: none;
+       padding: 10px;
+       background: black;
+       color: white;
+       width: 80px;
+     
+   }
+ .delete-friend-yes{
+     color: red;
+
+ }
+ .accept-friend-yes{
+    color: green;
+
+}
+.yes-no-buttons{
+  
+    display: flex;
+    flex-direction: column;
+}
+.yes-no-buttons>button{
+     border: none; 
+}
+   @media screen and (min-width: 450px) {
+       .Header{
+       height: 42px;
+       }
+       .Header h1 {
+       font-size: 22pt;
+       }
+       
+       .Header__not-logged-in {
+       flex-direction: row;
+       }
+       
+       .Header__not-logged-in .Hyph {
+       display: initial;
+       }
+       }

@@ -34,14 +34,11 @@ export class FriendsProvider extends Component {
         this.setState({ friends })
     }
     confirmFriend = (friendId, userId ) => {
-        let friendship = this.state.friends.find(fr => (fr.friend_id === friendId && userId === fr.sender_id) ||
-            (fr.friend_id === friendId && userId === fr.receiver_id))
-        friendship.confirmed = true
-        console.log('confirm frienship:', friendship)
+        console.log('friend:', friendId, 'user:', userId)
         this.setState({
             friends: this.state.friends.map(i =>
-                ((i.friend_id !== friendId && userId !== i.sender_id) || (i.friend_id !== friendId && userId !== i.receiver_id)) ? i :
-                    friendship)
+                (i.friend_id !== friendId && userId !== i.receiver_id) ? i :
+                    {...i, confirmed:true})
         })
     }
 //*** test this ***//

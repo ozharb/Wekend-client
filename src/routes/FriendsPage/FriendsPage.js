@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import FriendsContext from '../../contexts/FriendsContext'
 import WekendApiService from '../../services/Wekend-api-service'
 import CurrentFriend from '../../components/CurrentFriend/CurrentFriend'
+import RequestSent from '../../components/RequestSent/RequestSent'
+import RequestReceived from '../../components/RequestReceived/RequestReceived'
 import './FriendsPage.css'
 
 export default class FriendsPage extends Component {
@@ -21,11 +23,9 @@ export default class FriendsPage extends Component {
     renderCurrentFriends() {
         const { friends = [] } = this.context
       
- 
         let allFriends = friends.filter(friend=> 
             friend.confirmed === true)
 
-            let currentFriends
         return allFriends.map((friend, i) =>
           <CurrentFriend
             key={friend.receiver_id + friend.sender_id}
@@ -33,51 +33,55 @@ export default class FriendsPage extends Component {
           />
         )
       }
-      // renderRequestsSent() {
-      //   const { friends = [] } = this.context
+      renderRequestsSent() {
+        const { friends = [] } = this.context
       
  
-      //   let allFriends = friends.filter(friend=> 
-      //       friend.confirmed === true)
+        let friendRequests = friends.filter(friend=> 
+            (!friend.confirmed)&&(friend.friend_id===friend.receiver_id))
 
-          
-      //       let requestsSent
          
-      //   return currentFriends.map(event =>
-      //     <RequestSent
-      //       key={event.id}
-      //       event={event}
-      //     />
-      //   )
-      // }
-      // renderRequestsReceived() {
-      //   const { friends = [] } = this.context
+        return friendRequests.map(friend =>
+          <RequestSent
+            key={friend.receiver_id+friend.sender_id}
+            friend={friend}
+          />
+        )
+      }
+      renderRequestsReceived() {
+        const { friends = [] } = this.context
       
  
-      //   let allFriends = friends.filter(friend=> 
-      //       friend.confirmed === true)
+        let requestsReceived = friends.filter(friend=> 
+          (!friend.confirmed)&&(friend.friend_id===friend.sender_id))
 
-          
-      //       let requestsSent
          
-      //   return currentFriends.map(event =>
-      //     <RequestsReceived
-      //       key={event.id}
-      //       event={event}
-      //     />
-      //   )
-      // }
+         
+        return requestsReceived.map(friend =>
+          <RequestReceived
+            key={friend.receiver_id + friend.sender_id}
+            friend={friend}
+          />
+        )
+      }
 
     render() {
         const { error } = this.context
  
         return (
             <section className='FriendPage'>
-                <h2>Friends</h2>
+                <h2>Your Friends</h2>
                 {error
                     ? <p className='red'>There was an error, try again</p>
                     : this.renderCurrentFriends()}
-               
+                    <h2>Pending Requests Sent</h2>
+                {error
+                    ? <p className='red'>There was an error, try again</p>
+                    : this.renderRequestsSent()}
+                        <h2>Pending Requests Received</h2>
+                {error
+                    ? <p className='red'>There was an error, try again</p>
+                    : this.renderRequestsReceived()}
             </section>
         )
     }
