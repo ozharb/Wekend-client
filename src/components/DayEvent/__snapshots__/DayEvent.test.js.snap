@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div
+  className="Day-Events"
+>
+  <div
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "position": "fixed",
+        "zIndex": 9999,
+      }
+    }
+  />
+  <button
+    aria-label="expand"
+    className="Event__expand-event-button"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="Event-Content"
+    >
+      <div
+        className="event-title-attendees"
+      >
+        <h2
+          className="Day-Events_heading-large"
+          style={null}
+        >
+          
+        </h2>
+      </div>
+    </div>
+  </button>
+</div>
+`;

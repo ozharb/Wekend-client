@@ -9,10 +9,13 @@ import LandingPage from '../../routes/LandingPage/LandingPage'
 import Dashboard from '../../routes/Dashboard/Dashboard'
 import NewEvent from  '../../routes/NewEvent/NewEvent'
 import EditEvent from  '../../routes/EditEvent/EditEvent'
+import DeleteEvent from '../../routes/DeleteEvent/DeleteEvent'
 import DayPage from '../../routes/DayPage/DayPage'
 import FilterPage from '../../routes/FilterPage/FilterPage'
 import FriendsPage from '../../routes/FriendsPage/FriendsPage'
 import NewFriend from '../../routes/NewFriend/NewFriend'
+import RsvpEvent from '../../routes/RsvpEvent/RsvpEvent'
+import RsvpEventCancel from '../../routes/RsvpEventCancel/RsvpEventCancel'
 import { Route, Switch } from 'react-router-dom'
 import './App.css';
 
@@ -63,6 +66,21 @@ class App extends Component {
                 exact
                 path={'/change-event/:event_id'}
                 component={EditEvent}
+              />
+                <PrivateRoute
+                exact
+                path={'/delete-event/:event_id'}
+                component={DeleteEvent}
+              />
+              <PrivateRoute
+                exact
+                path={'/rsvp/:event_id'}
+                component={RsvpEvent}
+              />
+               <PrivateRoute
+                exact
+                path={'/cancel-rsvp/:event_id'}
+                component={RsvpEventCancel}
               />
               <PrivateRoute
                 path={'/days/:day'}

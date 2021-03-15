@@ -19,6 +19,7 @@ import {
   faChevronRight,
   faChevronDown,
   faTimes,
+  faCommentAlt,
   faMoon
 } from '@fortawesome/free-solid-svg-icons'
 
@@ -33,6 +34,7 @@ library.add(fab,
   faCashRegister,
   faChevronRight,
   faChevronDown,
+  faCommentAlt,
   faMoon)
 
 

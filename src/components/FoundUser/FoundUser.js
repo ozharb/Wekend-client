@@ -35,10 +35,20 @@ sendFriendRequest = e => {
   WekendApiService.postFriendRequest(user.id)
   .then(friendRes =>{
       this.context.addFriend(friendRes)
-    .then(this.props.submitRequest)
+
+      this.props.submitRequest()
+              setTimeout(() => {
+                  this.props.history.goBack()
+                 }, 2000)
   })
   
-  .catch(error => { console.error({ error }) })
+  .catch(error => this.setState({error:error.error}))
+//   .then( this.props.submitRequest,
+//         setTimeout(() => {
+//             this.props.history.goBack()
+//            }, 2000)
+//     )
+  
   }
     render() {
 
@@ -52,6 +62,11 @@ sendFriendRequest = e => {
         {user.username}<br/>
          <span className='founder-user-heading'>located in {user.city}</span>
          </>
+         let errorMessage = <div className='error-message-friend-request'>
+            Hmm...<span className='error-message-details'>{this.state.error}</span>
+            <br />
+            <Link to= '/friends'>Go to Dashboard</Link>
+         </div>
         return (
             <>
                 {/* <Link to={`/thing/${thing.id}`} className='ThingListItem'> */}
@@ -59,21 +74,23 @@ sendFriendRequest = e => {
                 <div className='Friends-List'>
                     <Toaster position="top-center" />
                     <div className='current-friend'>
+                        {this.state.error ? errorMessage :
                             <div className='friend-not-deleting'>
         <h2 className={friendClassName} >{this.state.requesting
-        ? `Send friend request to${user.username}?`
+        ? `Send friend request to ${user.username}?`
         : foundUserHeading }</h2>
                         <div className='delete-friend-container'>
                             {this.state.requesting
                         ?<div className='yes-no-buttons'>
-                        <button className='delete-friend' onClick={this.handleUnRequest}>No</button> 
-                        <button className='delete-friend-yes' onClick={this.sendFriendRequest}><span className='delete-friend-yes'>Yes</span></button>
+                        <button className='request-friend' onClick={this.handleUnRequest}>No</button> 
+                        <button className='request-friend-yes' onClick={this.sendFriendRequest}><span className='request-friend-yes'>Yes</span></button>
                         </div>
                         : 
-                        <button className='delete-friend' onClick={this.handleRequest}>Send Request</button>
+                        <button className='request-friend' onClick={this.handleRequest}>Send Request</button>
                         }
                         </div>
                         </div>
+    }
                     </div>
                 </div>
                 {/* </Link> */}

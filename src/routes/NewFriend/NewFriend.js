@@ -33,7 +33,7 @@ validateName = () => {
 
   handleSearch = e => {
     e.preventDefault()
-
+this.setState({results: []})
     const  nameSearch = e.target['name'].value
 
 
@@ -57,6 +57,7 @@ validateName = () => {
     </>
     : results.map((user, i) =>
       <FoundUser
+        history={this.props.history}
         submitRequest={this.setRequested}
         key={user.id + i}
         user={user}
@@ -65,9 +66,11 @@ validateName = () => {
   }
   render() {
     return (
-      <section className='add-event-form'>
-                <h3>Find Your friend</h3>
-                {this.state.requested ? <h3 className ='posted-event'>Request Requested!</h3>:
+      <section className='new-friend-page'>
+              
+                {this.state.requested ? <h3 className ='posted-event requested'>Request Requested!</h3>:
+                <fieldset className='friend-serach'>
+                  <legend><h3>Find Your friend</h3></legend>
                 <form onSubmit={this.handleSearch}>
                     <label htmlFor='Event-title-input'>
                         Search name: <Required />
@@ -81,8 +84,13 @@ validateName = () => {
                     <button className='done-add-event' type="submit" disabled={this.validateName()}>Search</button>
 
                 </form>
-  }
- {this.state.submitted && this.renderResults()}
+   </fieldset>              
+ }
+
+ {(this.state.submitted && !this.state.requested) && 
+ <section className='friend-search-results'><h2>Results</h2>
+ {this.renderResults()}
+ </section>}
             </section>
     )
   }

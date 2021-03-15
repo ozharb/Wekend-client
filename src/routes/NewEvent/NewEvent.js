@@ -44,11 +44,13 @@ validateTime = () => {
     const details = e.target['details'].value
     const day = e.target['day'].value
 
-  console.log('title:',title, 'time:',time,'place:', place,'details:', details, 'day', day)
     WekendApiService.postEvent(title, time, place, details, day)
   
       .then((event) => {
-        this.context.addEvent(event)
+        
+        let username = 'user'
+        const user =  window.localStorage.getItem(username)  
+        this.context.addEvent(event, user)
         this.setState({sumbmitted: true})
         setTimeout(() => {
           this.props.history.push('/days')
@@ -61,8 +63,11 @@ validateTime = () => {
   render() {
     return (
       <section className='add-event-form'>
-                <h3>Add Event</h3>
+
                 {this.state.sumbmitted ? <h3 className ='posted-event'>Posted!</h3>:
+                <>
+                                <legend><h3>Add Event</h3></legend>
+                                <fieldset>
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor='Event-title-input'>
                         Title <Required />
@@ -105,6 +110,8 @@ validateTime = () => {
                     <button className='done-add-event' type="submit" disabled={this.validateTitle()}>Post</button>
 
                 </form>
+                </fieldset>
+                </>
   }
             </section>
     )

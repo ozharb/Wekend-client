@@ -60,7 +60,10 @@ validateTime = () => {
   }
 }
   static contextType = EventsContext
-
+handleCancel = e =>{
+  e.preventDefault()
+  this.props.history.goBack()
+}
   handleSubmit = e => {
     e.preventDefault()
 const fieldsToUpdate = {
@@ -96,7 +99,8 @@ const fieldsToUpdate = {
            
                 {this.state.sumbmitted ? <h3 className ='posted-event'>Updated!</h3>:
                    
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit}
+                onCancel = {this.handleCancel}>
                     <h3>Add Event</h3>
                     <label htmlFor='Event-title-input'>
                         Title <Required />
@@ -151,7 +155,7 @@ const fieldsToUpdate = {
           </select>
                     <button className='done-add-event' type="submit"
                      disabled={(this.validateTitle())||(this.validateTime())}>Post</button>
-                    <button className='done-add-event cancel' type='cancel'>Nevermind</button>
+                    <button className='done-add-event cancel' onClick = {this.handleCancel} type='cancel'>Nevermind</button>
                 </form>
   }
             </section>

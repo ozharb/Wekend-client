@@ -1,7 +1,12 @@
 .ReviewForm select, .ReviewForm label {
   font-size: 1.1em;
 }
-
+fieldset{
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
 .ReviewForm label {
   display: inline-block;
   margin: 10px 10px 20px;
@@ -18,7 +23,7 @@
 .add-event-form{
   margin-left: 20px;
 }
-.posted-event{
+.requested{
   font-family: 'Bungee Shade', cursive;
-  font-size: 70px;
+  font-size: 35px;
 }

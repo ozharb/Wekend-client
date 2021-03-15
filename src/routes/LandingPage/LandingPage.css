@@ -1,36 +1,78 @@
 
 
 .LandingPage{
+    font-family: 'Public Sans', sans-serif;
+    margin-top: 120px; 
     text-align: center;
+    margin-bottom: 80px;
+    line-height: 1.6;
+}
+header>h1{
+    font-family: 'Bungee Shade', cursive;
+    font-size: 50px;
+}
+
+.logo-landing-page{
+    border: none;
+}
+.speech-text{
+    margin-top: 64px;
+    position: absolute;
+}
+.speech-bubble-text{
+font-family: 'Bungee Shade', cursive;
+display: flex;
+font-weight: bold;
+justify-content: center;
+}
+
+.speech-bubble{
+margin-right: 20px;
+}
+.app-how-to-use>p{
+
+    padding-bottom: 30px;
+}
+.landing-page-register{
+    padding: 20px;
+    background-color: #9EF573;
+}
+.landing-page-bottom{
+    padding-bottom: 20px;
+}
+.add-event-word-landingpage{
+    border: solid;
+    background: #fbff12;
+    padding: 5px;
+}
+.home-word-landingpage{
+    border: solid;
+    background: orange;
+    padding: 5px;
+}
+.friends-word-landingpage{
+    border: solid;
+    background: #41ead4;
+    padding: 5px;
+}
+.filter-word-landingpage{
+    border: solid;
+    background: #ff206e;
+    padding: 5px;
 }
 .register-button{
     margin: auto;
-    background-color:Transparent;
-    border-radius: 20px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: white;
+    background-color:black;
+    border: none;
     color: white;
     display: block;
     font-size: 12px;
     font-weight: bold;
-    height: 30px;
+    padding: 10px;
     text-align: center;
     text-decoration: none;
-    width: 90px;
+    width: 70px;
 }
-
-.register-button:hover{
-    cursor: pointer;
-     border-color: #3CACD5;
-     color: #3CACD5;
-     filter:drop-shadow(0px 0px 8px #3CACD5);
-
-   } 
-   .register-button:focus{
-      border-color: #3CACD5;
-      color: #3CACD5;
-   } 
 
 .app-screenshot{
 margin-top: 30px;

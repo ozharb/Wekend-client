@@ -11,7 +11,9 @@ const EventsContext = React.createContext({
   deleteEvent: () => {},
   addEvent: () => {},
   findEvent: () => {},
-  changeEventAlert: ()=> {}
+  changeEventAlert: ()=> {},
+  postAttendance: () => {},
+  deleteAttendance: ()=>{}
 })
 
 export default EventsContext
@@ -42,11 +44,27 @@ export class EventsProvider extends Component {
         )
       })
   }
+ postAttendance = (eventId, username) => {
+     this.setState({
+         events: this.state.events.map(i=>
+(i.id!==eventId) ? i : {...i,attendees: [...{username: username, alert: false}]}
+         )
+     })
+ }
+ deleteAttendance = (eventId, username) => {
+    this.setState({
+        events: this.state.events.map(i=>
+(i.id!==eventId) 
+? i
+: {...i,attendees: [i.attendees.filter(person=>person.username !==username)]}
+        )
+    })
+}
   changeEventAlert = eventId => {
+    
     this.setState({
         events: this.state.events.map(i =>
           (i.id !== eventId) ? i : {...i, alert:false}
-        
         )
       })
   }
@@ -57,11 +75,11 @@ deleteEvent = eventId => {
         event.id !== parseInt(eventId))
     })
   }
-addEvent = event => {
+addEvent = (event, username) => {
     this.setState({
       events: [
         ...this.state.events,
-        event
+        event['attendees'] = {username:username, alert:false}
       ]
     })
   }
@@ -81,7 +99,9 @@ addEvent = event => {
       deleteEvent: this.deleteEvent,
       addEvent: this.addEvent,
       findEvent: this.findEvent,
-      changeEventAlert: this.changeEventAlert
+      changeEventAlert: this.changeEventAlert,
+      postAttendance: this.postAttendance,
+      deleteAttendance: this.deleteAttendance
     }
     return (
       <EventsContext.Provider value={value}>

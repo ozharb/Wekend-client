@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div
+  className="menu-items"
+>
+  <a
+    className="dayboard"
+    href="/days"
+    onClick={[Function]}
+  >
+    home
+  </a>
+  <ul
+    className="list"
+  >
+    Hi 
+    <div
+      className="side2"
+    >
+      <li
+        className="li-add-event"
+      >
+        <a
+          href="/new-event"
+          onClick={[Function]}
+        >
+          Add Event
+        </a>
+      </li>
+      <div
+        className="row1"
+      >
+        <li
+          className="li-filter"
+        >
+          <a
+            href="/filter"
+            onClick={[Function]}
+          >
+            Filter
+          </a>
+        </li>
+        <li
+          className="li-friends"
+        >
+          <a
+            href="/friends"
+            onClick={[Function]}
+          >
+            Friends
+          </a>
+        </li>
+      </div>
+      <li
+        className="li-logout"
+      >
+        <a
+          className="logout"
+          href="/login"
+          onClick={[Function]}
+        >
+          Logout
+        </a>
+         
+      </li>
+    </div>
+  </ul>
+</div>
+`;

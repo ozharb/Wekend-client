@@ -1,0 +1,27 @@
+.ReviewForm select, .ReviewForm label {
+  font-size: 1.1em;
+}
+
+.ReviewForm label {
+  display: inline-block;
+  margin: 10px 10px 20px;
+  margin-left: 0;
+}
+.done-add-event{
+  font-weight: bold;
+  font-family: 'Public Sans', sans-serif;
+  margin: 20px;
+  background-color: black;
+  padding:15px; 
+  border: none;
+}
+.add-event-form{
+  margin-left: 20px;
+}
+.posted-event{
+  text-align: center;
+  font-weight: normal;
+  font-family: 'Bungee Shade', cursive;
+  font-size: 50px;
+  transform: rotate(-15deg);
+}

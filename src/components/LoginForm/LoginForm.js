@@ -97,7 +97,7 @@ export default class LoginForm extends Component {
           </Input>
         </div>
        
-        <button type='submit'>
+        <button className='login-submit btn' type='submit'>
           Login
         </button>
          </>}

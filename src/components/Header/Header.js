@@ -39,23 +39,23 @@ export default class Header extends Component {
   renderLoginLink() {
     return (
       <div className='Header__not-logged-in'>
-        <div className="register">
+      
           <Link
             to='/register'>
             Register
         </Link>
-        </div>
-        <div className='log-in'>
+ 
+      
+     
           <Link
             to='/login'>
             Log in
         </Link>
-        </div>
+
       </div>
     )
   }
 
-  // static contextType = AppContext
 
   render() {
 
@@ -69,9 +69,7 @@ export default class Header extends Component {
       <nav className='Header'>
         <h1>
         {!TokenService.hasAuthToken() &&
-          <Link to='/days'>
-            {/* <i className="fas fa-cash-register"><FontAwesomeIcon className='logo' icon='cash-register' /></i> */}
-    
+          <Link to='/'>
             WEkend
           </Link>
   }

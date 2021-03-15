@@ -16,9 +16,7 @@ const ReMount = props => {
     );
   };
 class Logo extends Component {
-    // state = {
-    //     expand: true
-    //   }
+
  
     render(){
      

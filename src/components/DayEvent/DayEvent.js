@@ -24,21 +24,28 @@ export default class DayEvent extends Component {
         })
     }
     
+    
     render() {  
-       
+               const { event } = this.props
+              
         let username = 'user'
         const user =  window.localStorage.getItem(username)
-        const { event } = this.props
+        const attending = (event.attendees.length)
+        ? (!!event.attendees.find(i=>i.username===user))
+        : false
+        console.log("event ATENDEES:",event.attendees.length)
+        
+        const rsvpLink = (attending)?`cancel-rsvp`:`rsvp`
+        const path = `/${rsvpLink}/${event.id}`
          let alertStyle = event.alert ? {color: 'red'} : null
         let headingStyle = (event.title.length > 12 && this.state.expand)? 'Day-Events_heading-small' : 'Day-Events_heading-large'
         let time = convertTime(event.time)
         let timeNumbers = time.split('').slice(0, time.length - 2).join('')
         let timeLetters = time.split('').slice(time.length - 2).join('')
- 
         
         const notify = () => toast((t) => (
             <span className = 'alert-message'>
-               <b>{event.Event_Host===user?`You`: event.Host}</b>
+               <b>{event.Event_Host===user?`You`: event.Event_Host}</b>
         {'  '}changed this event.
         <br/>
               <button onClick={() => toast.dismiss(t.id)}>
@@ -47,7 +54,9 @@ export default class DayEvent extends Component {
             </span>
        
           ) 
+             ,console.log('alert')
               ,WekendApiService.turnOffAlert(event.id)
+         
             .then(this.context.changeEventAlert(event.id))
               .catch(error => { console.error({ error }) })
             
@@ -67,7 +76,8 @@ export default class DayEvent extends Component {
             ?<div className = 'Event-top-and-bottom'>
              <div className='Event-content-details'>
                 <div className="Event-column-1">
-                  {host}
+                  {host} <br/>
+                  @ {event.place}
                 </div>
                 <div className="Event-column-2">
                     {timeNumbers}
@@ -79,20 +89,37 @@ export default class DayEvent extends Component {
     Deets:{event.details.length===0? 'No deets':event.details.split(/\n \r|\n/).map((para, i) =>
                     <p key={i}>{para}</p>)}
           </div>          
-    {event.Event_Host === user  ?<div className='Event-edit-container'>
+    {event.Event_Host === user 
+     ?<div className='Event-edit-container'>
                                  <Link
                         to={`/change-event/${event.id}`}
                         className='Event-edit-link'>
                         edit
                      </Link>
+                     <Link
+                        to={{pathname:`/delete-event/${event.id}`,
+                            state:{ title: event.title  }
+                        }}
+                        className='Event-edit-link'>
+                        delete
+                     </Link>
                         </div>
-                     : null}
+                     : <div className='Event-edit-container'>
+                     <Link
+            to={{pathname: path,
+            state: {
+                title: event.title
+            }}}
+            className='Event-edit-link'>
+            {attending?`change rsvp`: `rsvp`}
+         </Link>
+            </div>}
                 </div>
                
                 </div>
             : null
             
-       const alertOrExand = event.alert? notify : this.handleExpand
+       const alertOrExpand = event.alert? notify : this.handleExpand
 
         return (
             <>
@@ -105,7 +132,7 @@ export default class DayEvent extends Component {
                     <button
                         type='button'
                         aria-label='expand'
-                        onClick={alertOrExand}
+                        onClick={alertOrExpand}
                         className='Event__expand-event-button'>
                         <div className="Event-Content">
                             <div className='event-title-attendees'>

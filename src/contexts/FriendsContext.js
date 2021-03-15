@@ -8,7 +8,8 @@ const FriendsContext = React.createContext({
     clearError: () => { },
     setFriends: () => { },
     confirmFriend: () => { },
-    changeFriendFilter: () => { },
+    changeReceiverFilter: () => { },
+    changeSenderFilter: () => { },
     deleteFriend: () => { },
     addFriend: () => { },
 })
@@ -41,21 +42,23 @@ export class FriendsProvider extends Component {
                     {...i, confirmed:true})
         })
     }
-//*** test this ***//
-    changeFriendFilter = (friendId, userId, trueOrFalse) => {
-        let friendship = this.state.friends.find(fr => (fr.friend_id === friendId && userId === fr.sender_id) ||
-            (fr.friend_id === friendId && userId === fr.receiver_id))
-        friendship.friend_id === friendship.receiver_id
-            ? friendship.sender_filter = trueOrFalse
-            : friendship.receiver_id = trueOrFalse
-        console.log('frienship filter:', friendship)
+
+    changeReceiverFilter = (friendId, userId, trueOrFalse) => {
+        console.log('Receiver filter:', trueOrFalse)
         this.setState({
             friends: this.state.friends.map(i =>
                 ((i.friend_id !== friendId && userId !== i.sender_id) || (i.friend_id !== friendId && userId !== i.receiver_id)) ? i :
-                    friendship)
+                    {...i,receiver_filter: trueOrFalse})
         })
     }
-
+    changeSenderFilter = (friendId, userId, trueOrFalse) => {
+ console.log('SENDER filter:', trueOrFalse)
+        this.setState({
+            friends: this.state.friends.map(i =>
+                ((i.friend_id !== friendId && userId !== i.sender_id) || (i.friend_id !== friendId && userId !== i.receiver_id)) ? i :
+                    {...i,sender_filter: trueOrFalse})
+        })
+    }
     deleteFriend = (friendId, userId) => {
         this.setState({
             friends: this.state.friends.filter(i =>
@@ -81,7 +84,8 @@ export class FriendsProvider extends Component {
             clearError: this.clearError,
             setFriends: this.setFriends,
             confirmFriend: this.confirmFriend,
-            changeFriendFilter: this.changeFriendFilter,
+            changeReceiverFilter: this.changeReceiverFilter,
+            changeSenderFilter: this.changeSenderFilter,
             deleteFriend: this.deleteFriend,
             addFriend: this.addFriend,
         }

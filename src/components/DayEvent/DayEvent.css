@@ -52,7 +52,11 @@
 }
 .Event-edit-container{
     float: right;
-  
+
+}.Event-edit-container>a{
+
+    margin-left: 8px;
+
 }
 .time-letters{
    font-size: 20px;
@@ -108,7 +112,7 @@ width: 100px;
     font-family: 'Monoton', cursive;
  font-size: 50px;
  font-size: bold;
- color: #ff4000;
+ /* color: #ff4000; */
 }
 .Event-bottom-row{
     font-size: 20px;
@@ -116,7 +120,7 @@ width: 100px;
     margin-bottom: 20px;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 600px) {
     .Header{
     height: 42px;
     }

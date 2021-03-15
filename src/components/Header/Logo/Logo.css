@@ -21,12 +21,13 @@
 .reload:focus{
    transition: ease-in-out, width .35s ease-in-out;
 }
-.fas{
+.fa-moon{
    color: black;
-   font-size: 50px;
+   font-size: 70px;
 
    position: absolute;
-   margin-top: 20px;
+   margin-right: 70px;
+   margin-top: 7px;
     width: 70px;
     height: 70px;
    }
@@ -112,7 +113,7 @@
 
     
    
- @media screen and (min-width: 450px) {
+ @media screen and (min-width: 600px) {
    .circle {
       width: 70px;
       height: 70px;

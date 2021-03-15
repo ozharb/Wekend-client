@@ -1,3 +1,9 @@
 .founder-user-heading{
     font-size: 20px;
 }
+.request-friend-yes{
+color: green;
+}
+.error-message-friend-request>a{
+    color: orangered;
+}

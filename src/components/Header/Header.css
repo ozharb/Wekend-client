@@ -36,13 +36,12 @@ color: white;
 .Header__not-logged-in {
 display: flex;
 flex-direction: row;
-}
-
-.Header__not-logged-in .Hyph {
-display: flex;
-display: none;
 
 }
+.Header__not-logged-in >a{
+    margin-left: 5px;
+}
+
 .user-profile{
 display: flex;
 
@@ -148,7 +147,7 @@ background-color: var(--toggler-bg-color);
 transition: all var(--timeout);
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 600px) {
 .Header{
 height: 42px;
 }

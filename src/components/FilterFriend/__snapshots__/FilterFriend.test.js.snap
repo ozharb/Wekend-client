@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div
+  className="Friends-List"
+>
+  <div
+    className="current-friend"
+  >
+    <div
+      className="friend-not-deleting"
+    >
+      <h2
+        className="large-font"
+      >
+        
+      </h2>
+      <div
+        className="delete-friend-container"
+      >
+        <button
+          className="delete-friend"
+          onClick={[Function]}
+        >
+          filter is off
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import FriendsContext from '../../contexts/FriendsContext'
 import WekendApiService from '../../services/Wekend-api-service'
-import CurrentFriend from '../../components/CurrentFriend/CurrentFriend'
 import RequestSent from '../../components/RequestSent/RequestSent'
 import RequestReceived from '../../components/RequestReceived/RequestReceived'
 import './FriendsPage.css'
+import CurrentFriend from '../../components/CurrentFriend/CurrentFriend'
 
 export default class FriendsPage extends Component {
     static contextType = FriendsContext
@@ -26,9 +26,9 @@ export default class FriendsPage extends Component {
         let allFriends = friends.filter(friend=> 
             friend.confirmed === true)
 
-        return (!allFriends)?<p>No amigos at the moment</p> : allFriends.map((friend, i) =>
+        return (!allFriends.length)?<p>No amigos at the moment...</p> : allFriends.map((friend, i) =>
           <CurrentFriend
-            key={friend.receiver_id + friend.sender_id}
+            key={1+ friend.receiver_id + friend.sender_id}
             friend={friend}
           />
         )
@@ -41,7 +41,7 @@ export default class FriendsPage extends Component {
             (!friend.confirmed)&&(friend.friend_id===friend.receiver_id))
 
          
-        return (!friendRequests)? <p>You have no pending friend requests</p>:friendRequests.map(friend =>
+        return (!friendRequests.length)? <p>You have no pending friend requests</p>:friendRequests.map(friend =>
           <RequestSent
             key={friend.receiver_id+friend.sender_id}
             friend={friend}

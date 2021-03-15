@@ -12,21 +12,10 @@
 }
 
 .LoginForm > button{
-    background-color:Transparent;
-    border-radius: 20px;
-    
-    border-style: solid;
-    border-color: white;
-    color: white;
-    display: block;
-    font-size: 12px;
-    font-weight: bold;
-    height: 70px;
-    padding: 8px;
-    text-align: center;
-    text-decoration: none;
-    width: 90px;
-    cursor: pointer;
+background-color: black;
+padding: 20px;
+border: none;
+color: white;
 }
 
 .LoginForm > button:hover{

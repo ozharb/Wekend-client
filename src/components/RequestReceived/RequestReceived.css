@@ -65,7 +65,7 @@
 .yes-no-buttons>button{
      border: none; 
 }
-   @media screen and (min-width: 450px) {
+   @media screen and (min-width: 600px) {
        .Header{
        height: 42px;
        }

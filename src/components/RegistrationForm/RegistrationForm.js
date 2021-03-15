@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { Input, Required } from '../../Utils/Utils'
 import AuthApiService from '../../services/auth-api-service'
 import './RegistrationForm.css'
@@ -133,6 +134,7 @@ state = { error: null,
         <button type='submit'>
           Register
         </button>
+        <Link to='/login'>Already have an account?</Link>
         </>}
       </form>
     )

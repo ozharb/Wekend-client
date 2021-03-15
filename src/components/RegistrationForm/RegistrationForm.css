@@ -1,7 +1,11 @@
 
 .RegistrationForm{
-padding-bottom: 300px;
+padding-bottom: 30px;
+margin: 10px;
 }
+.RegistrationForm>a{
+ color: black;
+    }
 .green{
     color:green;
     font-size: 20px;
@@ -81,21 +85,12 @@ padding-bottom: 300px;
  color: gray;
 }
 .RegistrationForm > button{
-    background-color:Transparent;
-    border-radius: 20px;
-    
-    border-style: solid;
-    border-color: white;
-    color: white;
-    display: block;
-    font-size: 12px;
-    font-weight: bold;
-    height: 70px;
-    padding: 8px;
-    text-align: center;
-    text-decoration: none;
-    width: 90px;
+background-color: black;
+color: white;
+border: none;
+padding: 20px;
     cursor: pointer;
+    margin: 20px;
 }
 
 .RegistrationForm > button:hover{

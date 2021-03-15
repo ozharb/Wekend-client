@@ -159,6 +159,21 @@ const WekendApiService = {
                 (!res.ok) && res.json().then(e => Promise.reject(e))
             )
     },
+    deleteEvent(eventId) {
+        return fetch(`${config.API_ENDPOINT}/events`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': 'application/json',
+                'authorization': `bearer ${TokenService.getAuthToken()}`,
+            },
+            body: JSON.stringify({
+                event_id: eventId,
+            }),
+        })
+            .then(res =>
+                (!res.ok) && res.json().then(e => Promise.reject(e))
+            )
+    },
     postAttendance(eventId) {
         return fetch(`${config.API_ENDPOINT}/attendance`, {
             method: 'POST',
@@ -176,8 +191,22 @@ const WekendApiService = {
                     : res.json()
             )
     },
+    deleteAttendance(eventId) {
+        return fetch(`${config.API_ENDPOINT}/attendance`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': 'application/json',
+                'authorization': `bearer ${TokenService.getAuthToken()}`,
+            },
+            body: JSON.stringify({
+                event_id: eventId
+            }),
+        })
+            .then(res =>
+                (!res.ok) && res.json().then(e => Promise.reject(e))
+            )
+    },
     turnOffAlert(eventId) {
-        console.log('ALERT ID:', eventId)
         return fetch(`${config.API_ENDPOINT}/attendance`, {
             method: 'PATCH',
             headers: {

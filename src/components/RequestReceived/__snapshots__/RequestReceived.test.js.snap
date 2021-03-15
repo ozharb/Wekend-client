@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div
+  className="Friends-List"
+>
+  <div
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      Object {
+        "position": "fixed",
+        "zIndex": 9999,
+      }
+    }
+  />
+  <div
+    className="current-friend"
+  >
+    <div
+      className="friend-not-deleting-accepting"
+    >
+      <div
+        className="accept-friend-container"
+      >
+        <button
+          className="accept-friend"
+          onClick={[Function]}
+        >
+          accept
+        </button>
+      </div>
+      <h2
+        className="large-font"
+      >
+        
+      </h2>
+      <div
+        className="delete-friend-container"
+      >
+        <button
+          className="delete-friend"
+          onClick={[Function]}
+        >
+          delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
