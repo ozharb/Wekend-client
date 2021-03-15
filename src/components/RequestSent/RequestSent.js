@@ -1,11 +1,6 @@
 import toast, { Toaster } from 'react-hot-toast';
 import React, { Component } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link, withRouter } from 'react-router-dom'
 import WekendApiService from '../../services/Wekend-api-service'
-
-// import { Link } from 'react-router-dom'
-// import { ThingStarRating } from '../ThingStarRating/ThingStarRating'
 import './RequestSent.css'
 import FriendsContext from '../../contexts/FriendsContext';
 
@@ -54,14 +49,7 @@ const userId = friend.sender === user ? friend.sender_id : friend.receiver_id
   .catch(error => { console.error({ error }) })
   }
     render() {
-
-        let username = 'user'
-        const user = window.localStorage.getItem(username)
         const { friend } = this.props
-
-        // const expandButtonText = this.state.expand
-        // ?  <i className="fas fa-chevron-down"><FontAwesomeIcon className='chevron' icon='chevron-down' /></i> 
-        // :   <i className="fas fa-chevron-right"><FontAwesomeIcon className='chevron' icon='chevron-right' /></i>
 
         let friendClassName = (friend.friend.length > 12) ? 'small-font' : 'large-font'
         return (

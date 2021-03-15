@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './LandingPage.css'
 import { Link } from "react-router-dom"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import main from './images/wekend-landing-image.jpg'
 import smallLogo from './images/logo512.png'
 import speechBubble from './images/speech-bubble.png'

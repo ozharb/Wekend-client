@@ -3,7 +3,7 @@ import TokenService from './token-service'
 
 const WekendApiService = {
     getEvents() {
-        return fetch(`${config.API_ENDPOINT}/events/all`, {
+        return fetch(`${config.REACT_APP_API_BASE}/events/all`, {
             headers: {
                 'authorization': `bearer ${TokenService.getAuthToken()}`,
             },
@@ -15,7 +15,7 @@ const WekendApiService = {
             )
     },
     getFriends() {
-        return fetch(`${config.API_ENDPOINT}/friends`, {
+        return fetch(`${config.REACT_APP_API_BASE}/friends`, {
             headers: {
                 'authorization': `bearer ${TokenService.getAuthToken()}`,
             },
@@ -27,7 +27,7 @@ const WekendApiService = {
             )
     },
     findFriend(usernameToFind) {
-        return fetch(`${config.API_ENDPOINT}/friends/find`, {
+        return fetch(`${config.REACT_APP_API_BASE}/friends/find`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -45,7 +45,7 @@ const WekendApiService = {
     },
     postFriendRequest(receiverId) {
 
-        return fetch(`${config.API_ENDPOINT}/friends/request`, {
+        return fetch(`${config.REACT_APP_API_BASE}/friends/request`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -62,7 +62,7 @@ const WekendApiService = {
             )
     },
     acceptFriendRequest(senderId) {
-        return fetch(`${config.API_ENDPOINT}/friends/request`, {
+        return fetch(`${config.REACT_APP_API_BASE}/friends/request`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
@@ -78,7 +78,7 @@ const WekendApiService = {
             )
     },
     deleteFriendship(friendId) {
-        return fetch(`${config.API_ENDPOINT}/friends/`, {
+        return fetch(`${config.REACT_APP_API_BASE}/friends/`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json',
@@ -93,7 +93,7 @@ const WekendApiService = {
             )
     },
     filterFriend(friendId, trueOrFalse) {
-        return fetch(`${config.API_ENDPOINT}/friends/`, {
+        return fetch(`${config.REACT_APP_API_BASE}/friends/`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
@@ -111,7 +111,7 @@ const WekendApiService = {
             )
     },
     postEvent(titleVal, timeVal, placeVal, detailsVal, dayVal) {
-        return fetch(`${config.API_ENDPOINT}/events`, {
+        return fetch(`${config.REACT_APP_API_BASE}/events`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -132,7 +132,7 @@ const WekendApiService = {
             )
     },
     getEvent(eventId) {
-        return fetch(`${config.API_ENDPOINT}/events/event/${eventId}`, {
+        return fetch(`${config.REACT_APP_API_BASE}/events/event/${eventId}`, {
             headers: {
                 'authorization': `bearer ${TokenService.getAuthToken()}`,
             },
@@ -145,7 +145,7 @@ const WekendApiService = {
     },
 
     changeEvent(fieldsToUpdate) {
-        return fetch(`${config.API_ENDPOINT}/events`, {
+        return fetch(`${config.REACT_APP_API_BASE}/events`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
@@ -160,7 +160,7 @@ const WekendApiService = {
             )
     },
     deleteEvent(eventId) {
-        return fetch(`${config.API_ENDPOINT}/events`, {
+        return fetch(`${config.REACT_APP_API_BASE}/events`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json',
@@ -175,7 +175,7 @@ const WekendApiService = {
             )
     },
     postAttendance(eventId) {
-        return fetch(`${config.API_ENDPOINT}/attendance`, {
+        return fetch(`${config.REACT_APP_API_BASE}/attendance`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -192,7 +192,7 @@ const WekendApiService = {
             )
     },
     deleteAttendance(eventId) {
-        return fetch(`${config.API_ENDPOINT}/attendance`, {
+        return fetch(`${config.REACT_APP_API_BASE}/attendance`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json',
@@ -207,7 +207,7 @@ const WekendApiService = {
             )
     },
     turnOffAlert(eventId) {
-        return fetch(`${config.API_ENDPOINT}/attendance`, {
+        return fetch(`${config.REACT_APP_API_BASE}/attendance`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

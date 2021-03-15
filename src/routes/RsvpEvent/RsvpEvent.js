@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import EventsContext from '../../contexts/EventsContext'
 import WekendApiService from '../../services/Wekend-api-service'
-import { Input, Required } from '../../Utils/Utils'
 import './RsvpEvent.css'
 
 export default class RsvpEvent extends Component {
@@ -32,7 +31,7 @@ handleCancel = e =>{
   
   render() {
     const { title } = this.props.location.state
-    console.log("TITLE:", title)
+
     return (
       <section className='add-event-form'>
            

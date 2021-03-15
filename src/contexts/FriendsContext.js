@@ -35,7 +35,6 @@ export class FriendsProvider extends Component {
         this.setState({ friends })
     }
     confirmFriend = (friendId, userId ) => {
-        console.log('friend:', friendId, 'user:', userId)
         this.setState({
             friends: this.state.friends.map(i =>
                 (i.friend_id !== friendId && userId !== i.receiver_id) ? i :
@@ -44,7 +43,6 @@ export class FriendsProvider extends Component {
     }
 
     changeReceiverFilter = (friendId, userId, trueOrFalse) => {
-        console.log('Receiver filter:', trueOrFalse)
         this.setState({
             friends: this.state.friends.map(i =>
                 ((i.friend_id !== friendId && userId !== i.sender_id) || (i.friend_id !== friendId && userId !== i.receiver_id)) ? i :
@@ -52,7 +50,6 @@ export class FriendsProvider extends Component {
         })
     }
     changeSenderFilter = (friendId, userId, trueOrFalse) => {
- console.log('SENDER filter:', trueOrFalse)
         this.setState({
             friends: this.state.friends.map(i =>
                 ((i.friend_id !== friendId && userId !== i.sender_id) || (i.friend_id !== friendId && userId !== i.receiver_id)) ? i :

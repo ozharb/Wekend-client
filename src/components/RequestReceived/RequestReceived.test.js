@@ -14,7 +14,6 @@ it('renders the UI as expected', () => {
      </BrowserRouter>
     )
 
-    
     .toJSON();
  
   expect(tree).toMatchSnapshot();  

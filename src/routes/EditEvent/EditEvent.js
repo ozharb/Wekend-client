@@ -80,8 +80,6 @@ const fieldsToUpdate = {
     WekendApiService.changeEvent(fieldsToUpdate)
   
       .then((event) => {
-        // console.log('fields to update:', fieldsToUpdate)
-        // this.context.changeEvent(fieldsToUpdate)
         this.setState({sumbmitted: true})
         setTimeout(() => {
           this.props.history.goBack()

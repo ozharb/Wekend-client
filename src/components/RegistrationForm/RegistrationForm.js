@@ -36,7 +36,7 @@ state = { error: null,
      this.props.onRegistrationSuccess()
   })
   .catch(res => {
-    console.log(res)
+
     this.setState({ error: res.error })
   })
   }

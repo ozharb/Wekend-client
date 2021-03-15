@@ -1,11 +1,8 @@
 import toast, { Toaster } from 'react-hot-toast';
 import React, { Component } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link, withRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import WekendApiService from '../../services/Wekend-api-service'
 
-// import { Link } from 'react-router-dom'
-// import { ThingStarRating } from '../ThingStarRating/ThingStarRating'
 import './DayEvent.css'
 import EventsContext from '../../contexts/EventsContext';
 
@@ -33,7 +30,7 @@ export default class DayEvent extends Component {
         const attending = (event.attendees.length)
         ? (!!event.attendees.find(i=>i.username===user))
         : false
-        console.log("event ATENDEES:",event.attendees.length)
+    
         
         const rsvpLink = (attending)?`cancel-rsvp`:`rsvp`
         const path = `/${rsvpLink}/${event.id}`
@@ -54,7 +51,6 @@ export default class DayEvent extends Component {
             </span>
        
           ) 
-             ,console.log('alert')
               ,WekendApiService.turnOffAlert(event.id)
          
             .then(this.context.changeEventAlert(event.id))
@@ -68,9 +64,6 @@ export default class DayEvent extends Component {
          <span className='host-name'>{event.Event_Host}'s</span> hosting
        </> 
        
-        // const expandButtonText = this.state.expand
-        // ?  <i className="fas fa-chevron-down"><FontAwesomeIcon className='chevron' icon='chevron-down' /></i> 
-        // :   <i className="fas fa-chevron-right"><FontAwesomeIcon className='chevron' icon='chevron-right' /></i>
         const eventDetails = this.state.expand
 
             ?<div className = 'Event-top-and-bottom'>
@@ -123,7 +116,6 @@ export default class DayEvent extends Component {
 
         return (
             <>
-                {/* <Link to={`/thing/${thing.id}`} className='ThingListItem'> */}
                 <div className='Day-Events'>
           
      
@@ -153,31 +145,9 @@ export default class DayEvent extends Component {
                         </div>
                     </button>
                 </div>
-                {/* </Link> */}
+    
             </>
         )
     }
 }
 
-// function readableReviewCount(number) {
-//   switch(number) {
-//     case 0:
-//       return 'no reviews yet'
-
-//     case 1:
-//       return `based on 1 review`
-
-//     default:
-//       return `based on ${number} reviews`
-//   }
-// }
-
-// function truncate(text) {
-//   const words = text.split(' ')
-
-//   if (words.length > 10) {
-//     return words.slice(0, 10).join(' ') + ' ...'
-//   }
-
-//   return text
-// }

@@ -21,11 +21,10 @@ export default class DayPage extends Component {
     renderEvents() {
         const { events = [] } = this.context
        const {day} = this.props.match.params
-     console.log('day:', day)   
         let dayEvents = events.filter(event=> 
             event.day === day)
             dayEvents = dayEvents.sort((a,b)=> parseInt(a.time)-parseInt(b.time))
-            console.log("dayevents:", dayEvents)
+
         return dayEvents.map(event =>
           <DayEvent
             key={event.id}

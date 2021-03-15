@@ -31,7 +31,6 @@ export default class LoginForm extends Component {
           password.value = ''
 
           window.localStorage.setItem(user_name, res.username)
-           console.log(res)
 
           TokenService.saveAuthToken(res.authToken)
           this.props.onLoginSuccess()

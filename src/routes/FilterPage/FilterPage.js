@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import FriendsContext from '../../contexts/FriendsContext'
 import WekendApiService from '../../services/Wekend-api-service'
 import FilterFriend from '../../components/FilterFriend/FilterFriend'
-import RequestSent from '../../components/RequestSent/RequestSent'
-import RequestReceived from '../../components/RequestReceived/RequestReceived'
 import './FilterPage.css'
 
 export default class Filterpage extends Component {

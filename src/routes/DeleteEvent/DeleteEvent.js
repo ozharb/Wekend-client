@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import EventsContext from '../../contexts/EventsContext'
 import WekendApiService from '../../services/Wekend-api-service'
-import { Input, Required } from '../../Utils/Utils'
 import './DeleteEvent.css'
 
 export default class DeleteEvent extends Component {

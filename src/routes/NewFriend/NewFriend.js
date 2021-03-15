@@ -3,7 +3,6 @@ import EventsContext from '../../contexts/EventsContext'
 import WekendApiService from '../../services/Wekend-api-service'
 import { Input, Required } from '../../Utils/Utils'
 import FoundUser from '../../components/FoundUser/FoundUser'
-import AppForm from '../../Utils/AppForm'
 import './NewFriend.css'
 
 export default class NewFriend extends Component {
@@ -36,8 +35,6 @@ validateName = () => {
 this.setState({results: []})
     const  nameSearch = e.target['name'].value
 
-
-  console.log('nameSearch:',nameSearch )
     WekendApiService.findFriend(nameSearch)
   
       .then((results) => {
