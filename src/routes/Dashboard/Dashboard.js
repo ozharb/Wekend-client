@@ -33,6 +33,7 @@ export default class Dashboard extends Component {
         const { error } = this.context
         return (
             <section  className='Dashboard'>
+                <h3>DayBoard</h3>
                 {error
                     ? <p className='red'>There was an error, try again</p>
                     : this.renderDayLinks()}

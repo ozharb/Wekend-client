@@ -54,7 +54,7 @@
     float: right;
 
 }.Event-edit-container>a{
-
+    font-size: medium;
     margin-left: 8px;
 
 }
@@ -106,21 +106,26 @@ width: 100px;
 
 .Event-column-1{
  margin: 10px;
-
+ font-size: medium;
+ line-height: 1.4em; 
+}
+.deets{
+    letter-spacing: .3em;
 }
 .Event-column-2{
     font-family: 'Monoton', cursive;
  font-size: 50px;
  font-size: bold;
- /* color: #ff4000; */
+
 }
 .Event-bottom-row{
+    letter-spacing: .15em;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 670px) {
     .Header{
     height: 42px;
     }

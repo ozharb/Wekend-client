@@ -79,7 +79,7 @@ export default class DayEvent extends Component {
             </div>
             <div className = 'event-details'>
     <div className='Event-bottom-row'> 
-    Deets:{event.details.length===0? 'No deets':event.details.split(/\n \r|\n/).map((para, i) =>
+   <span className = 'deets'> deets:</span>{event.details.length===0? 'No deets':event.details.split(/\n \r|\n/).map((para, i) =>
                     <p key={i}>{para}</p>)}
           </div>          
     {event.Event_Host === user 

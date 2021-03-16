@@ -27,7 +27,9 @@
 
   margin-right: 3px;
 }
-
+li>a{
+    text-decoration: none;
+}
 .list>.side2>li{
    
     padding: 5px;

@@ -17,8 +17,14 @@ padding: 20px;
 border: none;
 color: white;
 }
-
-.LoginForm > button:hover{
-    border-color: #3CACD5;
-    color: #3CACD5;
-}
+.Loader-login {
+    will-change: transform;
+    overflow: hidden;
+    border: 12px solid black;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+  
+  }

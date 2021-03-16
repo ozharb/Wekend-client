@@ -5,17 +5,21 @@ import AuthApiService from '../../services/auth-api-service'
 import './RegistrationForm.css'
 
 export default class RegistrationForm extends Component {
-state = { error: null,
+state = { loading: false,
+   error: null,
          registered: false }
 
   static defaultProps = {
     onRegistrationSuccess: () => {}
   }
 
-  
+  setLoading = (trueOrFalse) =>{
+    this.setState({loading: trueOrFalse})
+}
 
   handleSubmit = ev => {
     ev.preventDefault()
+    this.setLoading(true)
     const { fullname, nickname, username, city, password } = ev.target
     this.setState({ error: null })
       AuthApiService.postUser({
@@ -32,11 +36,12 @@ state = { error: null,
     username.value = ''
     password.value = ''
     city.value = ''
-    this.setState({registered:true})    
+    this.setLoading(false)
+    this.setState({registered:true})   
      this.props.onRegistrationSuccess()
   })
   .catch(res => {
-
+    this.setLoading(false)
     this.setState({ error: res.error })
   })
   }
@@ -131,8 +136,9 @@ state = { error: null,
             id='city'>
           </Input>
         </div>
-        <button type='submit'>
-          Register
+    
+            <button type='submit'>
+          {this.state.loading? 'Loading...':'Register'}
         </button>
         <Link to='/login'>Already have an account?</Link>
         </>}

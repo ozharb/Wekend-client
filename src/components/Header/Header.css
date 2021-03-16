@@ -147,7 +147,7 @@ background-color: var(--toggler-bg-color);
 transition: all var(--timeout);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 670px) {
 .Header{
 height: 42px;
 }

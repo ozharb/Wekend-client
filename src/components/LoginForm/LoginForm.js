@@ -2,23 +2,30 @@ import React, { Component } from 'react'
 import TokenService from '../../services/token-service'
 import AuthApiService from '../../services/auth-api-service'
 import { Input } from '../../Utils/Utils'
-// import AppContext from '../../contexts/AppContext'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import './LoginForm.css'
 
 export default class LoginForm extends Component {
   static defaultProps = {
     onLoginSuccess: () => {}
   }
-  // static contextType = AppContext
 
-  state = { error: null,
-            loginStatus: false }
 
+  state = {
+    loading: false,
+    error: null,
+    loginStatus: false 
+  }
+  setLoading = (trueOrFalse) =>{
+    this.setState({loading: trueOrFalse})
+}
   
 
   handleSubmitJwtAuth = ev => {
       ev.preventDefault()
       this.setState({ error: null })
+      this.setLoading(true)
       const { username, password } = ev.target
       AuthApiService.postLogin({
         username: username.value,
@@ -34,10 +41,12 @@ export default class LoginForm extends Component {
 
           TokenService.saveAuthToken(res.authToken)
           this.props.onLoginSuccess()
+          this.setLoading(false)
           this.setState({loginStatus: true})
         
         })
         .catch(res => {
+          this.setLoading(false)
           this.setState({ error: res.error })
         })
     }
@@ -95,10 +104,18 @@ export default class LoginForm extends Component {
            
           </Input>
         </div>
-       
-        <button className='login-submit btn' type='submit'>
-          Login
-        </button>
+        {this.state.loading ?
+                <div className='loader-container-login'>
+                <div className='Loader-login'>
+                <div className="loader-circle-overlay"  > 
+                <i className="fas fa-moon small-moon"><FontAwesomeIcon className='small-moon' icon='moon' /></i>
+                </div>
+                    </div>
+                    </div>
+                    :  <button className='login-submit btn' type='submit'>
+                    Login
+                  </button>}
+        
          </>}
       </form>
     )

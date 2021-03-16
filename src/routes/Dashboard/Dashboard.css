@@ -12,9 +12,12 @@ color: black;
 margin-bottom: 40px;
 text-decoration: none;
 }
-.Dashboard> a:hover{
-font-size: 70px;
-}
-.Dashboard> a:focus{
-font-size: 70px;
-}
+
+@media screen and (min-width: 670px) {
+    .Dashboard> a:hover{
+        font-size: 70px;
+        }
+        .Dashboard> a:focus{
+        font-size: 70px;
+        }
+    }
