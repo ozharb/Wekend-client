@@ -9,7 +9,7 @@
    border-radius: 50%;
    margin-top: 0px;
    display: flex;
-   justify-content: center;
+ justify-content: center;
 }
 .reload{
    color: black;
@@ -22,11 +22,12 @@
    transition: ease-in-out, width .35s ease-in-out;
 }
 .fa-moon{
+   will-change: transform;
    color: black;
    font-size: 70px;
 
    position: absolute;
-   margin-right: 70px;
+margin-left: -.14em;
    margin-top: 7px;
     width: 70px;
     height: 70px;
@@ -68,7 +69,7 @@
    background: black;
    margin-top: 0px;
    display: flex;
-   justify-content: center;
+
 }
 .circleFill{
    overflow: hidden;
