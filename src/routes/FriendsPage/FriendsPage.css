@@ -1,54 +1,54 @@
 /* .Day-Events:nth-child(even){
-    background: black;
+  background: black;
 
 }
 .Day-Events:nth-child(odd){
 
-  background-color: green;
+background-color: green;
 } */
 .FriendPage>h2{
-    font-size: 50px;
-    font-family: 'Public Sans', sans-serif;
- 
+  font-size: 50px;
+  font-family: 'Public Sans', sans-serif;
+
 }
 .FriendPage{
-  padding-bottom: 40px;
+padding-bottom: 40px;
 }
 .friends-header{
-  margin-top: 90px;
-  display: flex;
-  justify-content: space-between;
+margin-top: 90px;
+display: flex;
+justify-content: space-between;
 }
 .friends-header>h2{
 font-size: 40px;
 }
 .get-new-friends-link{
-  text-align: center;
+text-align: center;
+margin-top: 25px;
+margin-right: 10px;
+height: 30px;
+font-size: 15px;
+font-family: 'Public Sans', sans-serif;
+text-decoration: none;
+color: orangered;
+padding: 20px 40px 40px 40px;
+border: solid;
+letter-spacing: .3em;
+margin-left: 20px;
+}
+
+@media screen and (min-width: 550px) {
+.get-new-friends-link{
   margin-top: 25px;
   margin-right: 10px;
 height: 30px;
-  font-size: 15px;
-font-family: 'Public Sans', sans-serif;
- text-decoration: none;
-color: orangered;
-padding: 20px 40px 40px 40px;
+    font-size: 15px;
+  font-family: 'Public Sans', sans-serif;
+  text-decoration: none;
+  color: orangered;
+padding: 10px 2px 0 4px;
   border: solid;
   letter-spacing: .3em;
   margin-left: 20px;
 }
-
-@media screen and (min-width: 550px) {
-  .get-new-friends-link{
-    margin-top: 25px;
-    margin-right: 10px;
-  height: 30px;
-      font-size: 15px;
-    font-family: 'Public Sans', sans-serif;
-    text-decoration: none;
-    color: orangered;
-  padding: 10px 2px 0 4px;
-    border: solid;
-    letter-spacing: .3em;
-    margin-left: 20px;
-  }
 }

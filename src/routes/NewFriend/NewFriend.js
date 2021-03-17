@@ -78,7 +78,7 @@ this.setState({results: []})
               
                 {this.state.requested ? <h3 className ='posted-event requested'>Request Requested!</h3>:
                 <fieldset className='friend-search-form'>
-                  <legend><h3>Find Your friend</h3></legend>
+                  <legend><h3>Find a friend</h3></legend>
                 <form onSubmit={this.handleSearch}
                 onCancel = {this.handleCancel}>
                     <label htmlFor='Event-title-input'>
