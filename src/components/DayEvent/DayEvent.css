@@ -111,7 +111,8 @@ width: 100px;
  margin-top: 14px;
 }
 .deets{
-    letter-spacing: .3em;
+font-size: medium;
+letter-spacing: .4em;
 
 }
 .whos-going{
@@ -131,9 +132,11 @@ letter-spacing: .14em;
     letter-spacing: .15em;
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
-
+.Event-bottom-row>p{
+  margin: 0px;
+}
 @media screen and (min-width: 770px) {
     .Header{
     height: 42px;
