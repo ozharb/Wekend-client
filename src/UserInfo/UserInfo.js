@@ -1,14 +1,12 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
 import './UserInfo.css'
-// import AppContext from '../contexts/AppContext'
+
 import TokenService from '../services/token-service'
 
 
 class UserInfo extends Component {
   
-
-// static contextType = AppContext;
 
 handleLogoutClick = () => {
     let username = 'user'
@@ -18,8 +16,7 @@ handleLogoutClick = () => {
   }
 
 render(){
-    // const { lists=[] } = this.context
-  
+
     let username = 'user'
     const user =  window.localStorage.getItem(username)
   return (

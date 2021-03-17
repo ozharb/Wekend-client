@@ -26,3 +26,16 @@
   font-size: 50px;
   transform: rotate(-15deg);
 }
+.loader-edit_form-container{
+ margin-top: 150px;
+}
+
+.loader-edit_form-overlay {
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: white;
+  }

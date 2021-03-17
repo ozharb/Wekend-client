@@ -4,8 +4,8 @@ import { Link } from "react-router-dom"
 import main from './images/wekend-landing-image.jpg'
 import smallLogo from './images/logo512.png'
 import speechBubble from './images/speech-bubble.png'
-// import allLists from './images/budgitz-screenshot-all-lists.jpg'
-// import userStatus from './images/budgitz-screenshot-user-info.jpg'
+import alertScreenshot from './images/alert-screenshot.jpg'
+import expandedScreesnshot from './images/wekend-expanded-screenshot.jpg'
 
 export default class RegistrationPage extends Component {
   static defaultProps = {
@@ -27,15 +27,18 @@ export default class RegistrationPage extends Component {
  </header>
         <section className="app-features">
         
-
-          {/* <img src={allLists} width="200" className="app-screenshot home" alt="app-screesnshot-home-page" /> */}
           <p> Make friends, post events, and see what's up this weekend</p>
         </section>
         <section className ='friends-image'>
-          <img src={main} width="300" className="app-screenshot-main" alt="app-screesnshot-main" />
-         
+          <img src={main} width="600" className="banner-main" alt="drawing of two friends using the app" />
       </section>
+     
        <p>See who's doing what when so can you do that too with them!</p>
+        <img src={alertScreenshot} width="300" className="screenshot" alt="screenshot of update alert" />
+<p>RSVP to your friends' events and see when details get changed so you can stay in the know.</p>
+<img src={expandedScreesnshot} width="300" className="screenshot" alt="screenshot of expanded view" />
+<p>Get the who, what, when details for every event. Also see if someone didn't get an event update so you can let them know</p>
+<em>"Yoga got pushed back to 1:15 Mary. Check the app!"- Mary's friend</em>
       <div className='speech-bubble-text'>
         <div className="speech-text">
           <p>FMO <br/>be gone!</p>

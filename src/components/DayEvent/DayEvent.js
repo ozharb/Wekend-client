@@ -53,7 +53,7 @@ export default class DayEvent extends Component {
           ) 
               ,WekendApiService.turnOffAlert(event.id)
          
-            .then(this.context.changeEventAlert(event.id))
+            .then(this.context.changeEventAlert(event.id,user))
               .catch(error => { console.error({ error }) })
             
           );
@@ -130,12 +130,16 @@ export default class DayEvent extends Component {
                             <div className='event-title-attendees'>
                                 <h2 className={headingStyle} style={alertStyle}>{event.title}</h2>
                                 {this.state.expand && 
+                                <>
+                                <span className='whos-going'>Who's going:</span> 
                                 <ul className = 'events-attendees'>
-                                    Who's going:
+                                    
+                                   
                                    { event.attendees.length === 0? <p>Nobody</p>:event.attendees.map((el,i)=>{
-                                   return <li key={i+event.id}>{el.username}</li>
+                                   return <li key={i+event.id} className={el.alert?'alert-on':'alert-off'}>{el.username}</li>
                                 })}
-                                </ul> }
+                                </ul> 
+                                </>}
                                 
                                 {/* <h2 className='Day-Events_heading'>{event.time}</h2> */}
                             </div>

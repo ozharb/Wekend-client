@@ -48,7 +48,7 @@
 }
 .Event__expand-event-button{
     width: 100%;
-
+    margin: 0;
 }
 .Event-edit-container{
     float: right;
@@ -108,15 +108,24 @@ width: 100px;
  margin: 10px;
  font-size: medium;
  line-height: 1.4em; 
+ margin-top: 14px;
 }
 .deets{
     letter-spacing: .3em;
+
 }
+.whos-going{
+letter-spacing: .14em;
+}
+
 .Event-column-2{
     font-family: 'Monoton', cursive;
  font-size: 50px;
  font-size: bold;
 
+}
+.alert-on{
+    color: red;
 }
 .Event-bottom-row{
     letter-spacing: .15em;

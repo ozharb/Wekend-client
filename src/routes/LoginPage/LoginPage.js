@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import LoginForm from '../../components/LoginForm/LoginForm'
 import { Section } from '../../Utils/Utils'
-// import AppContext from '../../contexts/AppContext'
+
 
 export default class LoginPage extends Component {
   static defaultProps = {
@@ -24,7 +24,7 @@ export default class LoginPage extends Component {
         
      }, 2001); 
   }
-  // static contextType = AppContext
+
   render() {
     return (
       <Section className='LoginPage'>

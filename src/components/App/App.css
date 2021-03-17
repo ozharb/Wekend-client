@@ -10,7 +10,9 @@ ul{
     font-size: 15px;
 }
 
-
+select{
+    font-size: medium;
+}
 footer{
     margin: 0;
     height: 0;

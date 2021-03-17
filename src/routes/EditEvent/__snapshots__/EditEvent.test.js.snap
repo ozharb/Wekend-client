@@ -4,115 +4,20 @@ exports[`renders the UI as expected 1`] = `
 <section
   className="add-event-form"
 >
-  <form
-    onCancel={[Function]}
-    onSubmit={[Function]}
+  <div
+    className="loader-container loader-edit_form-container"
   >
-    <h3>
-      Add Event
-    </h3>
-    <label
-      htmlFor="Event-title-input"
+    <div
+      className="Loader"
     >
-      Title 
-      <span
-        className="Required "
+      <div
+        className="loader-circle-overlay loader-edit_form-overlay"
       >
-        *
-      </span>
-      <p
-        className="error"
-      >
-        What's the event?
-      </p>
-    </label>
-    <input
-      className="Input "
-      id="event-title-input"
-      name="title"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label
-      htmlFor="event-form-content"
-    >
-      Additional Info:
-    </label>
-    <input
-      className="Input "
-      defaultValue=""
-      id="item-form-content"
-      name="details"
-    />
-    <label
-      htmlFor="item-form-time"
-    >
-      Time:
-    </label>
-    <input
-      className="Input "
-      id="item-form-time"
-      name="time"
-      onChange={[Function]}
-      type="time"
-      value=""
-    />
-    <label
-      htmlFor="event-form-place"
-    >
-      Place:
-    </label>
-    <input
-      className="Input "
-      defaultValue=""
-      id="event-form-place"
-      name="place"
-      type="text"
-    />
-    <label
-      htmlFor="event-form-day"
-    >
-      Day:
-    </label>
-    <select
-      aria-label="Pick day!"
-      id="day"
-      name="day"
-      onChange={[Function]}
-      required={true}
-      value=""
-    >
-      <option
-        value="Friday"
-      >
-        Friday
-      </option>
-      <option
-        value="Saturday"
-      >
-        Saturday
-      </option>
-      <option
-        value="Sunday"
-      >
-        Sunday
-      </option>
-    </select>
-    <button
-      className="done-add-event"
-      disabled="What's the event?"
-      type="submit"
-    >
-      Post
-    </button>
-    <button
-      className="done-add-event cancel"
-      onClick={[Function]}
-      type="cancel"
-    >
-      Nevermind
-    </button>
-  </form>
+        <i
+          className="fas fa-moon small-moon"
+        />
+      </div>
+    </div>
+  </div>
 </section>
 `;
