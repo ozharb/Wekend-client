@@ -33,7 +33,7 @@ export default class RegistrationPage extends Component {
           <img src={main} width='300' className="banner-main" alt="drawing of two friends using the app" />
       </section>
      
-       <p>See who's doing what when so can you do that too with them!</p>
+       <p>See who's doing what when so you can do that too－with them!</p>
         <img src={alertScreenshot} width="300" className="screenshot" alt="screenshot of update alert" />
 <p>RSVP to your friends' events and see when details get changed so you can stay in the know.</p>
 <img src={expandedScreesnshot} width="300" className="screenshot" alt="screenshot of expanded view" />
