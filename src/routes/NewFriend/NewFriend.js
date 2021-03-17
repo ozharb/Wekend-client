@@ -77,7 +77,7 @@ this.setState({results: []})
     return (
       <section className='new-friend-page'>
               
-                {this.state.requested ? <h3 className ='posted-event requested'>Request Requested!</h3>:
+                {this.state.requested ? <h3 className ='posted-event requested'>Request <br/>Requested!</h3>:
                 <fieldset className='friend-search-form'>
                   <legend><h3>Find a friend</h3></legend>
                 <form onSubmit={this.handleSearch}
