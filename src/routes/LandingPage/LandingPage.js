@@ -37,8 +37,11 @@ export default class RegistrationPage extends Component {
         <img src={alertScreenshot} width="300" className="screenshot" alt="screenshot of update alert" />
 <p>RSVP to your friends' events and see when details get changed so you can stay in the know.</p>
 <img src={expandedScreesnshot} width="300" className="screenshot" alt="screenshot of expanded view" />
-<p>Get the who, what, when details for every event. Also see if someone didn't get an event update so everyone can stay in the know.</p>
-<em>"Yoga got pushed back to 1:15 Mary. Check the app!"- Mary's friend</em>
+<p>Get the who, what, when details for every event.</p>
+  <p>Even see if someone didn't get an event update so you can let them know and everyone can stay in the know.</p>
+<p><em>"Yoga got pushed back to 1:15 Mary. Check the app!"- Mary's friend</em></p>
+<p><em>"Cool. Thanks. I should check that app more often!"- Mary</em></p>
+<p><em>"Yeah. You should."- Mary's friend</em></p>
       <div className='speech-bubble-text'>
         <div className="speech-text">
           <p>FMO <br/>be gone!</p>
