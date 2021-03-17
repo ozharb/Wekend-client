@@ -30,14 +30,14 @@ export default class RegistrationPage extends Component {
           <p> Make friends, post events, and see what's up this weekend</p>
         </section>
         <section className ='friends-image'>
-          <img src={main} width="600" className="banner-main" alt="drawing of two friends using the app" />
+          <img src={main} width='300' className="banner-main" alt="drawing of two friends using the app" />
       </section>
      
        <p>See who's doing what when so can you do that too with them!</p>
         <img src={alertScreenshot} width="300" className="screenshot" alt="screenshot of update alert" />
 <p>RSVP to your friends' events and see when details get changed so you can stay in the know.</p>
 <img src={expandedScreesnshot} width="300" className="screenshot" alt="screenshot of expanded view" />
-<p>Get the who, what, when details for every event. Also see if someone didn't get an event update so you can let them know</p>
+<p>Get the who, what, when details for every event. Also see if someone didn't get an event update so everyone can stay in the know.</p>
 <em>"Yoga got pushed back to 1:15 Mary. Check the app!"- Mary's friend</em>
       <div className='speech-bubble-text'>
         <div className="speech-text">
