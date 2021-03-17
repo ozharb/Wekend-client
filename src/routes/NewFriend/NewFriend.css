@@ -33,3 +33,7 @@ margin: 20px;
   font-family: 'Bungee Shade', cursive;
   font-size: 35px;
 }
+.no-results{
+  letter-spacing: .15em;
+  font-size: 15px;
+}
