@@ -72,12 +72,15 @@ export default class FriendsPage extends Component {
             <section className='FriendPage'>
                   
               <article className='FriendPage article'>
+                <div className='friends-header'>
                 <h2>Your Friends</h2>
+                <Link to='/friend-search' className='get-new-friends-link'>get some new friends</Link>
+                </div>
                 {error
                     ? <p className='red'>There was an error, try again</p>
                     : this.renderCurrentFriends()}
                     </article>
-                <Link to='/friend-search' >get some new friends</Link>
+
                     <article className='FriendPage article'>
                     <h2>Pending Requests Sent</h2>
                 {error

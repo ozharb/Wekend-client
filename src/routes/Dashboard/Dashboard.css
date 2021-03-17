@@ -12,12 +12,22 @@ color: black;
 margin-bottom: 40px;
 text-decoration: none;
 }
-
+.dayboard-header{
+margin-top: 10px;
+text-align: center;
+font-size: 30px;
+letter-spacing: .5em;
+}
 @media screen and (min-width: 670px) {
-    .Dashboard> a:hover{
-        font-size: 70px;
-        }
-        .Dashboard> a:focus{
-        font-size: 70px;
-        }
+.dayboard-header{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    letter-spacing: .9em;
+}
+.Dashboard> a:hover{
+    font-size: 70px;
     }
+    .Dashboard> a:focus{
+    font-size: 70px;
+    }
+}

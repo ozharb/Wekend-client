@@ -40,7 +40,6 @@ const contextFilter = friend.receiver === friend.friend
   UnfilterFriend = e => {
 
     e.preventDefault()
-    console.log('Unfilter friend')
     const {friend} = this.props
     const friendId = friend.friend_id
 const userId = friend.receiver === friend.friend? friend.sender_id : friend.receiver_id

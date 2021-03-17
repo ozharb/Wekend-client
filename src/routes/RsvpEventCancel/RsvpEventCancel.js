@@ -35,7 +35,7 @@ handleCancel = e =>{
     return (
       <section className='add-event-form'>
            
-                {this.state.submitted ? <h3 className ='posted-event'>You're not going</h3>:
+                {this.state.submitted ? <h3 className ='posted-event-cancel'>You're <br/>not<br/> going</h3>:
                 <>
                       <h3>RSVP</h3>
                 <form onSubmit={this.handleSubmit}

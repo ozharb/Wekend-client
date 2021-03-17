@@ -18,10 +18,10 @@
 .add-event-form{
   margin-left: 20px;
 }
-.posted-event{
+.posted-event-cancel{
   text-align: center;
   font-weight: normal;
   font-family: 'Bungee Shade', cursive;
   font-size: 50px;
-  transform: rotate(-15deg);
+  transform: rotate(15deg);
 }
