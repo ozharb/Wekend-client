@@ -29,6 +29,14 @@ margin: 20px;
 .add-event-form{
   margin-left: 20px;
 }
+.search-friend{
+  font-weight: bold;
+  font-family: 'Public Sans', sans-serif;
+  margin: 20px;
+  background-color: black;
+  padding:15px; 
+  border: none;
+}
 .requested{
   font-family: 'Bungee Shade', cursive;
   font-size: 35px;

@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import UserInfo from '../../UserInfo/UserInfo'
 import TokenService from '../../services/token-service'
 import './Header.css'
-// import AppContext from '../../contexts/AppContext'
 import { CSSTransition } from 'react-transition-group';
 import Logo from './Logo/Logo';
 export default class Header extends Component {
@@ -44,9 +42,6 @@ export default class Header extends Component {
             to='/register'>
             Register
         </Link>
- 
-      
-     
           <Link
             to='/login'>
             Log in
@@ -62,8 +57,6 @@ export default class Header extends Component {
     const logLink = TokenService.hasAuthToken()
       ? null
       : this.renderLoginLink()
-
-
     return (
 
       <nav className='Header'>
@@ -74,7 +67,6 @@ export default class Header extends Component {
           </Link>
   }
         </h1>
-
         <div className='Header-user-info'>
           <div className="logout">
             <div>{logLink} </div>
@@ -84,9 +76,7 @@ export default class Header extends Component {
             
              onClick={this.handleItemExpand}
             >
-
                 <Logo  />
-            
               <div className="user-menu">
                 <CSSTransition
                   in={this.state.expand}

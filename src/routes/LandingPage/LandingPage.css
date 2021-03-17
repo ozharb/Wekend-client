@@ -11,7 +11,16 @@ header>h1{
     font-family: 'Bungee Shade', cursive;
     font-size: 50px;
 }
-
+.friends-image{
+    display: flex;
+    justify-content: center;
+}
+.banner-main{
+    position: relative;
+    width: 300px;
+    height: 403px;
+    background-color: white;
+}
 .logo-landing-page{
     border: none;
 }

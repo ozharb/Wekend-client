@@ -82,17 +82,16 @@ this.setState({results: []})
                   <legend><h3>Find a friend</h3></legend>
                 <form onSubmit={this.handleSearch}
                 onCancel = {this.handleCancel}>
-                    <label htmlFor='Event-title-input'>
+                    <label htmlFor='search-name-input'>
                         Search name: <Required />
-
                         {<p className="error">{this.validateName()}</p>}
                     </label>
-                    <Input type='text' id='event-title-input' name='name'
+                    <Input type='text' id='search-name-input' name='name'
                         value={this.state.name.value}
                         onChange={e => this.setName(e.target.value)} />
                  
-                    <button className='done-add-event' type="submit" disabled={this.validateName()}>Search</button>
-                    <button className='done-add-event cancel' onClick = {this.handleCancel} type='cancel'>Nevermind</button>
+                    <button className='search-friend' type="submit" disabled={this.validateName()}>Search</button>
+                    <button className='search-friend cancel' onClick = {this.handleCancel} type='cancel'>Nevermind</button>
                 </form>
    </fieldset>              
  }

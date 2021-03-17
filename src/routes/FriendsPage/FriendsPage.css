@@ -1,5 +1,5 @@
 /* .Day-Events:nth-child(even){
-  background: black;
+background: black;
 
 }
 .Day-Events:nth-child(odd){
@@ -7,8 +7,8 @@
 background-color: green;
 } */
 .FriendPage>h2{
-  font-size: 50px;
-  font-family: 'Public Sans', sans-serif;
+font-size: 50px;
+font-family: 'Public Sans', sans-serif;
 
 }
 .FriendPage{
@@ -23,32 +23,33 @@ justify-content: space-between;
 font-size: 40px;
 }
 .get-new-friends-link{
+overflow: hidden;
 text-align: center;
-margin-top: 25px;
+margin-top: 50px;
 margin-right: 10px;
 height: 30px;
 font-size: 15px;
 font-family: 'Public Sans', sans-serif;
 text-decoration: none;
 color: orangered;
-padding: 20px 40px 40px 40px;
+padding: 10px 10px 15px 10px;
 border: solid;
 letter-spacing: .3em;
 margin-left: 20px;
 }
 
 @media screen and (min-width: 550px) {
-.get-new-friends-link{
+  .get-new-friends-link{
   margin-top: 25px;
   margin-right: 10px;
-height: 30px;
-    font-size: 15px;
+  height: 30px;
+  font-size: 15px;
   font-family: 'Public Sans', sans-serif;
   text-decoration: none;
   color: orangered;
-padding: 10px 2px 0 4px;
+  padding: 10px 2px 0 6px;
   border: solid;
   letter-spacing: .3em;
   margin-left: 20px;
-}
+  }
 }
