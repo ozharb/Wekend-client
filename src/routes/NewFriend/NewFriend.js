@@ -61,7 +61,7 @@ this.setState({results: []})
     return (!results.length) ?
     <article className = 'no-results'>
      <p>Looks like there's nobody by that name 'round these parts.</p>
-    <p>I reckon you should check your spelling and try again.</p>
+    <p>I reckon you should check your spelling and try again partner.</p>
     <p>Or...send your friend a link and tell 'em to sign up.</p>
     </article>
     : results.map((user, i) =>
