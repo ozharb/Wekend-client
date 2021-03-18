@@ -16,7 +16,7 @@ To check out the app, I suggest you  account so you can see the onboarding exper
 
 WEkend is a friendly weekend planning app for friends. Connect with friends, post events, and see what others are up to. 
 
-Simple, quick, and stylish.
+Simple, quick, and awesome.
 
 ### User Stories
 
@@ -24,16 +24,17 @@ Simple, quick, and stylish.
 * Register for a new account
 
 ## App Screenshots
-<img src="src/routes/LandingPage/images/alert-screenshot.jpg" width="300" style='border-radius: 20px; margin-left: 20px;'>
 
-- See all the events you and your friends posted and get notified when any details change.
+<img src="src/routes/LandingPage/images/alert-screenshot.jpg" width="300">
 
-<img src="src/routes/LandingPage/images/wekend-expanded-screenshot.jpg" width="300" style='border-radius: 20px; margin-left: 20px;'>
+- See all the events you and your friends posted and get notified when any details change. Also, see if an event detail has changed after you've RSPVed to be sure you're up to date with the latest info. Like in the screenshot above, the event 'yoga' is marked in red. This means you've RSVPed to an event, a detail about that event has changed, and you haven't opened up the event since. Once you open up the event, the event name will no longer be red. 
+
+<img src="src/routes/LandingPage/images/wekend-expanded-screenshot.jpg" width="300">
 
 
-- Get all the important info you need in one place, including who's going to what and whether someone didn't get notified about an update. 
+- Get all the important info you need in one place, including who's going to which events and who didn't see an update. Like in the screenshot above where the name Mary is marked in red, this means Mary RSVPed to an event then the host changed some detail about the event, and Mary hasn't opened up the event since the update. Once Mary opens up the event again, her name will no longer be red.
 
-<img src="src/routes/LandingPage/images/wekend-friends-screenshot.jpg" width="300" style='border-radius: 20px; margin-left: 20px;'>
+<img src="src/routes/LandingPage/images/wekend-friends-screenshot.jpg" width="300">
 
 - Send friend requests and make friends to share your weekend with. 
 
