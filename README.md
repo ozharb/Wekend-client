@@ -24,11 +24,11 @@ Simple, quick, and stylish.
 * Register for a new account
 
 ## App Screenshots
-<img src="src/routes/LandingPage/images/alert-screenshot.jpg" width="200">
+<img src="src/routes/LandingPage/images/alert-screenshot.jpg" width="300" style='background:none'>
 
 - See all the events you and your friends posted and get notified when any details change.
+<img src="src/routes/LandingPage/images/wekend-expanded-screenshot.jpg" width="300" style='background:none'>
 
-![screenshot](src/routes/LandingPage/images/wekend-expanded-screenshot.jpg  width="200")
 
 - Get all the important info you need in one place, including who's going to what and whether someone didn't get notified about an update. 
 
