@@ -39,13 +39,11 @@ Simple, quick, and awesome.
 </p>
 Like in the screenshot above where the name Mary is marked in red, Mary RSVP-ed to an event then the host changed some detail about the event, and Mary hasn't opened up the event since the update. Once Mary opens up the event again, her name will no longer be red.
 
-### Send friend requests and make friends to share your weekend with. 
+### Send and accept friend requests to connect with others. 
 <p align="center">
 <img src="src/routes/LandingPage/images/wekend-friends-screenshot.jpg" width="300">
 </p>
-Using a built in search feature, you can easily find other users by their user name, nickname, or full name.  
-
-Send them a friend request and see the request pending on your friends pages until the accept. Once accepted, you can see all of eachothers events.
+Using a built in search feature, you can easily find other users by search their user name, nickname, or full name. Send them a friend request and see the request pending on your friends pages until the accept. Once accepted, you can see all of eachothers events.
 
 ### Filter the events you see by who's hosting them  
 <p align="center">
