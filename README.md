@@ -1,4 +1,4 @@
-# WEkend
+# 🌴 WEkend
 A social app for posting casual weekend events and activities for your friends to see.
 
 This repo is the front-end client, built in React.  You can see the app live at [https://wekend-client-ozharb.vercel.app/]
