@@ -18,7 +18,6 @@ setLoading = (trueOrFalse) =>{
         match: { params: {} },
       }
 
-
     componentDidMount() {
      
         this.context.clearError()
@@ -26,8 +25,6 @@ setLoading = (trueOrFalse) =>{
             .then(this.context.setEvents )
             .then(()=>this.setLoading(false))
             .catch(this.context.setError)
-           
-
     }
     renderEvents() {
     

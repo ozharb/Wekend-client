@@ -1,4 +1,55 @@
-# Getting Started with Create React App
+# WEkend
+A social app for posting casual weekend events and activities for your friends to see.
+
+This repo is the front-end client, built in React.  You can see the app live at [tps://wekend-client-ozharb.vercel.app/days/]
+
+The app is meant for mobile use, but scales for desktop viewing.
+
+To check out the app, I suggest you create a dummy account so you can see the onboarding experience.  But if you just want to view what the program looks like, you can use the demo account.
+
+#### Demo Account Details
+
+* user name: Demo
+* password: Demo2021!
+
+## Introduction
+
+WEkend is a friendly weekend planning app for friends. Connect with friends, post events, and see what others are up to. 
+
+Simple, quick, and stylish.
+
+## App Screenshots
+
+![screenshot](src/routes/LandingPage/images/wekend-expanded-screenshot.jpg)
+
+## Technology
+
+#### Front End
+
+* React
+  * Create React App
+  * React Router
+* HTML5
+* CSS3 (scratch - no frameworks)
+
+#### Testing
+
+* Jest (screen captures & smoke tests)
+
+#### Production
+
+* Deployed via Vercel
+
+## Getting Started
+
+Run `npm install` to load dependencies
+
+Run `npm test` to ensure a stable build
+
+
+The repo for the backend end server I've developed is available at https://github.com/ozharb/budgitz-api.git and is currently deployed on Heroku.
+
+Deployments are handled through vercel and can be run via `npm run deploy`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -28,44 +79,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# wekend-client
