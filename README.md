@@ -35,9 +35,9 @@ Simple, quick, and awesome.
 
 
 ### Get all the important info you need in one place, including who's going to which events and who didn't see an update. 
-
+<p align="center">
 <img src="src/routes/LandingPage/images/wekend-expanded-screenshot.jpg" width="300">
-
+</p>
 Like in the screenshot above where the name Mary is marked in red, this means Mary RSVPed to an event then the host changed some detail about the event, and Mary hasn't opened up the event since the update. Once Mary opens up the event again, her name will no longer be red.
 
 ### Send friend requests and make friends to share your weekend with. 
@@ -52,7 +52,7 @@ Send them a friend request and see the request pending on your friends pages unt
 <p align="center">
 <img src="src/routes/LandingPage/images/wekend-friend-filter.jpg" width="300">
 </p>
-Get a precise looks at what's going on this weekend by using filters. Turn on all your friends filters to just get your events. Or keep them all off and know what eveyrone's doing for the ultimate weekend!
+Get a precise look at what's going on this weekend by using filters. Turn on all your friends filters to just get your events. Or keep them all off and know what eveyrone's doing for the ultimate weekend!
 
 ## Technology
 
