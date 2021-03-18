@@ -40,9 +40,11 @@ Simple, quick, and awesome.
 
 Like in the screenshot above where the name Mary is marked in red, this means Mary RSVPed to an event then the host changed some detail about the event, and Mary hasn't opened up the event since the update. Once Mary opens up the event again, her name will no longer be red.
 
+### Send friend requests and make friends to share your weekend with. 
+
 <img src="src/routes/LandingPage/images/wekend-friends-screenshot.jpg" width="300">
 
-- Send friend requests and make friends to share your weekend with. 
+
 
 ## Technology
 
