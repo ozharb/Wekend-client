@@ -28,12 +28,14 @@ Simple, quick, and awesome.
 
 ### See all the events you and your friends posted and get notified when any details change.
 
+<p align="center">
 <img src="src/routes/LandingPage/images/alert-screenshot.jpg" width="300">
-
+</p>
  See if an event detail has changed after you've RSPVed to be sure you're up to date with the latest info. Like in the screenshot above, the event 'yoga' is marked in red. This means you've RSVP-ed to an event, a detail about that event has changed, and you haven't opened up the event since. Once you open up the event, the event name will no longer be red. 
 
 
 ### Get all the important info you need in one place, including who's going to which events and who didn't see an update. 
+
 <p align="center">
 <img src="src/routes/LandingPage/images/wekend-expanded-screenshot.jpg" width="300">
 </p>
