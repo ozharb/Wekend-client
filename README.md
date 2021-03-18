@@ -41,10 +41,18 @@ Simple, quick, and awesome.
 Like in the screenshot above where the name Mary is marked in red, this means Mary RSVPed to an event then the host changed some detail about the event, and Mary hasn't opened up the event since the update. Once Mary opens up the event again, her name will no longer be red.
 
 ### Send friend requests and make friends to share your weekend with. 
-
+<p align="center">
 <img src="src/routes/LandingPage/images/wekend-friends-screenshot.jpg" width="300">
+</p>
+Using a built in search feature, you can easily find other users by their user name, nickname, or full name.  
 
+Send them a friend request and see the request pending on your friends pages until the accept. Once accepted, you can see all of eachothers events.
 
+### Filter the events you see by who's hosting them  
+<p align="center">
+<img src="src/routes/LandingPage/images/wekend-friend-filter.jpg" width="300">
+</p>
+Get a precise looks at what's going on this weekend by using filters. Turn on all your friends filters to just get your events. Or keep them all off and know what eveyrone's doing for the ultimate weekend!
 
 ## Technology
 
