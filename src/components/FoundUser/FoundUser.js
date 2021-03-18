@@ -1,14 +1,9 @@
 import  { Toaster } from 'react-hot-toast';
 import React, { Component } from 'react'
-
 import { Link } from 'react-router-dom'
 import WekendApiService from '../../services/Wekend-api-service'
-
-// import { Link } from 'react-router-dom'
-// import { ThingStarRating } from '../ThingStarRating/ThingStarRating'
 import './FoundUser.css'
 import FriendsContext from '../../contexts/FriendsContext';
-
 
 
 export default class FoundUser extends Component {
@@ -18,7 +13,7 @@ export default class FoundUser extends Component {
         requesting: false
     };
 
-    handleRequest=e=>{
+handleRequest=e=>{
     this.setState({requesting: true})
 }
 handleUnRequest=e=>{
@@ -61,7 +56,6 @@ sendFriendRequest = e => {
          </div>
         return (
             <>
-
                 <div className='Friends-List'>
                     <Toaster position="top-center" />
                     <div className='current-friend'>

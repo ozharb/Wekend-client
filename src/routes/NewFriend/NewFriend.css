@@ -38,8 +38,12 @@ margin: 20px;
   border: none;
 }
 .requested{
+  margin-top: 150px;
+  text-align: center;
+  font-weight: normal;
   font-family: 'Bungee Shade', cursive;
-  font-size: 35px;
+  font-size: 40px;
+  transform: rotate(-15deg);
 }
 .no-results{
   letter-spacing: .15em;

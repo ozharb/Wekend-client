@@ -18,6 +18,11 @@ WEkend is a friendly weekend planning app for friends. Connect with friends, pos
 
 Simple, quick, and stylish.
 
+### User Stories
+
+- User can:
+* Register for a new account
+
 ## App Screenshots
 
 ![screenshot](src/routes/LandingPage/images/wekend-expanded-screenshot.jpg)

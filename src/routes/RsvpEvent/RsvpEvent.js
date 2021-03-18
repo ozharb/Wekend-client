@@ -5,7 +5,6 @@ import './RsvpEvent.css'
 
 export default class RsvpEvent extends Component {
   state = {
-
     submitted: false,
 };
  static contextType = EventsContext
@@ -34,7 +33,6 @@ handleCancel = e =>{
 
     return (
       <section className='add-event-form'>
-           
                 {this.state.submitted ? <h3 className ='posted-event'>You're Going!</h3>:
                 <>
                       <h3>RSVP</h3>
@@ -44,7 +42,6 @@ handleCancel = e =>{
                     Going to {title}?
             </label>
           <br/>
-  
                     <button className='done-add-event' type="submit">Yes</button>
                     <button className='done-add-event cancel' onClick = {this.handleCancel} type='cancel'>No</button>
                 </form>
