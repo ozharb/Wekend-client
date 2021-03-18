@@ -2,7 +2,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import WekendApiService from '../../services/Wekend-api-service'
-
+import MediaQuery from 'react-responsive'
 import './DayEvent.css'
 import EventsContext from '../../contexts/EventsContext';
 
@@ -29,6 +29,7 @@ export default class DayEvent extends Component {
         const attending = (event.attendees.length)
         ? (!!event.attendees.find(i=>i.username===user))
         : false
+        
         const hostName = event.Event_Host.length>10
         ? <>{[...event.Event_Host].splice(0,10).join('')}-
              <br/>
@@ -63,10 +64,16 @@ export default class DayEvent extends Component {
          const host = event.Event_Host ===user ? <>
            <span className='host-name'>You're</span> hosting
          </> 
-         : <>
-         {/* fix this */}
-         <span className='host-name'>{hostName}'s</span> hosting
-       </> 
+         : <div>
+         <MediaQuery minDeviceWidth={700}>
+         {(matches) =>
+        matches
+          ?   <div><span className='host-name'>{event.Event_Host}'s</span> hosting</div>
+          :   <div><span className='host-name'>{hostName}'s</span> hosting</div>
+         
+      }
+         </MediaQuery>
+         </div>
        
         const eventDetails = this.state.expand
 
