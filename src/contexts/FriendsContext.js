@@ -34,26 +34,36 @@ export class FriendsProvider extends Component {
     setFriends = friends => {
         this.setState({ friends })
     }
-    confirmFriend = (friendId, userId ) => {
+    confirmFriend = (friendId, userId) => {
+        console.log('friendid:', friendId, 'userId:', userId)
+
         this.setState({
             friends: this.state.friends.map(i =>
-                (i.friend_id !== friendId && userId !== i.receiver_id) ? i :
-                    {...i, confirmed:true})
+                (i.friend_id === friendId && i.receiver_id === userId)
+                    ? { ...i, confirmed: true }
+                    : i
+            )
         })
     }
 
     changeReceiverFilter = (friendId, userId, trueOrFalse) => {
         this.setState({
-            friends: this.state.friends.map(i =>
-                ((i.friend_id !== friendId && userId !== i.sender_id) || (i.friend_id !== friendId && userId !== i.receiver_id)) ? i :
-                    {...i,receiver_filter: trueOrFalse})
+            friends: this.state.friends
+                .map(i =>
+                    ((i.friend_id === friendId && userId === i.sender_id) || (i.friend_id === friendId && userId === i.receiver_id))
+                        ? { ...i, receiver_filter: trueOrFalse }
+                        : i
+                )
         })
     }
     changeSenderFilter = (friendId, userId, trueOrFalse) => {
         this.setState({
-            friends: this.state.friends.map(i =>
-                ((i.friend_id !== friendId && userId !== i.sender_id) || (i.friend_id !== friendId && userId !== i.receiver_id)) ? i :
-                    {...i,sender_filter: trueOrFalse})
+            friends: this.state.friends
+                .map(i =>
+                    ((i.friend_id === friendId && userId === i.sender_id) || (i.friend_id === friendId && userId === i.receiver_id))
+                        ? { ...i, sender_filter: trueOrFalse }
+                        : i
+                )
         })
     }
     deleteFriend = (friendId, userId) => {

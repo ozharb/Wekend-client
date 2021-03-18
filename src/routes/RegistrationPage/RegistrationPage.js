@@ -20,6 +20,7 @@ export default class RegistrationPage extends Component {
   render() {
     return (
       <section className='RegistrationPage'>
+        <p className = 'register-description'>Start making your weekends better with friends.</p>
         <h2>Register</h2>
         <RegistrationForm
           onRegistrationSuccess={this.handleRegistrationSuccess}

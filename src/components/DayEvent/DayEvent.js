@@ -20,22 +20,25 @@ export default class DayEvent extends Component {
             expand: !this.state.expand
         })
     }
-    
-    
+
     render() {  
                const { event } = this.props
-              
+ 
         let username = 'user'
         const user =  window.localStorage.getItem(username)
         const attending = (event.attendees.length)
         ? (!!event.attendees.find(i=>i.username===user))
         : false
-    
-        
+        const hostName = event.Event_Host.length>10
+        ? <>{[...event.Event_Host].splice(0,10).join('')}-
+             <br/>
+             {[...event.Event_Host].splice(10).join('')}</>
+        : event.Event_Host
+
         const rsvpLink = (attending)?`cancel-rsvp`:`rsvp`
         const path = `/${rsvpLink}/${event.id}`
          let alertStyle = event.alert ? {color: 'red'} : null
-        let headingStyle = (event.title.length > 12 && this.state.expand)? 'Day-Events_heading-small' : 'Day-Events_heading-large'
+        let headingStyle = (event.title.length > 6 && this.state.expand)? 'Day-Events_heading-small' : 'Day-Events_heading-large'
         let time = convertTime(event.time)
         let timeNumbers = time.split('').slice(0, time.length - 2).join('')
         let timeLetters = time.split('').slice(time.length - 2).join('')
@@ -61,7 +64,8 @@ export default class DayEvent extends Component {
            <span className='host-name'>You're</span> hosting
          </> 
          : <>
-         <span className='host-name'>{event.Event_Host}'s</span> hosting
+         {/* fix this */}
+         <span className='host-name'>{hostName}'s</span> hosting
        </> 
        
         const eventDetails = this.state.expand

@@ -1,3 +1,6 @@
 .RegistrationPage>h2{
     margin-left: 10px;
 }
+.RegistrationPage>p{
+    font-family: 'Public Sans', sans-serif;
+}

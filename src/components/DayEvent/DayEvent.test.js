@@ -9,8 +9,8 @@ it('renders the UI as expected', () => {
     .create(
     <BrowserRouter>
     <DayEvent 
-    props={{event:{attendees:[{username:''}], title:'', time: '0:00'}}}
-    event={{attendees:[{username:''}], title:'', time:'0:00'}}
+    props={{event:{Event_Host:'',attendees:[{username:''}], title:'', time: '0:00'}}}
+    event={{Event_Host:'',attendees:[{username:''}], title:'', time:'0:00'}}
     time={'0:00'}
     />
      </BrowserRouter>

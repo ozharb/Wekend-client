@@ -21,7 +21,8 @@ Simple, quick, and awesome.
 ### User Stories
 
 - User can:
-* Register for a new account
+  - Register for a new account
+  - 
 
 ## App Features
 

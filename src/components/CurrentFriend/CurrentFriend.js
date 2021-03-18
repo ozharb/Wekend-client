@@ -50,12 +50,10 @@ const userId = friend.sender === user ? friend.sender_id : friend.receiver_id
     render() {
    
         const { friend } = this.props
-        let friendClassName = (friend.friend.length > 12) ? 'small-font' : 'large-font'
+        let friendClassName = (friend.friend.length > 7) ? 'small-font' : 'large-font'
 
         return (
             <>
-                {/* <Link to={`/thing/${thing.id}`} className='ThingListItem'> */}
-
                 <div className='Friends-List'>
                     <Toaster position="top-center" />
                     <div className='current-friend'>
@@ -75,31 +73,8 @@ const userId = friend.sender === user ? friend.sender_id : friend.receiver_id
         
                     </div>
                 </div>
-                {/* </Link> */}
             </>
         )
     }
 }
 
-// function readableReviewCount(number) {
-//   switch(number) {
-//     case 0:
-//       return 'no reviews yet'
-
-//     case 1:
-//       return `based on 1 review`
-
-//     default:
-//       return `based on ${number} reviews`
-//   }
-// }
-
-// function truncate(text) {
-//   const words = text.split(' ')
-
-//   if (words.length > 10) {
-//     return words.slice(0, 10).join(' ') + ' ...'
-//   }
-
-//   return text
-// }

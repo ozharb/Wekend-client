@@ -55,9 +55,6 @@ state = { loading: false,
       password.type = "password";
     }
   }
-  // componentDidMount(){
-  //   window.scrollTo(0, 0)
-  // }
   render() {
     const { error } = this.state
     return (
@@ -69,7 +66,7 @@ state = { loading: false,
           {error && <p className='red'>{error}</p>}
         </div>
         { this.state.registered ? <p className='green'>Registration complete.</p>:
-        <>
+        <div>
         <div className='full_name'>
           <label htmlFor='RegistrationForm__full_name'>
             Full name <Required />
@@ -136,12 +133,13 @@ state = { loading: false,
             id='city'>
           </Input>
         </div>
-    
-            <button type='submit'>
-          {this.state.loading? 'Loading...':'Register'}
+        <div className='register-button-and-link'>
+            <button className='register-page_button' type='submit'>
+          {this.state.loading? 'One moment':'Register'}
         </button>
-        <Link to='/login'>Already have an account?</Link>
-        </>}
+        <Link className = 'already-link' to='/login'>Already have an account?</Link>
+</div>
+        </div>}
       </form>
     )
   }

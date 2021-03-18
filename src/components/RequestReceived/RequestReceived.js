@@ -91,7 +91,7 @@ const userId = friend.sender === user ? friend.sender_id : friend.receiver_id
     return friend
 }
      } 
-     let friendClassName = (friend.friend.length > 12) ? 'small-font' : 'large-font'
+     let friendClassName = (friend.friend.length > 7) ? 'small-font' : 'large-font'
         return (
             <>
                 <div className='Friends-List'>
