@@ -24,14 +24,18 @@ Simple, quick, and stylish.
 * Register for a new account
 
 ## App Screenshots
-<img src="src/routes/LandingPage/images/alert-screenshot.jpg" width="300" style='background:none'>
+<img src="src/routes/LandingPage/images/alert-screenshot.jpg" width="300" style='border-radius: 20px; margin-left: 20px;'>
 
 - See all the events you and your friends posted and get notified when any details change.
 
-<img src="src/routes/LandingPage/images/wekend-expanded-screenshot.jpg" width="300" style='text-align:center'>
+<img src="src/routes/LandingPage/images/wekend-expanded-screenshot.jpg" width="300" style='border-radius: 20px; margin-left: 20px;'>
 
 
 - Get all the important info you need in one place, including who's going to what and whether someone didn't get notified about an update. 
+
+<img src="src/routes/LandingPage/images/wekend-friends-screenshot.jpg" width="300" style='border-radius: 20px; margin-left: 20px;'>
+
+- Send friend requests and make friends to share your weekend with. 
 
 ## Technology
 
