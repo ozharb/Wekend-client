@@ -26,19 +26,18 @@ Simple, quick, and awesome.
 ## App Features
 
 
-
 ### See all the events you and your friends posted and get notified when any details change.
 
 <img src="src/routes/LandingPage/images/alert-screenshot.jpg" width="300">
 
- See if an event detail has changed after you've RSPVed to be sure you're up to date with the latest info. Like in the screenshot above, the event 'yoga' is marked in red. This means you've RSVPed to an event, a detail about that event has changed, and you haven't opened up the event since. Once you open up the event, the event name will no longer be red. 
+ See if an event detail has changed after you've RSPVed to be sure you're up to date with the latest info. Like in the screenshot above, the event 'yoga' is marked in red. This means you've RSVP-ed to an event, a detail about that event has changed, and you haven't opened up the event since. Once you open up the event, the event name will no longer be red. 
 
 
 ### Get all the important info you need in one place, including who's going to which events and who didn't see an update. 
 <p align="center">
 <img src="src/routes/LandingPage/images/wekend-expanded-screenshot.jpg" width="300">
 </p>
-Like in the screenshot above where the name Mary is marked in red, this means Mary RSVPed to an event then the host changed some detail about the event, and Mary hasn't opened up the event since the update. Once Mary opens up the event again, her name will no longer be red.
+Like in the screenshot above where the name Mary is marked in red, Mary RSVP-ed to an event then the host changed some detail about the event, and Mary hasn't opened up the event since the update. Once Mary opens up the event again, her name will no longer be red.
 
 ### Send friend requests and make friends to share your weekend with. 
 <p align="center">
