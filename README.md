@@ -1,11 +1,11 @@
 # WEkend
 A social app for posting casual weekend events and activities for your friends to see.
 
-This repo is the front-end client, built in React.  You can see the app live at [tps://wekend-client-ozharb.vercel.app/days/]
+This repo is the front-end client, built in React.  You can see the app live at [https://wekend-client-ozharb.vercel.app/]
 
 The app is meant for mobile use, but scales for desktop viewing.
 
-To check out the app, I suggest you create a dummy account so you can see the onboarding experience.  But if you just want to view what the program looks like, you can use the demo account.
+To check out the app, I suggest you  account so you can see the onboarding experience.  But if you just want to view what the program looks like, you can use the demo account.
 
 #### Demo Account Details
 
@@ -25,7 +25,13 @@ Simple, quick, and stylish.
 
 ## App Screenshots
 
-![screenshot](src/routes/LandingPage/images/wekend-expanded-screenshot.jpg)
+![screenshot](src/routes/LandingPage/images/alert-screenshot.jpg =250x)
+
+- See all the events you and your friends posted and get notified when any details change.
+
+![screenshot](src/routes/LandingPage/images/wekend-expanded-screenshot.jpg =250x)
+
+- Get all the important info you need in one place, including who's going to what and whether someone didn't get notified about an update. 
 
 ## Technology
 
@@ -52,7 +58,7 @@ Run `npm install` to load dependencies
 Run `npm test` to ensure a stable build
 
 
-The repo for the backend end server I've developed is available at https://github.com/ozharb/budgitz-api.git and is currently deployed on Heroku.
+The repo for the backend end server I've developed is available at https://github.com/ozharb/WEkend-api and is currently deployed on Heroku.
 
 Deployments are handled through vercel and can be run via `npm run deploy`
 
