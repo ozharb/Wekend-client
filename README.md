@@ -25,11 +25,11 @@ Simple, quick, and stylish.
 
 ## App Screenshots
 
-![screenshot](src/routes/LandingPage/images/alert-screenshot.jpg =250x)
+![screenshot](src/routes/LandingPage/images/alert-screenshot.jpg  width="200")
 
 - See all the events you and your friends posted and get notified when any details change.
 
-![screenshot](src/routes/LandingPage/images/wekend-expanded-screenshot.jpg =250x)
+![screenshot](src/routes/LandingPage/images/wekend-expanded-screenshot.jpg  width="200")
 
 - Get all the important info you need in one place, including who's going to what and whether someone didn't get notified about an update. 
 
