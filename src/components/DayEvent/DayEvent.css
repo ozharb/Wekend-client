@@ -137,12 +137,13 @@ font-family: 'Monoton', cursive;
 .Event-bottom-row>p{
   margin: 0px;
 }
+
 @media screen and (min-width: 770px) {
     .Event-column-2{
         font-family: 'Monoton', cursive;
          font-size: 70px;
          font-size: bold;
-        
+
         }
     .Header{
     height: 42px;
