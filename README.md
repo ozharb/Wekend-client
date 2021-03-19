@@ -5,7 +5,7 @@ This repo is the front-end client, built in React.  You can see the app live at 
 
 The app is meant for mobile use, but scales for desktop viewing.
 
-To check out the app, I suggest you  account so you can see the onboarding experience.  But if you just want to view what the program looks like, you can use the demo account.
+To check out the app, I suggest you use the demo account using the crediantials below as well as create your own account to experience the registration process.
 
 #### Demo Account Details
 
@@ -22,7 +22,23 @@ Simple, quick, and awesome.
 
 - User can:
   - Register for a new account
-  - 
+  - Log in to their own secure account
+  - See their dashbaord (Dayboard)
+  - Pick a day of the weekend to view
+  - See all event the user and the user's friends posted
+  - See event details inluding who's attending the event
+  - Get notified when an event has changed. 
+  - See if others attending an event have not seen the update (explained in app features section)
+  - Edit or delete events the user posted
+  - Rsvp or delete Rsvp for events others posted
+  - Search for friends by searching username or full name or knickname
+  - Send other app users a friend request
+  - View all friends in their friends page
+  - See confirmed friends
+  - See pending friends including resquests send and received
+  - Accept or delete or cancel confirmed and pending friendships
+  - Filter events by specific friends
+  - Get a link to a how-to guide in the app
 
 ## App Features
 
