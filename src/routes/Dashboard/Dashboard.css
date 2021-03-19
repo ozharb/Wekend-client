@@ -18,6 +18,20 @@ text-align: center;
 font-size: 30px;
 letter-spacing: .5em;
 }
+.help-link-container{
+    height: 50px;
+    text-align: center;
+}
+.help-link{
+    font-family: 'Public Sans', sans-serif;
+    font-size: small;
+    padding: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: black;
+    border: solid black;
+    letter-spacing: .4em;
+}
 @media screen and (min-width: 770px) {
 .dayboard-header{
     margin-top: 50px;

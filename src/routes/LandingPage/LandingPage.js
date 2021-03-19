@@ -10,14 +10,34 @@ import PropTypes from 'prop-types';
 import PreloadImage from 'react-preload-image'
 
 export default class LandingPage extends Component {
+  state = {
+    fromDashboard: false
+  }
   static defaultProps = {
     history: {
       push: () => { },
     },
+    location: {
+      state:{
+        fromDashboard:false
+      }
+    }
   }
-
-
-
+  appGuide = React.createRef()  
+ 
+componentDidMount(){
+  if (this.props.location.state){
+    this.scrollToTarget()
+}
+}
+scrollToTarget = () => {
+  
+  setTimeout(() =>{
+    this.appGuide.current.scrollIntoView({
+          behavior: 'smooth'
+      }) 
+     }, 500);
+}
   render() {
     return (
       <article className='LandingPage'>
@@ -65,7 +85,7 @@ export default class LandingPage extends Component {
         </Link>
           <h3>Don't waste a precious second of your weekend.</h3>
         </section>
-        <section className='app-how-to-use'>
+        <section className='app-how-to-use' ref={this.appGuide} >
           <h3>A Quick How-To Guide</h3>
           <h4>Let the eye be your guide</h4>
           <img src={smallLogo} width="100" className="logo-landing-page" alt="app-screesnshot-main" />
@@ -85,6 +105,12 @@ export default class LandingPage extends Component {
         </Link>
           <h3>All your friends are doing it.</h3>
         </section>
+
+             Additional information available on
+        <div className='github-link-container'>
+          <a className='github-link' href='https://github.com/ozharb/wekend-client'>
+            github</a>
+        </div>
       </ article>
 
     )
@@ -92,9 +118,9 @@ export default class LandingPage extends Component {
 }
 LandingPage.propTypes = {
   props: PropTypes.shape({
-      history: PropTypes.object,
-      match: PropTypes.shape({
-          params: PropTypes.object,
-      })
+    history: PropTypes.object,
+    match: PropTypes.shape({
+      params: PropTypes.object,
+    })
   })
 }

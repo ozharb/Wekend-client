@@ -1,7 +1,4 @@
-.App{
-   
-    height: 100%;
-}
+
 html, body{
 
     height: 100%;
@@ -13,7 +10,4 @@ ul{
 select{
     font-size: medium;
 }
-footer{
-    margin: 0;
-    height: 0;
-}
+

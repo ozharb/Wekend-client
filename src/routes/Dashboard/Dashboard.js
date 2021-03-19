@@ -26,16 +26,32 @@ export default class Dashboard extends Component {
           </Link>
         </>
     }
-
+    handleScroll = () => {
+        if(this.props.scrollToTarget){
+            this.props.scrollToTarget()
+        }
+    }
     render() {
         const { error } = this.context
         return (
+            <>
             <section  className='Dashboard'>
                 <h3 className='dayboard-header'>DayBoard</h3>
                 {error
                     ? <p className='red'>There was an error, try again</p>
                     : this.renderDayLinks()}
+                    
             </section>
+             <div className='help-link-container' >
+          <Link className='help-link' to={{                             
+    pathname: '/',                    
+      state: {                        
+        fromDashboard: true                    
+      }                
+    }} >
+            help me</Link>
+        </div>    
+        </>
         )
     }
 }

@@ -89,3 +89,16 @@ border-style: solid;
 border-width: 2px;
 
 }
+.github-link-container{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.github-link{
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    border: solid black;
+    letter-spacing: .4em;
+}
