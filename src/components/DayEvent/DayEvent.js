@@ -20,10 +20,8 @@ export default class DayEvent extends Component {
             expand: !this.state.expand
         })
     }
-
     render() {  
                const { event } = this.props
- 
         let username = 'user'
         const user =  window.localStorage.getItem(username)
         const attending = (event.attendees.length)
@@ -126,7 +124,7 @@ export default class DayEvent extends Component {
        const alertOrExpand = event.alert? notify : this.handleExpand
 
         return (
-            <>
+            <div>
                 <div className='Day-Events'>
           
      
@@ -145,14 +143,11 @@ export default class DayEvent extends Component {
                                 <span className='whos-going'>Who's going:</span> 
                                 <ul className = 'events-attendees'>
                                     
-                                   
                                    { event.attendees.length === 0? <p>Nobody</p>:event.attendees.map((el,i)=>{
                                    return <li key={i+event.id} className={el.alert?'alert-on':'alert-off'}>{el.username}</li>
                                 })}
                                 </ul> 
                                 </>}
-                                
-                                {/* <h2 className='Day-Events_heading'>{event.time}</h2> */}
                             </div>
                    
                             {eventDetails}
@@ -161,7 +156,7 @@ export default class DayEvent extends Component {
                     </button>
                 </div>
     
-            </>
+            </div>
         )
     }
 }
