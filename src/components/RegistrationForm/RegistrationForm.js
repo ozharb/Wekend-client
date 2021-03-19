@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import { Input, Required } from '../../Utils/Utils'
-import AuthApiService from '../../services/auth-api-service'
-import './RegistrationForm.css'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { Input, Required } from '../../Utils/Utils';
+import AuthApiService from '../../services/auth-api-service';
+import PropTypes from 'prop-types';
+import './RegistrationForm.css';
 
 export default class RegistrationForm extends Component {
 state = { loading: false,
@@ -143,4 +144,9 @@ state = { loading: false,
       </form>
     )
   }
+}
+RegistrationForm.propTypes = {
+  props: PropTypes.shape({
+    onRegistrationSuccess:PropTypes.func
+  })
 }

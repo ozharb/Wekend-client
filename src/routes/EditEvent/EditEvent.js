@@ -3,6 +3,7 @@ import EventsContext from '../../contexts/EventsContext'
 import WekendApiService from '../../services/Wekend-api-service'
 import { Input, Required } from '../../Utils/Utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import PropTypes from 'prop-types';
 import './EditEvent.css'
 
 export default class EditEvent extends Component {
@@ -172,4 +173,13 @@ export default class EditEvent extends Component {
       </section>
     )
   }
+}
+
+EditEvent.propTypes = {
+  props: PropTypes.shape({
+      history: PropTypes.object,
+      match: PropTypes.shape({
+          params: PropTypes.object,
+      })
+  })
 }

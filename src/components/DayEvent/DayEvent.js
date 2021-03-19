@@ -1,6 +1,7 @@
 import toast, { Toaster } from 'react-hot-toast';
 import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 import WekendApiService from '../../services/Wekend-api-service'
 import MediaQuery from 'react-responsive'
 import './DayEvent.css'
@@ -159,4 +160,22 @@ export default class DayEvent extends Component {
         )
     }
 }
+DayEvent.defaultProps = {
+    event:{
+        attendees:[],
+        Event_Host:'',
+        alert:'',
+        title:'',
+        place:'',
+        details:'',
+        id:'',
+    },
+  } 
+  
+  DayEvent.propTypes = {
+    props: PropTypes.shape({
+      event: PropTypes.object,
+      attendees:PropTypes.array,
+    }),
+  }
 

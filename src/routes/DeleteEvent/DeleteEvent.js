@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import EventsContext from '../../contexts/EventsContext'
 import WekendApiService from '../../services/Wekend-api-service'
 import './DeleteEvent.css'
@@ -50,4 +51,19 @@ handleCancel = e =>{
             </section>
     )
   }
+}
+DeleteEvent.defaultProps = {
+  title: ''
+}
+
+DeleteEvent.propTypes = {
+  props: PropTypes.shape({
+      history: PropTypes.object,
+      match: PropTypes.shape({
+          params: PropTypes.object,
+      }),
+      location: PropTypes.shape({
+        state: PropTypes.object,
+    })
+  })
 }

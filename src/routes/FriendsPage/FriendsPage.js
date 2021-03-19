@@ -4,10 +4,17 @@ import FriendsContext from '../../contexts/FriendsContext'
 import WekendApiService from '../../services/Wekend-api-service'
 import RequestSent from '../../components/RequestSent/RequestSent'
 import RequestReceived from '../../components/RequestReceived/RequestReceived'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './FriendsPage.css'
 import CurrentFriend from '../../components/CurrentFriend/CurrentFriend'
 
 export default class FriendsPage extends Component {
+  state = {
+    loading: true
+}
+setLoading = (trueOrFalse) =>{
+  this.setState({loading: trueOrFalse})
+}
     static contextType = FriendsContext
     static defaultProps = {
         match: { params: {} },
@@ -17,6 +24,7 @@ export default class FriendsPage extends Component {
         this.context.clearError()
         WekendApiService.getFriends()
             .then(this.context.setFriends)
+            .then(()=>this.setLoading(false))
             .catch(this.context.setError)
     }
 
@@ -74,24 +82,50 @@ export default class FriendsPage extends Component {
               <article className='FriendPage article'>
                 <div className='friends-header'>
                 <h2>Your Friends</h2>
+                
                 <Link to='/friend-search' className='get-new-friends-link'>get some new friends</Link>
                 </div>
+               
                 {error
                     ? <p className='red'>There was an error, try again</p>
-                    : this.renderCurrentFriends()}
+                    : this.state.loading
+                    ?  <div className='loader-container'>
+                    <div className='Loader'>
+                    <div className="loader-circle-overlay"  > 
+                    <i className="fas fa-moon small-moon"><FontAwesomeIcon className='small-moon' icon='moon' /></i>
+                    </div>
+                        </div>
+                        </div>
+                : this.renderCurrentFriends()}
                     </article>
 
                     <article className='FriendPage article'>
                     <h2>Pending Requests Sent</h2>
                 {error
                     ? <p className='red'>There was an error, try again</p>
-                    : this.renderRequestsSent()}
+                    : this.state.loading
+                    ?  <div className='loader-container'>
+                    <div className='Loader'>
+                    <div className="loader-circle-overlay"  > 
+                    <i className="fas fa-moon small-moon"><FontAwesomeIcon className='small-moon' icon='moon' /></i>
+                    </div>
+                        </div>
+                        </div>
+                :this.renderRequestsSent()}
                     </article>
                     <article className='FriendPage article'>
                         <h2>Pending Requests Received</h2>
                 {error
                     ? <p className='red'>There was an error, try again</p>
-                    : this.renderRequestsReceived()}
+                    : this.state.loading
+                    ?  <div className='loader-container'>
+                    <div className='Loader'>
+                    <div className="loader-circle-overlay"  > 
+                    <i className="fas fa-moon small-moon"><FontAwesomeIcon className='small-moon' icon='moon' /></i>
+                    </div>
+                        </div>
+                        </div>
+                : this.renderRequestsReceived()}
                     </article>
             </section>
         )

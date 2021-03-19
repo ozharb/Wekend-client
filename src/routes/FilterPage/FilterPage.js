@@ -6,9 +6,7 @@ import './FilterPage.css'
 
 export default class Filterpage extends Component {
     static contextType = FriendsContext
-    static defaultProps = {
-        match: { params: {} },
-      }
+
     componentDidMount() {
          
         this.context.clearError()

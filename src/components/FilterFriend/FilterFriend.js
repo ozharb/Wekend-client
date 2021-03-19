@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import WekendApiService from '../../services/Wekend-api-service'
-import './FilterFriend.css'
+import React, { Component } from 'react';
+import WekendApiService from '../../services/Wekend-api-service';
+import PropTypes from 'prop-types';
+import './FilterFriend.css';
 import FriendsContext from '../../contexts/FriendsContext';
 
 
@@ -82,3 +83,15 @@ const contextFilter = friend.receiver === friend.friend
     }
 }
 
+FilterFriend.defaultProps = {
+    friend:{
+        sender:'',
+        friend_id:''
+    },
+  } 
+  
+  FilterFriend.propTypes = {
+    props: PropTypes.shape({
+      friend: PropTypes.object,
+    })
+  }

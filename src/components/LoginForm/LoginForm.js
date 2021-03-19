@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import TokenService from '../../services/token-service'
 import AuthApiService from '../../services/auth-api-service'
+import PropTypes from 'prop-types';
 import { Input } from '../../Utils/Utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -120,4 +121,11 @@ export default class LoginForm extends Component {
       </form>
     )
   }
+}
+
+
+LoginForm.propTypes = {
+  props: PropTypes.shape({
+    onLoginSuccess:PropTypes.func
+  })
 }

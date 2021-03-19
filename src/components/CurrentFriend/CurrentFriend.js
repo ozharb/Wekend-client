@@ -1,5 +1,6 @@
 import toast, { Toaster } from 'react-hot-toast';
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import WekendApiService from '../../services/Wekend-api-service'
 import './CurrentFriend.css'
 import FriendsContext from '../../contexts/FriendsContext';
@@ -78,3 +79,15 @@ const userId = friend.sender === user ? friend.sender_id : friend.receiver_id
     }
 }
 
+CurrentFriend.defaultProps = {
+    friend:{
+        sender:'',
+        friend_id:''
+    },
+  } 
+  
+  CurrentFriend.propTypes = {
+    props: PropTypes.shape({
+      friend: PropTypes.object,
+    })
+  }

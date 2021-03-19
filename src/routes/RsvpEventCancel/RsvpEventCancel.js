@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import EventsContext from '../../contexts/EventsContext'
 import WekendApiService from '../../services/Wekend-api-service'
+import PropTypes from 'prop-types'
 import './RsvpEventCancel.css'
 
 export default class RsvpEventCancel extends Component {
@@ -44,7 +45,6 @@ handleCancel = e =>{
                     Not going to {title}?
             </label>
           <br/>
-  
                     <button className='done-add-event' type="submit">Not going</button>
                     <button className='done-add-event cancel' onClick = {this.handleCancel} type='cancel'>Still going</button>
                 </form>
@@ -53,4 +53,18 @@ handleCancel = e =>{
             </section>
     )
   }
+}
+RsvpEventCancel.defaultProps = {
+  title: ''
+}
+RsvpEventCancel.propTypes = {
+  props: PropTypes.shape({
+      history: PropTypes.object,
+      match: PropTypes.shape({
+          params: PropTypes.object,
+      }),
+      location: PropTypes.shape({
+        state: PropTypes.object,
+    })
+  })
 }

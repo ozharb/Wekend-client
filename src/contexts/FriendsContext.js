@@ -35,8 +35,6 @@ export class FriendsProvider extends Component {
         this.setState({ friends })
     }
     confirmFriend = (friendId, userId) => {
-        console.log('friendid:', friendId, 'userId:', userId)
-
         this.setState({
             friends: this.state.friends.map(i =>
                 (i.friend_id === friendId && i.receiver_id === userId)

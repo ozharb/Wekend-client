@@ -6,9 +6,10 @@ import smallLogo from './images/logo512.png'
 import speechBubble from './images/speech-bubble.png'
 import alertScreenshot from './images/alert-screenshot.jpg'
 import expandedScreesnshot from './images/wekend-expanded-screenshot.jpg'
+import PropTypes from 'prop-types';
 import PreloadImage from 'react-preload-image'
 
-export default class RegistrationPage extends Component {
+export default class LandingPage extends Component {
   static defaultProps = {
     history: {
       push: () => { },
@@ -75,7 +76,6 @@ export default class RegistrationPage extends Component {
           <p>Use <span className='add-event-word-landingpage'>Add Event</span>  to post new events.</p>
           <p>Once your event is posted, you can go back to the day page to see your events and make any updates you want.</p>
           <p>It's recommended you remove events after they happen to keep people's day pages up to date.</p>
-
         </section>
         <section className='landing-page-register landing-page-bottom'>
           <h3>Be a good friend and get WEkend</h3>
@@ -89,4 +89,12 @@ export default class RegistrationPage extends Component {
 
     )
   }
+}
+LandingPage.propTypes = {
+  props: PropTypes.shape({
+      history: PropTypes.object,
+      match: PropTypes.shape({
+          params: PropTypes.object,
+      })
+  })
 }

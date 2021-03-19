@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import EventsContext from '../../contexts/EventsContext'
+import PropTypes from 'prop-types';
 import WekendApiService from '../../services/Wekend-api-service'
 import { Input, Required } from '../../Utils/Utils'
 import './NewEvent.css'
@@ -121,4 +122,9 @@ export default class NewEvent extends Component {
       </section>
     )
   }
+}
+NewEvent.propTypes = {
+  props: PropTypes.shape({
+      history: PropTypes.object
+  })
 }
