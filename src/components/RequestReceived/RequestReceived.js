@@ -5,7 +5,6 @@ import './RequestReceived.css'
 import FriendsContext from '../../contexts/FriendsContext';
 
 
-
 export default class RequestReceived extends Component {
     static contextType = FriendsContext
     state = {
@@ -30,24 +29,8 @@ handleUnDelete=e=>{
 handleUnAccept=e=>{
     this.setState({accepting:false})
 }
-friendAcceptnotify = () => toast((t) => (
-    <span className = 'alert-message'>
-friend made
-      <button onClick={() => toast.dismiss(t.id)}>
-        Cool
-      </button>
-    </span>
+friendAcceptnotify = () => toast.success('Friendship made')
 
-  )  );
-  friendDeletednotify = () => toast((t) => (
-    <span className = 'alert-message'>
- request deleted
-      <button onClick={() => toast.dismiss(t.id)}>
-        Cool
-      </button>
-    </span>
-
-  )  );
 acceptFriendFinal = e => {
     e.preventDefault()
      
@@ -75,7 +58,7 @@ const userId = friend.sender === user ? friend.sender_id : friend.receiver_id
 
   WekendApiService.deleteFriendship(friendId)
   .then(this.context.deleteFriend(friendId,userId))
-  .then(this.friendDeletednotify)
+  .then(this.props.deleteNotify)
   .catch(error => { console.error({ error }) })
   }
     render() {

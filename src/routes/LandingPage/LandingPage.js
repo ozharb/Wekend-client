@@ -51,7 +51,7 @@ export default class LandingPage extends Component {
         <p><em>"Yeah. You should."- Mary's friend</em></p>
         <div className='speech-bubble-text'>
           <div className="speech-text">
-            <p>FMO <br />be gone!</p>
+            <p>FOMO <br />be gone!</p>
           </div>
           <div className='speech-bubble'>
             <img src={speechBubble} width="300" className="speech-bubble-landing-page" alt="speech bubble" />

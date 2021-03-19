@@ -1,4 +1,3 @@
-import { Toaster } from 'react-hot-toast';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -58,7 +57,6 @@ export default class FoundUser extends Component {
         return (
             <>
                 <div className='Friends-List'>
-                    <Toaster position="top-center" />
                     <div className='current-friend'>
                         {this.state.error ? errorMessage :
                             <div className='friend-not-deleting'>

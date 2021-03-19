@@ -5,16 +5,6 @@ exports[`renders the UI as expected 1`] = `
   className="Friends-List"
 >
   <div
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    style={
-      Object {
-        "position": "fixed",
-        "zIndex": 9999,
-      }
-    }
-  />
-  <div
     className="current-friend"
   >
     <div

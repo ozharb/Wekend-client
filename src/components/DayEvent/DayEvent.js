@@ -21,6 +21,20 @@ export default class DayEvent extends Component {
             expand: !this.state.expand
         })
     }
+
+    notify = () => {
+        const { event } = this.props
+        let username = 'user'
+        const user = window.localStorage.getItem(username)
+        toast(`${event.Event_Host === user ? `You` : event.Event_Host} changed this event`, {
+            icon: '✏️',
+        });
+        WekendApiService.turnOffAlert(event.id)
+
+            .then(this.context.changeEventAlert(event.id, user))
+            .catch(error => { console.error({ error }) })
+
+    }
     render() {
         const { event } = this.props
         let username = 'user'
@@ -43,23 +57,6 @@ export default class DayEvent extends Component {
         let timeNumbers = time.split('').slice(0, time.length - 2).join('')
         let timeLetters = time.split('').slice(time.length - 2).join('')
 
-        const notify = () => toast((t) => (
-            <span className='alert-message'>
-                <b>{event.Event_Host === user ? `You` : event.Event_Host}</b>
-                {'  '}changed this event.
-                <br />
-                <button onClick={() => toast.dismiss(t.id)}>
-                    Cool
-              </button>
-            </span>
-
-        )
-            , WekendApiService.turnOffAlert(event.id)
-
-                .then(this.context.changeEventAlert(event.id, user))
-                .catch(error => { console.error({ error }) })
-
-        );
         const host = event.Event_Host === user
             ? <>
                 <span className='host-name'>You're</span> hosting
@@ -124,7 +121,7 @@ export default class DayEvent extends Component {
             </div>
             : null
 
-        const alertOrExpand = event.alert ? notify : this.handleExpand
+        const alertOrExpand = event.alert ? this.notify : this.handleExpand
 
         return (
             <>
@@ -161,21 +158,21 @@ export default class DayEvent extends Component {
     }
 }
 DayEvent.defaultProps = {
-    event:{
-        attendees:[],
-        Event_Host:'',
-        alert:'',
-        title:'',
-        place:'',
-        details:'',
-        id:'',
+    event: {
+        attendees: [],
+        Event_Host: '',
+        alert: '',
+        title: '',
+        place: '',
+        details: '',
+        id: '',
     },
-  } 
-  
-  DayEvent.propTypes = {
+}
+
+DayEvent.propTypes = {
     props: PropTypes.shape({
-      event: PropTypes.object,
-      attendees:PropTypes.array,
+        event: PropTypes.object,
+        attendees: PropTypes.array,
     }),
-  }
+}
 

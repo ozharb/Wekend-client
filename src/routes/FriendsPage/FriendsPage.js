@@ -1,3 +1,4 @@
+import toast, { Toaster } from 'react-hot-toast';
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import FriendsContext from '../../contexts/FriendsContext'
@@ -15,6 +16,9 @@ export default class FriendsPage extends Component {
 setLoading = (trueOrFalse) =>{
   this.setState({loading: trueOrFalse})
 }
+
+deleteNotify = ()=>  toast.success("deleted")
+
     static contextType = FriendsContext
     static defaultProps = {
         match: { params: {} },
@@ -30,7 +34,6 @@ setLoading = (trueOrFalse) =>{
 
     renderCurrentFriends() {
         const { friends = [] } = this.context
-      
         let allFriends = friends.filter(friend=> 
             friend.confirmed === true)
 
@@ -38,21 +41,21 @@ setLoading = (trueOrFalse) =>{
           <CurrentFriend
             key={1+ friend.receiver_id + friend.sender_id}
             friend={friend}
+            deleteNotify={this.deleteNotify}
           />
         )
       }
       renderRequestsSent() {
         const { friends = [] } = this.context
       
- 
         let friendRequests = friends.filter(friend=> 
             (!friend.confirmed)&&(friend.friend_id===friend.receiver_id))
 
-         
         return (!friendRequests.length)? <p>You have no pending friend requests</p>:friendRequests.map(friend =>
           <RequestSent
             key={friend.receiver_id+friend.sender_id}
             friend={friend}
+            deleteNotify={this.deleteNotify}
           />
         )
       }
@@ -62,13 +65,12 @@ setLoading = (trueOrFalse) =>{
  
         let requestsReceived = friends.filter(friend=> 
           (!friend.confirmed)&&(friend.friend_id===friend.sender_id))
-          
-         
-         
+           
         return (!requestsReceived.length) ? <p>You have no pending friend requests</p>: requestsReceived.map(friend =>
           <RequestReceived
             key={friend.receiver_id + friend.sender_id}
             friend={friend}
+            deleteNotify={this.deleteNotify}
           />
         )
       }
@@ -78,7 +80,7 @@ setLoading = (trueOrFalse) =>{
  
         return (
             <section className='FriendPage'>
-                  
+                  <Toaster position="top-center" />
               <article className='FriendPage article'>
                 <div className='friends-header'>
                 <h2>Your Friends</h2>

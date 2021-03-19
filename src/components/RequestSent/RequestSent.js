@@ -1,4 +1,3 @@
-import toast, { Toaster } from 'react-hot-toast';
 import React, { Component } from 'react'
 import WekendApiService from '../../services/Wekend-api-service'
 import './RequestSent.css'
@@ -24,18 +23,10 @@ handleDelete=e=>{
 handleUnDelete=e=>{
     this.setState({deleting:false})
 }
-notify = () => toast((t) => (
-    <span className = 'alert-message'>
- deleted
-      <button onClick={() => toast.dismiss(t.id)}>
-        Cool
-      </button>
-    </span>
 
-  )  );
+
 deleteFriendFinal = e => {
     e.preventDefault()
-     
     let username = 'user'
     const user =  window.localStorage.getItem(username)
     const {friend} = this.props
@@ -45,7 +36,7 @@ const userId = friend.sender === user ? friend.sender_id : friend.receiver_id
 
   WekendApiService.deleteFriendship(friendId)
   .then(this.context.deleteFriend(friendId,userId))
-  .then(this.notify)
+  .then(this.props.deleteNotify)
   .catch(error => { console.error({ error }) })
   }
     render() {
@@ -54,10 +45,7 @@ const userId = friend.sender === user ? friend.sender_id : friend.receiver_id
         let friendClassName = (friend.friend.length > 12) ? 'small-font' : 'large-font'
         return (
             <>
-                {/* <Link to={`/thing/${thing.id}`} className='ThingListItem'> */}
-
                 <div className='Friends-List'>
-                    <Toaster position="top-center" />
                     <div className='current-friend'>
                             <div className='friend-not-deleting'>
                         <h2 className={friendClassName} >{this.state.deleting? `Delete ${friend.friend}?`: friend.friend}</h2>
@@ -75,31 +63,8 @@ const userId = friend.sender === user ? friend.sender_id : friend.receiver_id
         
                     </div>
                 </div>
-                {/* </Link> */}
+           
             </>
         )
     }
 }
-
-// function readableReviewCount(number) {
-//   switch(number) {
-//     case 0:
-//       return 'no reviews yet'
-
-//     case 1:
-//       return `based on 1 review`
-
-//     default:
-//       return `based on ${number} reviews`
-//   }
-// }
-
-// function truncate(text) {
-//   const words = text.split(' ')
-
-//   if (words.length > 10) {
-//     return words.slice(0, 10).join(' ') + ' ...'
-//   }
-
-//   return text
-// }
