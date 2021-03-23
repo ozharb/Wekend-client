@@ -66,7 +66,7 @@ Using a built in search feature, you can easily find other users by search their
 
 ### Filter the events you see by who's hosting them  
 <p align="center">
-<img src="src/routes/LandingPage/images/ friends-filter.png" width="300">
+<img src="src/routes/LandingPage/images/friends-filter.png" width="300">
 </p>
 Get a precise look at what's going on this weekend by using filters. Turn on all your friends filters to just get your events. Or keep them all off and know what eveyrone's doing for the ultimate weekend!
 

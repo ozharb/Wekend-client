@@ -64,7 +64,7 @@ margin: 10px;
 --toggler-width: 120px;
 
 --toggler-height: 40px;
---toggler-bg-color: white;
+--toggler-bg-color: none;
 --menu-starting-top: -50px;
 --menu-ending-top: 30px;
 --menu-max-height: 300px;
