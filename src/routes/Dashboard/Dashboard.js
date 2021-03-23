@@ -36,7 +36,7 @@ export default class Dashboard extends Component {
         return (
             <>
             <section  className='Dashboard'>
-                <h3 className='dayboard-header'>DayBoard</h3>
+                <h2 className='dayboard-header'>DayBoard</h2>
                 {error
                     ? <p className='red'>There was an error, try again</p>
                     : this.renderDayLinks()}

@@ -9,15 +9,27 @@
   
 
 }
+.LandingPage>p{
+    font-family: 'Sulphur Point', sans-serif; 
+}
+.app-features{
+    font-family: 'Sulphur Point', sans-serif; 
+}
 header>h1{
-    font-family: 'Bungee Shade', cursive;
-    font-size: 50px;
+    font-family: 'Bungee shade', cursive;
+    font-size: 40px;
+    letter-spacing: .2em;
 }
 .friends-image{
     display: flex;
     justify-content: center;
 }
+header>h2{
+    font-family: 'Sulphur Point', sans-serif;
+    font-size: 20px;
+}
 .banner-main{
+    font-family: 'Bungee Shade', cursive;
     position: relative;
     width: 300px;
     height: 403px;
