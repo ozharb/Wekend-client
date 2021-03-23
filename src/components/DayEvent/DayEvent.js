@@ -127,10 +127,11 @@ export default class DayEvent extends Component {
             <>
                 <div className='Day-Events'>
                     <Toaster position="top-center" />
-                    <button
-                        type='button'
+                    <section
+                        tabIndex='0'
                         aria-label='expand'
                         onClick={alertOrExpand}
+                        onKeyDown={alertOrExpand}
                         className='Event__expand-event-button'>
                         <div className="Event-Content">
                             <div className='event-title-attendees'>
@@ -150,7 +151,7 @@ export default class DayEvent extends Component {
                             {eventDetails}
 
                         </div>
-                    </button>
+                    </section>
                 </div>
 
             </>

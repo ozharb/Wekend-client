@@ -6,17 +6,19 @@
     text-align: center;
     margin-bottom: 80px;
     line-height: 1.6;
-  
 
 }
 .LandingPage>p{
     font-family: 'Sulphur Point', sans-serif; 
+
 }
 .app-features{
     font-family: 'Sulphur Point', sans-serif; 
+
 }
 header>h1{
-    font-family: 'Bungee shade', cursive;
+    font-family: 'Bungee', cursive;
+    color: white;
     font-size: 40px;
     letter-spacing: .2em;
 }
@@ -26,6 +28,7 @@ header>h1{
 }
 header>h2{
     font-family: 'Sulphur Point', sans-serif;
+    color: white;
     font-size: 20px;
 }
 .banner-main{

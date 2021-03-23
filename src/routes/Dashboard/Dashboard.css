@@ -14,9 +14,11 @@ margin-bottom: 40px;
 text-decoration: none;
 }
 .dayboard-header{
+font-family: 'Bungee', cursive;
+padding: 0;
 margin-top: 10px;
 text-align: center;
-font-size: 40px;
+font-size: 30px;
 letter-spacing: .5em;
 }
 .help-link-container{

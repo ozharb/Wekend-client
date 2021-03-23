@@ -56,7 +56,7 @@ export default class LandingPage extends Component {
         </header>
         <section className="app-features">
 
-          <p> Make friends, post events, and see what's up this weekend</p>
+          <p> Make friends, post events, and see what's up this weekend.</p>
         </section>
         <section className='friends-image'>
           <PreloadImage
@@ -90,7 +90,7 @@ export default class LandingPage extends Component {
             to={"/register"}>
             Register
         </Link>
-          <h3>Don't waste a precious second of your weekend.</h3>
+          <h3>Don't waste a second of your weekend.</h3>
         </section>
         <section className='app-how-to-use' ref={this.appGuide} >
           <h3>A Quick How-To Guide</h3>
