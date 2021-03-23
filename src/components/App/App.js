@@ -20,8 +20,11 @@ import { Route, Switch } from 'react-router-dom'
 import './App.css';
 
 class App extends Component {
-  state = { hasError: false }
-
+  state = { hasError: false,
+            onLandingPage: false}
+onLandingPage = (trueOrFalse) =>{
+  this.setState({onLandingPage:trueOrFalse})
+}
   static getDerivedStateFromError(error) {
     console.error(error)
     return { hasError: true }
@@ -30,8 +33,9 @@ class App extends Component {
 
 
     render() {
+    const appBackground = this.state.onLandingPage ? 'App background' : 'App'
       return (
-        <div className='App'>
+        <div className={appBackground} >
           <header className='App__header'>
             <Header />
           </header>
@@ -41,7 +45,10 @@ class App extends Component {
               <Route
                 exact
                 path={'/'}
-                component={LandingPage}
+                render={(props) => (
+                <LandingPage {...props}
+                 onLandingPage={this.onLandingPage}/>
+                )}
               />
              
               <PublicOnlyRoute

@@ -6,6 +6,8 @@
     text-align: center;
     margin-bottom: 80px;
     line-height: 1.6;
+  
+
 }
 header>h1{
     font-family: 'Bungee Shade', cursive;
@@ -19,7 +21,7 @@ header>h1{
     position: relative;
     width: 300px;
     height: 403px;
-    background-color: white;
+    background-color: none;
 }
 .logo-landing-page{
     border: none;

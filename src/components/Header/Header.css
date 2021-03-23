@@ -8,7 +8,6 @@ padding-top: 30px;
 padding-left: 20px;
 padding-right: 20px;
 padding-bottom: 22px;
-background: white;
 margin-bottom: 50px;
 }
 .Header-user-info{
@@ -39,7 +38,7 @@ flex-direction: row;
 
 }
 .Header__not-logged-in >a{
-    margin-left: 5px;
+    margin: 5px;
 }
 
 .user-profile{
@@ -99,7 +98,7 @@ position: absolute;
 top: var(--menu-ending-top);
 z-index: 1;
 box-sizing: border-box;
-margin-left: -12em;
+margin-left: -10em;
 width: var(--menu-width);
 overflow: hidden;
 background-color: var(--menu-bg-color);
@@ -162,4 +161,15 @@ flex-direction: row;
 .Header__not-logged-in .Hyph {
 display: initial;
 }
+}
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    .Header{
+       padding-right: 0px;
+        }
+
 }

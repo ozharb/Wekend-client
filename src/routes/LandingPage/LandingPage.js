@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import './LandingPage.css'
 import { Link } from "react-router-dom"
-import main from './images/wekend-landing-image.jpg'
+import main from './images/landing-image-no-bckgrnd.png'
 import smallLogo from './images/logo512.png'
 import speechBubble from './images/speech-bubble.png'
-import alertScreenshot from './images/alert-screenshot.jpg'
-import expandedScreesnshot from './images/wekend-expanded-screenshot.jpg'
+import alertScreenshot from './images/yoga.png'
+import expandedScreesnshot from './images/yoga-mary.png'
 import PropTypes from 'prop-types';
 import PreloadImage from 'react-preload-image'
 
@@ -18,26 +18,33 @@ export default class LandingPage extends Component {
       push: () => { },
     },
     location: {
-      state:{
-        fromDashboard:false
+      state: {
+        fromDashboard: false
       }
     }
   }
-  appGuide = React.createRef()  
- 
-componentDidMount(){
-  if (this.props.location.state){
-    this.scrollToTarget()
-}
-}
-scrollToTarget = () => {
-  
-  setTimeout(() =>{
-    this.appGuide.current.scrollIntoView({
-          behavior: 'smooth'
-      }) 
-     }, 500);
-}
+  appGuide = React.createRef()
+
+  componentDidMount() {
+    if (this.props.location.state) {
+      this.scrollToTarget()
+    }
+    this.props.onLandingPage(true)
+
+  }
+  componentWillUnmount() {
+
+    this.props.onLandingPage(false)
+
+  }
+  scrollToTarget = () => {
+
+    setTimeout(() => {
+      this.appGuide.current.scrollIntoView({
+        behavior: 'smooth'
+      })
+    }, 500);
+  }
   render() {
     return (
       <article className='LandingPage'>

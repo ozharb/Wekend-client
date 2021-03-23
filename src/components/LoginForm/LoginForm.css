@@ -7,9 +7,6 @@
     color:red;
 }
 
-.LoginForm{
-    height: 1400px;
-}
 
 .LoginForm > button{
 background-color: black;
