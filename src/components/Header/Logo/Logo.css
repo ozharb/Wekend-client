@@ -57,7 +57,7 @@ touch-action: none;
 border: 15px solid;
 position: absolute;
 height: 100px;
-width: 100px;
+width: 50px;
 border-radius: 50%;
 width: 100px;
 height: 100px;
@@ -124,7 +124,7 @@ justify-content: center;
 }
 
 
-.cloud1 {
+/* .cloud1 {
 position: absolute;
 margin-top: 15px;
 width: 40px;
@@ -133,15 +133,14 @@ background: black;
 border-radius: 50%;
 display: flex;
 justify-content: center;
-}
+} */
 
-.cloud2 {
+/* .cloud2 {
 position: absolute;
 margin-left: 20px;
-
 width: 25px;
 height: 25px;
 background: white;
 border-radius:60%;
-}
+} */
 }
