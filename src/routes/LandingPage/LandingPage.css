@@ -153,3 +153,9 @@ border-width: 2px;
     border: solid black;
     letter-spacing: .4em;
 }
+@media screen and (min-width: 770px) {
+    section.quotes {
+        padding: 0 200px 0 200px;
+     
+    }
+    }

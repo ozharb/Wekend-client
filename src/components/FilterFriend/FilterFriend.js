@@ -64,14 +64,14 @@ const contextFilter = friend.receiver === friend.friend
 
                     <div className='current-friend'>
                             <div className='friend-not-deleting'>
-                        <h2 className={friendClassName} >{friend.friend}'s events are</h2>
+                        <h2 className={friendClassName} >{friend.friend}</h2>
                         <div className='delete-friend-container'>
                             {this.state.filter
                         ?<div className='yes-no-buttons'>
-                        <button className='delete-friend-yes' onClick={this.UnfilterFriend}>invisible</button>
+                        <button className='delete-friend-yes' onClick={this.UnfilterFriend}>exclude</button>
                         </div>
                         : 
-                        <button className='delete-friend' onClick={this.filterFriend}>visible</button>
+                        <button className='delete-friend' onClick={this.filterFriend}>include</button>
                         }
                         </div>
                         </div>
