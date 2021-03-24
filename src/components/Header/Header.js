@@ -4,7 +4,7 @@ import UserInfo from '../../UserInfo/UserInfo'
 import TokenService from '../../services/token-service'
 import './Header.css'
 import { CSSTransition } from 'react-transition-group';
-// import Logo from './Logo/Logo';
+import Logo from './Logo/Logo';
 export default class Header extends Component {
 
   state = {
@@ -81,7 +81,7 @@ export default class Header extends Component {
             className = 'temp-menu'
              onClick={this.handleItemExpand}
              onKeyDown={this.handleItemExpand}>menu</p>
-                {/* <Logo  /> */}
+                <Logo  />
               <div className="user-menu" >
                 <CSSTransition
                   in={this.state.expand}
