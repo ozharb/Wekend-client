@@ -59,13 +59,13 @@ export default class DayEvent extends Component {
 
         const host = event.Event_Host === user
             ? <>
-                <span className='host-name'>You're</span> hosting
+                <span className='host-name'>You're</span> hosting {' '}
             </>
             : <MediaQuery minDeviceWidth={700}>
                 {(matches) =>
                     matches
                         ? <div><span className='host-name'>{event.Event_Host}'s</span> hosting</div>
-                        : <div><span className='host-name'>{hostName}'s</span> hosting</div>
+                        : <div><span className='host-name'>{hostName}'s</span> hosting{' '} </div>
                 }
             </MediaQuery>
 
@@ -75,7 +75,7 @@ export default class DayEvent extends Component {
             ? <div className='Event-top-and-bottom'>
                 <div className='Event-content-details'>
                     <div className="Event-column-1">
-                        {host} <br />
+                        {host} 
                   @ {event.place}
                     </div>
                     <div className="Event-column-2">
