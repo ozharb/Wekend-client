@@ -70,9 +70,9 @@ export default class LandingPage extends Component {
 
         <p>See who's doing what when so you can do that too－with them!</p>
         <img src={alertScreenshot} width="300" className="screenshot" alt="screenshot of update alert" />
-        <p>RSVP to your friends' events and see when details get changed so you can stay in the know.</p>
+        <p>RSVP to an event and find out instantly if a detail gets changed.</p>
         <img src={expandedScreesnshot} width="300" className="screenshot" alt="screenshot of expanded view" />
-        <p>Get the who, what, when details for every event.</p>
+        <p>Get all the info you need for this weekend in one awesome place.</p>
         <p>Know if someone didn't see an update so you can let them know and everyone can stay in the know, you know?</p>
       
         <section className='quotes'>

@@ -49,7 +49,7 @@ export default class Dashboard extends Component {
         fromDashboard: true                    
       }                
     }} >
-            get help </Link>
+         help </Link>
         </div>    
         </>
         )

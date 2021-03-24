@@ -1,115 +1,115 @@
 .Day-Events > h2{
- font-family: 'Public Sans', sans-serif;
- font-size: 50px;
+font-family: 'Public Sans', sans-serif;
+font-size: 50px;
 }
 .Day-Events > h3{
-    font-family: 'Public Sans', sans-serif;
+font-family: 'Public Sans', sans-serif;
 
-   }
+}
 .Day-Events_heading-large{
-    font-size: 40px;
-    margin-bottom: 5px;
+font-size: 40px;
+margin-bottom: 5px;
 }
 .Day-Events_heading-small{
-    font-size: 24px;
-    margin-bottom: 5px;
+font-size: 24px;
+margin-bottom: 5px;
 }
 .Day-Events:nth-child(even) section{
-    background: black;
-    color: white;
+background: black;
+color: white;
 }
 .Day-Events:nth-child(even) p{
-    color: white;
+color: white;
 }
 .Day-Events:nth-child(even) a{
-    text-decoration: none;
-    padding: 10px;
-    background: white;
-    color: black;
-    margin-top: 5px;
+text-decoration: none;
+padding: 10px;
+background: white;
+color: black;
+margin-top: 5px;
 }
 .host-name{
-    font-weight: bold;
+font-weight: bold;
 }
 .Day-Events:nth-child(odd) section{
-    background: white;
-    color: black;
+background: white;
+color: black;
 }
 .Day-Events:nth-child(odd) p{
-    color: black;
+color: black;
 }
 .Day-Events:nth-child(odd) a{
-    text-decoration: none;
-    padding: 10px;
-    height: 15px;
-    background: black;
-    color: white;
-    margin-top: 5px;
+text-decoration: none;
+padding: 10px;
+height: 15px;
+background: black;
+color: white;
+margin-top: 5px;
 }
 .Event__expand-event-button{
-    width: 100%;
-    margin: 0;
+width: 100%;
+margin: 0;
 }
 .Event-edit-container{
-    float: right;
+float: right;
 
 }.Event-edit-container>a{
-    font-size: medium;
-    margin-left: 8px;
+font-size: medium;
+margin-left: 8px;
 
 }
 .time-letters{
-    text-align: center;
-   font-size: 20px;
-   margin-bottom: 5px;
+text-align: center;
+font-size: 20px;
+margin-bottom: 5px;
 }
 .Event-Content{
-    padding: 7px;
-    display: flex;
+padding: 7px;
+display: flex;
 
-    
+
 }
 .alert-message{
-    text-align: center;
-    
+text-align: center;
+
 }
 .alert{
-    color: red;
+color: red;
 
 }
 
 .Event-top-and-bottom{
 
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-self: flex-end;
 }
 .Event-content-details{
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
 }
 .events-attendees {
 width: 100px;
 }
 .events-attendees > li{
-    text-align: start;
-    font-weight: bold;
-    padding-right: 1px;
+text-align: start;
+font-weight: bold;
+padding-right: 1px;
 
 }
 
 ::marker {
-    margin-left: 20px;
+margin-left: 20px;
 }
 
 .Event-column-1{
- margin: 10px;
- font-size: medium;
- line-height: 1.4em; 
- margin-top: 14px;
+margin: 10px;
+font-size: medium;
+line-height: 1.4em; 
+margin-top: 14px;
 }
 .deets{
 font-size: medium;
@@ -122,43 +122,47 @@ letter-spacing: .14em;
 
 .Event-column-2{
 font-family: 'Monoton', cursive;
- font-size: 30px;
- font-size: bold;
+font-size: 30px;
+font-size: bold;
 
 }
 .alert-on{
-    color: red;
+color: red;
 }
 .Event-bottom-row{
-    letter-spacing: .15em;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 25px;
-    text-align: center;
+letter-spacing: .15em;
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 25px;
+text-align: center;
 }
 .Event-bottom-row>p{
-  margin: 0px;
+margin: 0px;
 }
 
 @media screen and (min-width: 770px) {
-    .Event-column-2{
-        font-family: 'Monoton', cursive;
-         font-size: 70px;
-         font-size: bold;
+.Event-column-2{
+font-family: 'Monoton', cursive;
+font-size: 70px;
+font-size: bold;
 
-        }
-    .Header{
-    height: 42px;
-    }
-    .Header h1 {
-    font-size: 22pt;
-    }
-    
-    .Header__not-logged-in {
-    flex-direction: row;
-    }
-    
-    .Header__not-logged-in .Hyph {
-    display: initial;
-    }
-    }
+}
+.Event-column-1{
+font-size: 25px;
+
+}
+.Header{
+height: 42px;
+}
+.Header h1 {
+font-size: 22pt;
+}
+
+.Header__not-logged-in {
+flex-direction: row;
+}
+
+.Header__not-logged-in .Hyph {
+display: initial;
+}
+}

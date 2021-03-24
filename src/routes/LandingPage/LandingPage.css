@@ -13,6 +13,7 @@
 
 }
 section.quotes {
+    padding: 0 50px 0 50px;
     display: flex;
     flex-direction: column;
     font-family: 'Sulphur Point', sans-serif; 

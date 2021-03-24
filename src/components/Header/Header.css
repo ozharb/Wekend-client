@@ -69,7 +69,7 @@ margin: 10px;
 --menu-ending-top: 30px;
 --menu-max-height: 300px;
 --menu-bg-color: white(27, 27, 27) ;
---fade-from-color: rgb(27, 27, 27) ;
+--fade-from-color: none ;
 --fade-to-color: black;
 --timeout: 1000ms;
 }
