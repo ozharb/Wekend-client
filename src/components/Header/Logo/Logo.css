@@ -17,7 +17,8 @@ color: black;
 background: transparent;
 margin-right: 5px;
 padding-right: 140px;
-/* padding-bottom: 140px; */
+padding-bottom: 0;
+padding-top: 0;
 
 }
 .inside-reload{
@@ -27,6 +28,7 @@ padding-right: 140px;
 transition: ease-in-out, width .35s ease-in-out;
 }
 .reload:focus:active{
+
    background: none;
    color: none;
    outline: 0;

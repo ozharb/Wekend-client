@@ -77,7 +77,8 @@ export default class Header extends Component {
              onClick={this.handleItemExpand}
             >
                 <Logo  />
-              <div className="user-menu">
+              <div className="user-menu"
+              >
                 <CSSTransition
                   in={this.state.expand}
                   timeout={2000}
