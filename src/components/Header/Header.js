@@ -67,7 +67,7 @@ export default class Header extends Component {
           </Link>
   }
         </h1>
-        <div className='Header-user-info'>
+        <>
           <div className="logout">
             <div>{logLink} </div>
           </div>
@@ -92,7 +92,7 @@ export default class Header extends Component {
 
             </section>
           }
-        </div>
+        </>
       </nav>
 
     )
