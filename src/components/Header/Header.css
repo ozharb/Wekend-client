@@ -38,7 +38,10 @@ flex-direction: row;
 .Header__not-logged-in >a{
     margin: 5px;
 }
-
+.temp-menu{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    padding: 20px;
+}
 .user-profile{
 display: flex; 
 

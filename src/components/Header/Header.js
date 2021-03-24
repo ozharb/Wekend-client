@@ -78,6 +78,7 @@ export default class Header extends Component {
             //  onKeyDown={this.handleItemExpand}
             >
           <p  tabIndex= '0'
+            className = 'temp-menu'
              onClick={this.handleItemExpand}
              onKeyDown={this.handleItemExpand}>menu</p>
                 {/* <Logo  /> */}
