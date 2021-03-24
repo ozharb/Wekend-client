@@ -27,7 +27,7 @@ class Logo extends Component {
         return(
            <>
  <ReMount >
-      <div className="diffcircle" >
+      <div onClick = {this.props.handleExpand} className="diffcircle" >
           <div className="circle-overlay" /> 
        <div className="circle-fill"  /> 
        <i className="fas fa-moon"><FontAwesomeIcon className='moon' icon='moon' /></i>

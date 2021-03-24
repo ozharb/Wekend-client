@@ -102,9 +102,10 @@ overflow: hidden;
 background-color: var(--menu-bg-color);
 
 }
-/* .temp-menu{
-    
-} */
+.temp-menu{
+    padding: 10px;
+    border: solid;
+}
 .list {
 margin-top:0;
 padding: 0;

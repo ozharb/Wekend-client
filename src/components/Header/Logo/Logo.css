@@ -7,15 +7,13 @@ color: black;
 background: transparent;
 margin-left: 30px;
 padding: 0px;
-width: 0px;
-margin-top: 0px;
+margin-top: 10px;
 
 }
 .inside-reload{
-    border: solid;
     width: 0;
     margin-top: 0px;
-    margin-bottom: 0;
+    margin-bottom: 0px;
     padding: 0;
 }
 .reload:focus{
@@ -41,10 +39,9 @@ height: 70px;
 
 .diffcircle{
 will-change: transform;
-/* -webkit-mask-image: -webkit-radial-gradient(white, black); */
 overflow:hidden;
 margin-top: -30px;
-margin-left: -25px;
+margin-left: -20px;
 height: 100%;
 touch-action: none;
 -ms-touch-action: none;
