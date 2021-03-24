@@ -7,7 +7,7 @@ const ReMount = props => {
     let [key, setKey] = React.useState(0);
   const handleKey = () => setKey(Date.now())
     return (
-      <div>
+      
       <button 
       className="reload" 
       onClick={handleKey}
@@ -15,7 +15,7 @@ const ReMount = props => {
         <div key={key} >{props.children}</div>
          
         </button>
-      </div>
+
     );
   };
 class Logo extends Component {

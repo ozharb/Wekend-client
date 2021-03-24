@@ -68,7 +68,7 @@ margin: 10px;
 --menu-starting-top: -50px;
 --menu-ending-top: 30px;
 --menu-max-height: 300px;
---menu-bg-color: white(27, 27, 27) ;
+--menu-bg-color: none;
 --fade-from-color: none ;
 /* --fade-to-color: black; */
 --timeout: 1000ms;
@@ -83,10 +83,10 @@ position: relative;
 z-index: 2;
 width: var(--toggler-width);
 height: var(--toggler-height);
-/* background-color: var(--toggler-bg-color); */
+background-color: var(--toggler-bg-color);
 border: none;
 outline: none;
-/* transition: background-color 1000ms; */
+transition: background-color 1000ms;
 }
 
 .toggler--active {

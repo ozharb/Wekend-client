@@ -13,6 +13,7 @@ justify-content: center;
 }
 .reload{
 color: black;
+background: none;
 margin-right: 5px;
 padding-right: 140px;
 padding-bottom: 140px;
