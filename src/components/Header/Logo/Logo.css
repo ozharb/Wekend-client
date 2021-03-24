@@ -1,17 +1,16 @@
 /* Logo.module.css */
 
 .reload{
-border: solid;
 
-    outline:none;
+ outline:none;
 color: black;
 background: transparent;
-margin-right: 5px;
 padding: 10px;
+/* margin-right: 5px; */
+padding: 0px;
+width: 0px;
+margin-top: 10px;
 
-width: 5px;
-margin-top: 0px;
-margin-bottom: px;
 }
 .inside-reload{
 
