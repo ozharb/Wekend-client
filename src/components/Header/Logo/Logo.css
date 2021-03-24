@@ -7,7 +7,7 @@ color: black;
 background: transparent;
 margin-left: 30px;
 padding: 0px;
-margin-top: 10px;
+margin-top: 30px;
 
 }
 .inside-reload{
@@ -45,7 +45,7 @@ margin-left: -20px;
 height: 100%;
 touch-action: none;
 -ms-touch-action: none;
-border: 14px solid;
+border: 15px solid;
 position: absolute;
 height: 50px;
 border-radius: 50%;
