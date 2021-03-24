@@ -41,6 +41,7 @@ flex-direction: row;
 
 .user-profile{
 display: flex; 
+-webkit-tap-highlight-color: transparent; 
 -webkit-tap-highlight-color: rgba(0,0,0,0);
 flex-direction: column;
 cursor: pointer;
