@@ -59,11 +59,12 @@
 
 }
 .time-letters{
+    text-align: center;
    font-size: 20px;
    margin-bottom: 5px;
 }
 .Event-Content{
-  
+    padding: 7px;
     display: flex;
 
     
@@ -133,6 +134,7 @@ font-family: 'Monoton', cursive;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 25px;
+    text-align: center;
 }
 .Event-bottom-row>p{
   margin: 0px;

@@ -11,8 +11,6 @@ export default class LoginForm extends Component {
   static defaultProps = {
     onLoginSuccess: () => {}
   }
-
-
   state = {
     loading: false,
     error: null,

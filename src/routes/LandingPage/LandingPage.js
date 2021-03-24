@@ -9,6 +9,7 @@ import expandedScreesnshot from './images/yoga-mary.png'
 import PropTypes from 'prop-types';
 import PreloadImage from 'react-preload-image'
 
+
 export default class LandingPage extends Component {
   state = {
     fromDashboard: false
@@ -72,10 +73,20 @@ export default class LandingPage extends Component {
         <p>RSVP to your friends' events and see when details get changed so you can stay in the know.</p>
         <img src={expandedScreesnshot} width="300" className="screenshot" alt="screenshot of expanded view" />
         <p>Get the who, what, when details for every event.</p>
-        <p>Even see if someone didn't get an event update so you can let them know and everyone can stay in the know.</p>
-        <p><em>"Yoga got pushed back to 1:15 Mary. Check the app!"- Mary's friend</em></p>
-        <p><em>"Cool. Thanks. I should check that app more often!"- Mary</em></p>
-        <p><em>"Yeah. You should."- Mary's friend</em></p>
+        <p>Know if someone didn't see an update so you can let them know and everyone can stay in the know, you know?</p>
+      
+        <section className='quotes'>
+           
+        <p className='quote quote-1'><em>"Yoga got pushed back to 1:15 Mary. Check the app!" <br />- Mary's friend</em></p>
+        
+        <div className= 'quote-2'>
+           <p className='quote'><em>"Cool. Thanks. I should check that app more often!"<br />- Mary</em></p>
+        </div>
+        <div className= 'quote-3'>
+        <p className='quote quote-3'><em>"Yeah. You should."<br />- Mary's friend</em></p>
+        </div>
+        </section>
+  
         <div className='speech-bubble-text'>
           <div className="speech-text">
             <p>FOMO <br />be gone!</p>

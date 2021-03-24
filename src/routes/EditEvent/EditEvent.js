@@ -15,12 +15,15 @@ export default class EditEvent extends Component {
     details: '',
     day: '',
     loading: true,
-
+    updating: false,
     sumbmitted: false,
   };
   setLoading = (trueOrFalse) => {
     this.setState({ loading: trueOrFalse })
   }
+  setUpdating= (trueOrFalse) =>{
+    this.setState({updating: trueOrFalse})
+}
   setTitle = title => {
     this.setState({ title: { value: title, touched: true } }); // Switch touched to true
   };
@@ -73,6 +76,7 @@ export default class EditEvent extends Component {
   }
   handleSubmit = e => {
     e.preventDefault()
+    this.setUpdating(true)
     const fieldsToUpdate = {
       id: this.props.match.params.event_id,
       title: this.state.title.value,
@@ -87,7 +91,9 @@ export default class EditEvent extends Component {
     WekendApiService.changeEvent(fieldsToUpdate)
 
       .then((event) => {
+        this.setUpdating(false)
         this.setState({ sumbmitted: true })
+        
         setTimeout(() => {
           this.props.history.goBack()
         }, 2000);
@@ -163,11 +169,20 @@ export default class EditEvent extends Component {
                 <option value='Sunday'>Sunday</option>
 
               </select>
+              {this.state.updating ?
+                <div className='loader-container-login update-load'>
+                <div className='Loader-login'>
+                <div className="loader-circle-overlay"  > 
+                <i className="fas fa-moon small-moon"><FontAwesomeIcon className='small-moon' icon='moon' /></i>
+                </div>
+                    </div>
+                    </div>
+                :
               <div className='submit-cancel-buttons'>
-                <button className='done-add-event' type="submit"
+               <button className='done-add-event' type="submit"
                   disabled={(this.validateTitle()) || (this.validateTime())}>Update</button>
                 <button className='done-add-event cancel' onClick={this.handleCancel} type='cancel'>Nevermind</button>
-              </div>
+              </div>}
             </form>
         }
       </section>

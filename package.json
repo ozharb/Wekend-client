@@ -10,6 +10,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
+    "animate.css": "^4.1.1",
     "convert-time": "^0.3.0",
     "date-fns": "^2.18.0",
     "react": "^17.0.1",
