@@ -40,15 +40,15 @@ flex-direction: row;
 }
 
 .user-profile{
-/* display: flex; */
+display: flex; 
 
-/* flex-direction: column; */
+flex-direction: column;
 cursor: pointer;
 }
 
 .Header > h3{
 font-size: 20px;
-color: #FF0038;
+
 }
 p{
 margin: 10px;
