@@ -4,7 +4,7 @@ import UserInfo from '../../UserInfo/UserInfo'
 import TokenService from '../../services/token-service'
 import './Header.css'
 import { CSSTransition } from 'react-transition-group';
-import Logo from './Logo/Logo';
+// import Logo from './Logo/Logo';
 export default class Header extends Component {
 
   state = {
@@ -73,10 +73,13 @@ export default class Header extends Component {
           </div>
           {TokenService.hasAuthToken() &&
             <section className="user-profile"
-            tabIndex= '0'
-             onClick={this.handleItemExpand}
+            // tabIndex= '0'
+            //  onClick={this.handleItemExpand}
+            //  onKeyDown={this.handleItemExpand}
             >
-          <p>menu</p>
+          <p  tabIndex= '0'
+             onClick={this.handleItemExpand}
+             onKeyDown={this.handleItemExpand}>menu</p>
                 {/* <Logo  /> */}
               <div className="user-menu" >
                 <CSSTransition
