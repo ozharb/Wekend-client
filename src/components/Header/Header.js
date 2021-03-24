@@ -72,7 +72,7 @@ export default class Header extends Component {
             <div>{logLink} </div>
           </div>
           {TokenService.hasAuthToken() &&
-            <button className="user-profile"
+            <section className="user-profile"
             
              onClick={this.handleItemExpand}
             >
@@ -90,7 +90,7 @@ export default class Header extends Component {
                 </CSSTransition>
               </div>
 
-            </button>
+            </section>
           }
         </div>
       </nav>
