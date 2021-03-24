@@ -1,16 +1,5 @@
 /* Logo.module.css */
-/* .circle {
-width: 10px;
-height: 100px;
-border: black;
-border-style: solid;
-border-width: 15px;
-background: green;
-border-radius: 50%;
-margin-top: 0px;
-display: flex;
-justify-content: center;
-} */
+
 .reload{
     outline:none;
 color: black;
@@ -54,10 +43,9 @@ overflow:hidden;
 height: 100%;
 touch-action: none;
 -ms-touch-action: none;
-border: 15px solid;
+border: 5px solid;
 position: absolute;
 height: 100px;
-width: 50px;
 border-radius: 50%;
 width: 100px;
 height: 100px;
