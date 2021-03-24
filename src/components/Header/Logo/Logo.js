@@ -8,13 +8,13 @@ const ReMount = props => {
   const handleKey = () => setKey(Date.now())
     return (
       
-      <button 
+      <div 
       className="reload" 
       onClick={handleKey}
       aria-label="main-menu">
         <div key={key} className='inside-reload'>{props.children}</div>
          
-        </button>
+        </div>
 
     );
   };
