@@ -46,7 +46,7 @@ flex-direction: column;
 cursor: pointer;
 }
 .user-profile:active{
- background: yellow;
+ background: transparent;
     }
 
 .Header > h3{
@@ -61,15 +61,14 @@ margin: 10px;
 /*---menu transition----*/
 
 :root {
-/* --toggler-width: 50px;
-
---toggler-height: 40px; */
+ --toggler-width: 50px;
+--toggler-height: 40px; 
 --toggler-bg-color: none;
 --menu-starting-top: -50px;
 --menu-ending-top: 30px;
 --menu-max-height: 300px;
---menu-bg-color: transparent;
---fade-from-color: transparent ;
+--menu-bg-color: none;
+--fade-from-color: none ;
 /* --fade-to-color: black; */
 --timeout: 1000ms;
 }

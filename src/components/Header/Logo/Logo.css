@@ -43,15 +43,16 @@ overflow:hidden;
 height: 100%;
 touch-action: none;
 -ms-touch-action: none;
-border: 5px solid;
+border: 14px solid;
 position: absolute;
-height: 100px;
+height: 50px;
 border-radius: 50%;
 width: 100px;
 height: 100px;
-background: black;
+background: red;
 margin-top: 0px;
 display: flex;
+padding-top: 0;
 
 }
 .circleFill{
