@@ -10,9 +10,10 @@ const ReMount = props => {
       
       <button 
       className="reload" 
-      onClick={handleKey}
+      // onClick={handleKey}
       aria-label="main-menu">
-        <div key={key} className='inside-reload'>{props.children}</div>
+        <div  onClick={handleKey}
+        key={key} className='inside-reload'>{props.children}</div>
          
         </button>
 
