@@ -41,7 +41,8 @@ flex-direction: row;
 
 .user-profile{
 display: flex; 
-
+padding: 0;
+height: 0;
 flex-direction: column;
 cursor: pointer;
 }
