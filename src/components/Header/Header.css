@@ -61,7 +61,7 @@ margin: 10px;
 /*---menu transition----*/
 
 :root {
---toggler-width: 120px;
+--toggler-width: 50px;
 
 --toggler-height: 40px;
 --toggler-bg-color: none;
