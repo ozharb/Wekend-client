@@ -72,13 +72,12 @@ export default class Header extends Component {
             <div>{logLink} </div>
           </div>
           {TokenService.hasAuthToken() &&
-            <div className="user-profile"
+            <button className="user-profile"
             
              onClick={this.handleItemExpand}
             >
                 <Logo  />
-              <div className="user-menu"
-              >
+              <div className="user-menu" >
                 <CSSTransition
                   in={this.state.expand}
                   timeout={2000}
@@ -91,7 +90,7 @@ export default class Header extends Component {
                 </CSSTransition>
               </div>
 
-            </div>
+            </button>
           }
         </div>
       </nav>
