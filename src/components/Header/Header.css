@@ -45,7 +45,7 @@ display: flex;
 flex-direction: column;
 cursor: pointer;
 }
-.user-profile:focus{
+.user-profile:active{
  background: yellow;
     }
 
@@ -61,15 +61,15 @@ margin: 10px;
 /*---menu transition----*/
 
 :root {
---toggler-width: 50px;
+/* --toggler-width: 50px;
 
---toggler-height: 40px;
+--toggler-height: 40px; */
 --toggler-bg-color: none;
 --menu-starting-top: -50px;
 --menu-ending-top: 30px;
 --menu-max-height: 300px;
---menu-bg-color: none;
---fade-from-color: none ;
+--menu-bg-color: transparent;
+--fade-from-color: transparent ;
 /* --fade-to-color: black; */
 --timeout: 1000ms;
 }
