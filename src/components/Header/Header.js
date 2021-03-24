@@ -73,10 +73,11 @@ export default class Header extends Component {
           </div>
           {TokenService.hasAuthToken() &&
             <section className="user-profile"
-            
+            tabIndex= '0'
              onClick={this.handleItemExpand}
             >
-                <Logo  />
+          <p>menu</p>
+                {/* <Logo  /> */}
               <div className="user-menu" >
                 <CSSTransition
                   in={this.state.expand}
