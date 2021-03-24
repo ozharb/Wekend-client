@@ -12,16 +12,25 @@ display: flex;
 justify-content: center;
 }
 .reload{
+    outline:none;
 color: black;
-background: none;
+background: transparent;
 margin-right: 5px;
 padding-right: 140px;
-padding-bottom: 140px;
+/* padding-bottom: 140px; */
 
+}
+.inside-reload{
+    background-color: green;
 }
 .reload:focus{
 transition: ease-in-out, width .35s ease-in-out;
 }
+.reload:focus:active{
+   background: none;
+   color: none;
+   outline: 0;
+    }
 .fa-moon{
 will-change: transform;
 color: black;
