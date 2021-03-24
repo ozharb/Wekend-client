@@ -81,7 +81,7 @@ export default class Header extends Component {
             className = 'temp-menu'
              onClick={this.handleItemExpand}
              onKeyDown={this.handleItemExpand}>menu</p>
-                <Logo  />
+                <Logo  handleExpand ={this.handleItemExpand} />
               <div className="user-menu" >
                 <CSSTransition
                   in={this.state.expand}
