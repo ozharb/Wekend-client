@@ -3,9 +3,6 @@ font-family: 'Bungee Shade', cursive;
 width: 80%;
 font-size: 40px;
 padding: 40px;
-
-
-
 }
 
 
@@ -17,13 +14,17 @@ padding: 40px;
     
     }
 .circle-text{
-    word-spacing: 37px;
+    
+    letter-spacing: .2em;
+}
+.Dashboard{
+    overflow-x:hidden;
 }
 .dayboard-container{
- 
- width: 200%;
- margin-left: -4em;
+
+overflow-x:hidden;
     transform: rotate(-20deg);
+
 }
 .dayboard-container> a{
 color: black;
@@ -32,19 +33,29 @@ margin-bottom: 30px;
 text-decoration: none;
 }
 .dayboard-friday{
-background: orange;
+    overflow-x:hidden;
+    width: 200%;
+    margin-left: -4em;
+    background: orange;
     display: flex ;
     justify-content: center;
 }
 .dayboard-saturday{
+    overflow-x:hidden;
+    width: 200%;
+    margin-left: -4em;
     display: flex ;
     background: yellow;
    justify-content: center;
 }
 .dayboard-sunday{
+    overflow-x:hidden;
+    width: 200%;
+    margin-left: -4em;
     display: flex ;
     justify-content: center;
-    background: rgb(14, 207, 221)
+    background:  rgb(0, 255, 242);
+
 }
 .dayboard-header{
 font-family: 'Bungee', cursive;
