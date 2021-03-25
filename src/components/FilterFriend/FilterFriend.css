@@ -61,19 +61,3 @@
 .yes-no-buttons>button{
      border: none; 
 }
-   @media screen and (min-width: 770px) {
-       .Header{
-       height: 42px;
-       }
-       .Header h1 {
-       font-size: 22pt;
-       }
-       
-       .Header__not-logged-in {
-       flex-direction: row;
-       }
-       
-       .Header__not-logged-in .Hyph {
-       display: initial;
-       }
-       }

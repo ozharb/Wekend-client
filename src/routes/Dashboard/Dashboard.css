@@ -1,17 +1,45 @@
-.Dashboard{
+.days-links{
 font-family: 'Bungee Shade', cursive;
-display: flex;
-flex-direction: column;
-align-content: space-between;
+width: 80%;
 font-size: 40px;
-margin: 40px;
-margin-bottom: 90px;
+padding: 40px;
+
+
 
 }
-.Dashboard> a{
+
+
+.days-links-circle{
+    font-family: 'Bungee Shade', cursive;
+   width: 100%;
+    font-size: 20px;
+
+    
+    }
+.circle-text{
+    word-spacing: px;
+}
+.dayboard-container{
+    width: 100%;
+
+}
+.dayboard-container> a{
 color: black;
+
 margin-bottom: 40px;
 text-decoration: none;
+}
+.dayboard-friday{
+    display: flex ;
+   justify-content: flex-start;
+}
+.dayboard-saturday{
+    display: flex ;
+   justify-content: center;
+}
+.dayboard-sunday{
+    display: flex ;
+    justify-content: flex-end;
 }
 .dayboard-header{
 font-family: 'Bungee', cursive;
@@ -22,10 +50,15 @@ font-size: 30px;
 letter-spacing: .5em;
 }
 .help-link-container{
-    height: 50px;
+    /* position: absolute;
+    bottom: -200px;
+    right: 40%;
+    height: 50px; */
+
     text-align: center;
 }
 .help-link{
+
     font-family: 'Public Sans', sans-serif;
     font-size: small;
     padding: 5px;
@@ -35,16 +68,38 @@ letter-spacing: .5em;
     border: solid black;
     letter-spacing: .4em;
 }
+.container {
+    /*centers in the container*/
+    text-align: center;
+  }
+  
+  div.circTxt {
+    /*allows for centering*/
+    display: inline-block;
+    /*adjust as needed*/
+    margin-bottom: 128px;
+    color: black;
+  }
+  
+  
+
 @media screen and (min-width: 770px) {
 .dayboard-header{
     margin-top: 50px;
     margin-bottom: 50px;
     letter-spacing: .9em;
 }
-.Dashboard> a:hover{
+.days-links{
+    position: fixed;
+    }
+
+.dayboard-container> a:hover{
     font-size: 70px;
     }
-    .Dashboard> a:focus{
+.dayboard-container> a:focus{
     font-size: 70px;
     }
+.help-link{
+text-align: center;
+}
 }

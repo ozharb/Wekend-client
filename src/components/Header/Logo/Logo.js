@@ -8,14 +8,14 @@ const ReMount = props => {
   const handleKey = () => setKey(Date.now())
     return (
       
-      <button 
+      <div 
       className="reload" 
       onClick={handleKey}
       aria-label="main-menu">
         <div  
         key={key} className='inside-reload'>{props.children}</div>
          
-        </button>
+        </div>
 
     );
   };
@@ -27,7 +27,11 @@ class Logo extends Component {
         return(
            <>
  <ReMount >
-      <div onClick = {this.props.handleExpand} className="diffcircle" >
+      <div 
+      tabIndex="0"
+      onClick = {this.props.handleExpand} 
+      onKeyDown = {this.props.handleExpand}
+      className="diffcircle" >
           <div className="circle-overlay" /> 
        <div className="circle-fill"  /> 
        <i className="fas fa-moon"><FontAwesomeIcon className='moon' icon='moon' /></i>

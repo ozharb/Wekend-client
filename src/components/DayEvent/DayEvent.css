@@ -152,18 +152,5 @@ font-size: bold;
 font-size: 25px;
 
 }
-.Header{
-height: 42px;
-}
-.Header h1 {
-font-size: 22pt;
-}
 
-.Header__not-logged-in {
-flex-direction: row;
-}
-
-.Header__not-logged-in .Hyph {
-display: initial;
-}
 }

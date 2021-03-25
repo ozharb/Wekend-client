@@ -1,14 +1,4 @@
-/* .Day-Events:nth-child(even){
-    background: black;
 
-}
-.Day-Events:nth-child(odd){
-
-  background-color: green;
-} */
-.ajax-loaded{
-  color: green;
-}
 .loader-container{
   display: flex;
     justify-content: center;
@@ -42,8 +32,7 @@
   position: absolute;
 margin-left: 4px;
   margin-top: -3px;
-   /* width: 70px;
-   height: 70px; */
+  
   }
 @keyframes spin {
   0% { transform: rotate(0deg); }

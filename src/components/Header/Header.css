@@ -3,7 +3,6 @@ height: 100px;
 display: flex;
 align-items: normal;
 justify-content: space-between;
-/* color: black; */
 padding-top: 25px;
 padding-left: 20px;
 padding-right: 20px;
@@ -148,9 +147,9 @@ background-color: var(--toggler-bg-color);
 transition: all var(--timeout);
 }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 1020px) {
 .Header{
-height: 42px;
+height: 80px;
 }
 .Header h1 {
 font-size: 22pt;

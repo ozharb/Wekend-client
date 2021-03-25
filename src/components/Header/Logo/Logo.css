@@ -30,7 +30,7 @@ will-change: transform;
 color: black;
 font-size: 70px;
 position: absolute;
-margin-left: -.14em;
+margin-left: .1em;
 margin-top: 7px;
 width: 70px;
 height: 70px;
@@ -55,6 +55,13 @@ background: black;
 display: flex;
 padding-top: 0;
 
+}
+.diffcircle:focus:not(:focus-visible) {
+    outline: none;
+  }
+.diffcircle:focus{
+outline-style: dotted;
+outline-color: black;
 }
 .circleFill{
 overflow: hidden;
