@@ -30,12 +30,12 @@ export default class LandingPage extends Component {
     if (this.props.location.state) {
       this.scrollToTarget()
     }
-    this.props.onLandingPage(true)
+    this.props.isOnLandingPage(true)
 
   }
   componentWillUnmount() {
 
-    this.props.onLandingPage(false)
+    this.props.isOnLandingPage(false)
 
   }
   scrollToTarget = () => {
@@ -136,6 +136,7 @@ export default class LandingPage extends Component {
 }
 LandingPage.propTypes = {
   props: PropTypes.shape({
+    isOnLandingPage: PropTypes.func,
     history: PropTypes.object,
     match: PropTypes.shape({
       params: PropTypes.object,

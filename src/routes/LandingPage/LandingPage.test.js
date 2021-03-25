@@ -7,7 +7,7 @@ it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(
     <BrowserRouter>
-  <LandingPage />
+  <LandingPage props={{isOnLandingPage: ()=>{}}} isOnLandingPage={()=>{}} />
   </BrowserRouter>
   , div);
   ReactDOM.unmountComponentAtNode(div);

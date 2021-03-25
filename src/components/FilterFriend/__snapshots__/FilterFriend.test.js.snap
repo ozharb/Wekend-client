@@ -22,7 +22,7 @@ exports[`renders the UI as expected 1`] = `
           className="delete-friend"
           onClick={[Function]}
         >
-          filter is off
+          include
         </button>
       </div>
     </div>

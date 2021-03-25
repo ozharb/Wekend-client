@@ -22,7 +22,7 @@ import './App.css';
 class App extends Component {
   state = { hasError: false,
             onLandingPage: false}
-onLandingPage = (trueOrFalse) =>{
+isOnLandingPage = (trueOrFalse) =>{
   this.setState({onLandingPage:trueOrFalse})
 }
   static getDerivedStateFromError(error) {
@@ -47,7 +47,7 @@ onLandingPage = (trueOrFalse) =>{
                 path={'/'}
                 render={(props) => (
                 <LandingPage {...props}
-                 onLandingPage={this.onLandingPage}/>
+                 isOnLandingPage={this.isOnLandingPage}/>
                 )}
               />
              
