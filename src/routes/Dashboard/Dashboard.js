@@ -86,7 +86,7 @@ id="curve"
                     <h2 className='dayboard-header'>DayBoard</h2>
                     {error
                         ? <p className='red'>There was an error, try again</p>
-                        : <MediaQuery minDeviceWidth={500}>
+                        : <MediaQuery minWidth={500} >
                         {(matches) =>
                             matches
                                 ? this.renderDayCircleLinks()
