@@ -1,39 +1,38 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-
-
+import MediaQuery from 'react-responsive'
 import './Dashboard.css'
 
 export default class Dashboard extends Component {
 
 
-    // renderDayLinks() {
+    renderDayColumnLinks() {
 
-    //     return <article className='days-links'>
-    //         <div className='dayboard-container dayboard-friday'>
-    //             <Link
-    //                 to='/days/Friday'
-    //             >
-    //                 Friday
-    //       </Link>
-    //         </div>
-    //         <div className='dayboard-container dayboard-saturday'>
-    //             <Link
-    //                 to='/days/Saturday'
-    //             >
-    //                 Saturday
-    //       </Link>
-    //         </div>
-    //         <div className='dayboard-container dayboard-sunday'>
-    //             <Link
-    //                 to='/days/Sunday'
-    //             >
-    //                 Sunday
-    //       </Link>
-    //         </div>
-    //     </article>
-    // }
-    renderDayLinks() {
+        return <article className='days-links'>
+            <div className='dayboard-container dayboard-friday'>
+                <Link
+                    to='/days/Friday'
+                >
+                    Friday
+          </Link>
+            </div>
+            <div className='dayboard-container dayboard-saturday'>
+                <Link
+                    to='/days/Saturday'
+                >
+                    Saturday
+          </Link>
+            </div>
+            <div className='dayboard-container dayboard-sunday'>
+                <Link
+                    to='/days/Sunday'
+                >
+                    Sunday
+          </Link>
+            </div>
+        </article>
+    }
+    renderDayCircleLinks() {
 
         return <article className='days-links-circle'>
                        <svg viewBox="0 0 500 200">
@@ -88,7 +87,13 @@ id="curve"
                     <h2 className='dayboard-header'>DayBoard</h2>
                     {error
                         ? <p className='red'>There was an error, try again</p>
-                        : this.renderDayLinks()}
+                        : <MediaQuery minDeviceWidth={700}>
+                        {(matches) =>
+                            matches
+                                ? this.renderDayCircleLinks()
+                                : this.renderDayColumnLinks()
+                        }
+                    </MediaQuery>}
 
                 </section>
 
