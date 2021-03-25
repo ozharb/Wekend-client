@@ -29,6 +29,9 @@ export default class LoginPage extends Component {
     return (
       <Section className='LoginPage'>
         <h2>Login</h2>
+        <p>Demo the app with the following info:</p>
+        <p>username: Demo</p>
+        <p>password: Demo2021!</p>
         <LoginForm
         onLoginSuccess={this.handleLoginSuccess}
         />
