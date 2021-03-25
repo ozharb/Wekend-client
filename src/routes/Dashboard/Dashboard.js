@@ -87,7 +87,7 @@ id="curve"
                     <h2 className='dayboard-header'>DayBoard</h2>
                     {error
                         ? <p className='red'>There was an error, try again</p>
-                        : <MediaQuery minDeviceWidth={700}>
+                        : <MediaQuery minDeviceWidth={500}>
                         {(matches) =>
                             matches
                                 ? this.renderDayCircleLinks()
@@ -96,17 +96,6 @@ id="curve"
                     </MediaQuery>}
 
                 </section>
-
-                {/* <svg viewBox="0 0 500 500">
-
-        <path id="curve" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97"/>
-
-    <text width="500" >
-        <textPath xlinkHref='#curve' >
-            Come on in...
-        </textPath>
-    </text>
-</svg> */}
 
                 <div className='help-link-container' >
                     <Link
