@@ -20,26 +20,31 @@ padding: 40px;
     word-spacing: 37px;
 }
 .dayboard-container{
-    width: 100%;
-
+ 
+ width: 200%;
+ margin-left: -4em;
+    transform: rotate(-20deg);
 }
 .dayboard-container> a{
 color: black;
-
-margin-bottom: 40px;
+margin-top: 10px;
+margin-bottom: 30px;
 text-decoration: none;
 }
 .dayboard-friday{
+background: orange;
     display: flex ;
-   justify-content: flex-start;
+    justify-content: center;
 }
 .dayboard-saturday{
     display: flex ;
+    background: yellow;
    justify-content: center;
 }
 .dayboard-sunday{
     display: flex ;
-    justify-content: flex-end;
+    justify-content: center;
+    background: rgb(14, 207, 221)
 }
 .dayboard-header{
 font-family: 'Bungee', cursive;
@@ -50,10 +55,7 @@ font-size: 30px;
 letter-spacing: .5em;
 }
 .help-link-container{
-    /* position: absolute;
-    bottom: -200px;
-    right: 40%;
-    height: 50px; */
+
 
     text-align: center;
 }
@@ -62,6 +64,7 @@ letter-spacing: .5em;
     font-family: 'Public Sans', sans-serif;
     font-size: small;
     padding: 5px;
+    padding-left: 9px;
     margin-top: 20px;
     text-decoration: none;
     color: black;
