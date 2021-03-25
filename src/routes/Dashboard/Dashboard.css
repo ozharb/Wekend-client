@@ -10,14 +10,13 @@ padding: 40px;
     font-family: 'Bungee Shade', cursive;
    width: 100%;
     font-size: 20px;
-
-    
+    overflow-y:hidden;
     }
-.circle-text{
-    
+.circle-text{ 
     letter-spacing: .2em;
 }
 .Dashboard{
+    overflow-y:hidden;
     overflow-x:hidden;
     height: 500px
 }

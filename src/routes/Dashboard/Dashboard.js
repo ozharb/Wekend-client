@@ -44,7 +44,6 @@ id="curve"
 
 <text width="500" className='circle-text'>
 <textPath xlinkHref='#curve' >
-
           
                 <Link
                     to='/days/Friday'
