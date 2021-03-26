@@ -13,15 +13,18 @@ export default class LoginForm extends Component {
   }
   state = {
     loading: false,
+    demo: false,
     error: null,
     loginStatus: false 
   }
   setLoading = (trueOrFalse) =>{
     this.setState({loading: trueOrFalse})
 }
-  
+  setDemo= ()=>{
+    this.setState({demo:!this.state.demo})
+  }
 
-  handleSubmitJwtAuth = ev => {
+    handleSubmitJwtAuth = (ev) => {
       ev.preventDefault()
       this.setState({ error: null })
       this.setLoading(true)
@@ -60,13 +63,14 @@ export default class LoginForm extends Component {
     } 
   render() {
     const { error, loginStatus } = this.state
-  
+
 
     return (
-      
+      <>
       <form
         className='LoginForm'
         onSubmit={this.handleSubmitJwtAuth}
+        
       >
         
         <div role='alert'>
@@ -74,6 +78,7 @@ export default class LoginForm extends Component {
            </div>
           {loginStatus? <p className='green'>Success!</p> : 
           <>
+          
         <div className='username'>
           <label htmlFor='LoginForm__username'>
             User name
@@ -102,6 +107,16 @@ export default class LoginForm extends Component {
             >
            
           </Input>
+          
+          <div className='demo'>
+                    <p className='demo-now' tabIndex={0}
+                     onKeyDown={this.setDemo}
+                     onClick={this.setDemo}>
+                       demo
+                      </p>
+                    <p style={{display:this.state.demo?"":"none"}}>username: Demo</p>
+                    <p style={{display:this.state.demo?"":"none"}}>password: Demo2021!</p>
+                    </div>
         </div>
         {this.state.loading ?
                 <div className='loader-container-login'>
@@ -111,12 +126,20 @@ export default class LoginForm extends Component {
                 </div>
                     </div>
                     </div>
-                    :  <button className='login-submit btn' type='submit'>
+                    : <>
+                     <button className='login-submit btn' type='submit'>
                     Login
-                  </button>}
-        
+                  </button>
+                  </>
+
+                  }
+   
          </>}
+       
       </form>
+  
+  
+</>
     )
   }
 }

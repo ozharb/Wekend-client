@@ -1,13 +1,26 @@
 .green{
     color:green;
     font-weight: bold;
+    letter-spacing: 1em;
 }
 
 .red {
     color:red;
 }
-
-
+.demo-now{
+    cursor: pointer;
+    letter-spacing: .3em;
+    text-align:center;
+}
+.demo{
+    color: rgb(155, 153, 153);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: solid;
+    font-family: 'Public Sans', sans-serif;
+    font-size: small;
+    width: 200px;
+}
 .LoginForm > button{
 background-color: black;
 padding: 20px;

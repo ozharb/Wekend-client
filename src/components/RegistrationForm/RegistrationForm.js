@@ -138,7 +138,7 @@ state = { loading: false,
             <button className='register-page_button' type='submit'>
           {this.state.loading? 'One moment':'Register'}
         </button>
-        <Link className = 'already-link' to='/login'>Already have an account?</Link>
+        <Link className = 'already-link' to='/login'>Already registered or just want to see a demo?</Link>
 </div>
         </div>}
       </form>
