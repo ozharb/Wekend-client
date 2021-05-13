@@ -73,16 +73,14 @@ export default class Header extends Component {
           </div>
           {TokenService.hasAuthToken() &&
             <section className="user-profile"
-            // tabIndex= '0'
-            //  onClick={this.handleItemExpand}
-            //  onKeyDown={this.handleItemExpand}
+
             >
    
                 <Logo  handleExpand ={this.handleItemExpand} />
               <div className="user-menu" >
                 <CSSTransition
                   in={this.state.expand}
-                  timeout={2000}
+                  timeout={1000}
                   classNames="display"
                   unmountOnExit
                 >

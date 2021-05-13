@@ -7,23 +7,23 @@ padding: 40px;
 
 
 .days-links-circle{
-    font-family: 'Bungee Shade', cursive;
-   width: 100%;
-    font-size: 20px;
-    overflow-y:hidden;
-    }
+font-family: 'Bungee Shade', cursive;
+width: 100%;
+font-size: 20px;
+overflow-y:hidden;
+}
 .circle-text{ 
-    letter-spacing: .2em;
+letter-spacing: .2em;
 }
 .Dashboard{
-    overflow-y:hidden;
-    overflow-x:hidden;
-    height: 500px
+overflow-y:hidden;
+overflow-x:hidden;
+height: 500px
 }
 .dayboard-container{
 
 overflow-x:hidden;
-    transform: rotate(-20deg);
+transform: rotate(-20deg);
 
 }
 .dayboard-container> a{
@@ -33,28 +33,28 @@ margin-bottom: 30px;
 text-decoration: none;
 }
 .dayboard-friday{
-    overflow-x:hidden;
-    width: 200%;
-    margin-left: -4em;
-    background: orange;
-    display: flex ;
-    justify-content: center;
+overflow-x:hidden;
+width: 200%;
+margin-left: -4em;
+background: orange;
+display: flex ;
+justify-content: center;
 }
 .dayboard-saturday{
-    overflow-x:hidden;
-    width: 200%;
-    margin-left: -4em;
-    display: flex ;
-    background: yellow;
-   justify-content: center;
+overflow-x:hidden;
+width: 200%;
+margin-left: -4em;
+display: flex ;
+background: yellow;
+justify-content: center;
 }
 .dayboard-sunday{
-    overflow-x:hidden;
-    width: 200%;
-    margin-left: -4em;
-    display: flex ;
-    justify-content: center;
-    background:  rgb(0, 255, 242);
+overflow-x:hidden;
+width: 200%;
+margin-left: -4em;
+display: flex ;
+justify-content: center;
+background:  rgb(0, 255, 242);
 
 }
 .dayboard-header{
@@ -66,62 +66,62 @@ font-size: 30px;
 letter-spacing: .5em;
 }
 .help-link-container{
-    text-align: center;
+text-align: center;
 }
 .help-link{
 
-    font-family: 'Public Sans', sans-serif;
-    font-size: small;
-    padding: 5px;
-    padding-left: 9px;
-    margin-top: 20px;
-    text-decoration: none;
-    color: black;
-    border: solid black;
-    letter-spacing: .4em;
+font-family: 'Public Sans', sans-serif;
+font-size: small;
+padding: 5px;
+padding-left: 9px;
+margin-top: 20px;
+text-decoration: none;
+color: black;
+border: solid black;
+letter-spacing: .4em;
 }
 .container {
-    /*centers in the container*/
-    text-align: center;
-  }
-  
-  div.circTxt {
-    /*allows for centering*/
-    display: inline-block;
-    /*adjust as needed*/
-    margin-bottom: 128px;
-    color: black;
-  }
-  
-  
+/*centers in the container*/
+text-align: center;
+}
+
+div.circTxt {
+/*allows for centering*/
+display: inline-block;
+/*adjust as needed*/
+margin-bottom: 128px;
+color: black;
+}
+
+
 
 @media screen and (min-width: 770px) {
 .dayboard-header{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    letter-spacing: .9em;
+margin-top: 50px;
+margin-bottom: 50px;
+letter-spacing: .9em;
 }
 .Dashboard{
-    height: 400px;
+height: 400px;
 }
 .days-links{
-    position: fixed;
-    }
+position: fixed;
+}
 
 .dayboard-container> a:hover{
-    font-size: 70px;
-    }
+font-size: 70px;
+}
 .dayboard-container> a:focus{
-    font-size: 70px;
-    }
+font-size: 70px;
+}
 .help-link{
 text-align: center;
 }
 }
 @media screen and (min-width: 600px) {
 
-    .Dashboard{
-        height: 600px;
-    }
+.Dashboard{
+height: 600px;
+}
 
-    }
+}
